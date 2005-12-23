@@ -6,9 +6,9 @@
     <artifactId>maven-skins</artifactId>
     <version>1</version>
   </parent>
-  <artifactId>maven-default-skin</artifactId>
+  <artifactId>maven-stylus-skin</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>Maven Default Skin</name>
-  <description>Maven Default Skin</description>
+  <name>Maven Site Skin</name>
+  <description>Maven Site Skin</description>
 </project>
 
