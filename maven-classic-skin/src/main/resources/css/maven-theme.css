@@ -4,13 +4,11 @@ body {
   padding: 0px 0px 10px 0px;
  }
 
-.contentBox h2 {
- color: #fff;
+h2 {
  background-color: #036;
  }
 
-.contentBox h3 {
- color: #fff;
+h3 {
  background-color: #888;
  }
 
@@ -24,7 +22,7 @@ body {
  color: #000;
  }
 
-.contentBox th {
+th {
  background-color: #bbb;
  color: #fff;
  }
@@ -43,7 +41,7 @@ div#banner {
 }
 
 #leftColumn {
- background: #eee;
+ background-color: #eee;
  color: #000;
  border-right: 1px solid #aaa;
  border-bottom: 1px solid #aaa;
@@ -51,14 +49,15 @@ div#banner {
 }
 
 #navcolumn {
-/* bad for IE
- background: #eee;
-*/
  color: #000;
  border-right: none;
  border-bottom: none;
  border-top: none;
  }
+
+#navcolumn h5 {
+  font-size: inherit;
+}
 
 #breadcrumbs {
  background-color: #ddd;
@@ -121,7 +120,12 @@ a.newWindow, a.newWindow:link, a.newWindow:visited, a.newWindow:active, a.newWin
 h2, h3 {
  margin-top: 1em;
  margin-bottom: 0;
- }
+ background-image: url(../images/nw_maj_rond.gif);
+ background-repeat: no-repeat;
+ color: #fff;
+ padding: 5px;
+ margin-right: 2px;
+}
 
 img.handle {
  border: 0;
@@ -135,15 +139,6 @@ img.handle {
 
 #navcolumn div div {
   padding-left: 10px;
-}
-/* $Id: maven-classic.css 170922 2005-05-19 13:19:44Z brett $
-  
-  This file defines basic default formatting for HTML conforming to Tigris application style. To extend or override these rules for your instance, edit inst.css instead of this file. */
-
-/* colors, backgrounds, borders, link indication */
-.contentBox h2, .contentBox h3, .tabs td, .tabs th, .functnbar {
-  background-image: url(../images/nw_maj_rond.gif);
-  background-repeat: no-repeat;
 }
 
 .functnbar, .functnbar2 {
@@ -515,10 +510,7 @@ code, pre {
   font-family: 'Andale Mono', Courier, monospace;
 }
 
-body, .contentBox h2, .contentBox h3, #rightcol h2, pre, code, #apphead h2 small, h3, th, td {
-  font-size: x-small;
-  voice-family: "\"}\"";
-  voice-family: inherit;
+body, h2, h3, #rightcol h2, pre, code, #apphead h2 small, h3, th, td {
   font-size: small;
 }
 
@@ -561,12 +553,10 @@ form {
 }
 
 #bodyColumn {
-  padding-left: 12px;
+  margin-right: 0;
+  margin-top: 1em;
   padding-right: 12px;
-  width: 100%;
-  voice-family: "\"}\"";
-  voice-family: inherit;
-  width: auto;
+  margin-left: 190px;
 }
 
 html>body #bodyColumn {
@@ -585,16 +575,11 @@ ol ol ol {
   list-style-type: lower-roman;
 }
 
-.contentBox h2, .contentBox h3 {
-  padding: 5px;
-  margin-right: 2px;
-}
-
 .contentBox td, .contentBox th {
   padding: 2px 3px;
 }
 
-.h2 p, .h3 p, .h2 dt, .h3 dt {
+.section p, .section p, .section dt, .section dt {
   margin-right: 7px;
   margin-left: 7px;
 }
@@ -849,12 +834,6 @@ td.filebrowse h2 {
 #breadcrumbs {
   padding: 2px 8px;
 }
-
-/* Bad for IE
-.contentBox h2, .contentBox h3, .bars {
-  clear: both;
-}
-*/
 
 .legend {
   float: right;
