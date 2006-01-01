@@ -61,7 +61,7 @@
   </organization>
   <distributionManagement>
     <snapshotRepository>
-      <id>snapshots</id>
+      <id>apache.snapshots</id>
       <name>Maven Central Development Repository</name>
       <url>scp://minotaur.apache.org/www/cvs.apache.org/maven-snapshot-repository</url>
     </snapshotRepository>
