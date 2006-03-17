@@ -1,10 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>maven-parent</artifactId>
+    <groupId>org.apache.maven</groupId>
+    <version>1</version>
+    <relativePath>../pom/maven/pom.xml</relativePath>
+  </parent>
   <groupId>org.apache.maven.skins</groupId>
   <artifactId>maven-skins</artifactId>
   <packaging>pom</packaging>
-  <version>1</version>
+  <version>1-SNAPSHOT</version>
   <name>Maven Skins</name>
   <description>Maven Skins</description>
   <url>http://maven.apache.org/skins/</url>
@@ -14,63 +20,7 @@
     <url>http://jira.codehaus.org/browse/MNG</url>
   </issueManagement>
   <!-- TODO: inherit this stuff from a common Maven POM -->
-  <ciManagement>
-    <system>continuum</system>
-    <notifiers>
-      <notifier>
-        <type>mail</type>
-        <configuration>
-          <address>commits@maven.apache.org</address>
-        </configuration>
-      </notifier>
-    </notifiers>
-  </ciManagement>
-  <developers>
-    <developer>
-      <id>jvanzyl</id>
-      <name>Jason van Zyl</name>
-      <email>jason@maven.org</email>
-      <organization>Maven</organization>
-      <roles>
-        <role>PMC Chair</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>brett</id>
-      <name>Brett Porter</name>
-      <email>brett@apache.org</email>
-      <organization>ASF</organization>
-      <roles>
-        <role>PMC Member</role>
-      </roles>
-      <timezone>+10</timezone>
-    </developer>
-    <developer>
-      <id>evenisse</id>
-      <name>Emmanuel Venisse</name>
-      <email>evenisse@apache.org</email>
-      <organization>ASF</organization>
-      <roles>
-        <role>PMC Member</role>
-      </roles>
-    </developer>
-  </developers>
-  <organization>
-    <name>Apache Software Foundation</name>
-    <url>http://www.apache.org/</url>
-  </organization>
   <distributionManagement>
-    <snapshotRepository>
-      <id>apache.snapshots</id>
-      <name>Maven Central Development Repository</name>
-      <url>scp://minotaur.apache.org/www/cvs.apache.org/maven-snapshot-repository</url>
-    </snapshotRepository>
-    <repository>
-      <id>repo1</id>
-      <name>Maven Central Repository</name>
-      <!-- TODO: change to www.apache.org -->
-      <url>scp://repo1.maven.org/home/projects/maven/repository-staging/to-ibiblio/maven2</url>
-    </repository>
     <site>
       <id>website</id>
       <url>scp://minotaur.apache.org/www/maven.apache.org/skins/</url>
