@@ -195,6 +195,10 @@ a:link {
     display: block;
 }
 
+#navcolumn li.collapsed {
+    background-image: url( ../images/super.gif );
+}
+
 #navcolumn li.expanded {
     background-image: url( ../images/super.gif );
     height: inherit;
