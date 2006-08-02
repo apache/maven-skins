@@ -26,6 +26,7 @@
     </site>
   </distributionManagement>
   <modules>
+    <module>maven-application-skin</module>
     <module>maven-default-skin</module>
     <module>maven-classic-skin</module>
     <module>maven-stylus-skin</module>
