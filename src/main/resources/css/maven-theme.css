@@ -201,7 +201,7 @@ a:link {
 
 #navcolumn li.expanded {
     background-image: url( ../images/super.gif );
-    height: inherit;
+    height: auto;
 }
 
 #navcolumn li a:link {
