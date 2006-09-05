@@ -28,7 +28,7 @@ select, input {
 }
 
 #contentBox h1 {
-    background-image: url(../images/arrow.gif);
+    background-image: url( ../images/arrow.gif );
     background-repeat: no-repeat;
     background-position: left bottom;
     border-bottom: 1px solid #DFDEDE;
@@ -49,7 +49,7 @@ select, input {
 }
 
 #contentBox h3 {
-    border-bottom: 1px solid #DFDEDE; 
+    border-bottom: 1px solid #DFDEDE;
     padding: 0 0 1px 0;
     margin-bottom: 7px;
     color: #333;
@@ -230,7 +230,7 @@ dt {
 }
 
 #navcolumn li ul li {
-    color:#333 !important;
+    color: #333 !important;
     text-indent: 30px !important;
     line-height: 20px !important;
     height: 20px !important;
@@ -242,10 +242,10 @@ dt {
     padding-left: 0;
 }
 
-#navcolumn li ul li a:hover{
+#navcolumn li ul li a:hover {
     color: #fff !important;
     background: url( ../images/super_hl_sub.gif ) 0 -20px no-repeat;
-    background-position:right;
+    background-position: right;
     width: 161px;
     display: block;
 }
@@ -266,4 +266,9 @@ a:link, a:visited {
 
 a:active, a:hover {
     color: #f30;
+}
+
+blockquote {
+    border-left: 1px solid #DFDEDE;
+    padding-left: 1em;
 }
