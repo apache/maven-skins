@@ -15,7 +15,7 @@
  */
 
 body {
-    padding: 0px 0px 10px 0px;
+    padding: 0 0 10px 0;
 }
 
 body, td, select, input, li {
@@ -31,31 +31,28 @@ select, input {
     background-image: url(../images/arrow.gif);
     background-repeat: no-repeat;
     background-position: left bottom;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #DFDEDE; 
-    padding: 0px 0px 1px 23px;
+    border-bottom: 1px solid #DFDEDE;
+    padding: 0 0 1px 23px;
     margin-bottom: 7px;
-    color: #333
+    color: #333;
     voice-family: inherit;
     font-size: small !important;
 }
 
 #contentBox h2 {
-    padding-bottom: 15px;
-    border-bottom: 1px solid #DFDEDE; 
-    padding: 0px 0px 1px 0px;
+    border-bottom: 1px solid #DFDEDE;
+    padding: 0 0 1px 0;
     margin-bottom: 7px;
-    color: #333
+    color: #333;
     voice-family: inherit;
     font-size: small !important;
 }
 
 #contentBox h3 {
-    padding-bottom: 15px;
     border-bottom: 1px solid #DFDEDE; 
-    padding: 0px 0px 1px 0px;
+    padding: 0 0 1px 0;
     margin-bottom: 7px;
-    color: #333
+    color: #333;
     voice-family: inherit;
     font-size: small !important;
 }
@@ -67,10 +64,6 @@ table {
 code {
     font-family: Courier, monospace;
     font-size: 13px;
-}
-
-a {
-    text-decoration: none;
 }
 
 #legend li.externalLink {
@@ -109,26 +102,7 @@ p {
     color: gray;
     font-weight: bold;
     font-size: 11px;
-    padding: 10px 0px 1px 19px;
-}
-
-table.bodyTable th {
-    color: white;
-    background-color: #bbb;
-    text-align: left;
-    font-weight: bold;
-}
-
-table.bodyTable th, table.bodyTable td {
-    font-size: 1em;
-}
-
-table.bodyTable tr.a {
-    background-color: #ddd;
-}
-
-table.bodyTable tr.b {
-    background-color: #eee;
+    padding: 10px 0 1px 19px;
 }
 
 .source {
@@ -166,10 +140,6 @@ dt {
 #breadcrumbs a:hover {
     text-decoration: none;
     color: white
-}
-
-a:link {
-    color: #333;
 }
 
 .errormark, .warningmark, .donemark, .infomark {
@@ -288,13 +258,12 @@ a:link {
 
 a:link, a:visited {
     color: #333;
-    text-decoration: underline;
 }
 
-#navcolumn a:link, a:visited {
+#navcolumn a {
     text-decoration: none;
 }
 
-a:active, a:hover, #leftcol a:active, #leftcol a:hover {
+a:active, a:hover {
     color: #f30;
 }
