@@ -21,7 +21,7 @@
   </issueManagement>
   <distributionManagement>
     <site>
-      <id>website</id>
+      <id>apache.website</id>
       <url>scp://people.apache.org/www/maven.apache.org/skins/</url>
     </site>
   </distributionManagement>
