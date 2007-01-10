@@ -14,10 +14,9 @@
   <name>Maven Skins</name>
   <description>Maven Skins</description>
   <url>http://maven.apache.org/skins/</url>
-  <!-- TODO: create a new JIRA project/component -->
   <issueManagement>
     <system>jira</system>
-    <url>http://jira.codehaus.org/browse/MNG</url>
+    <url>http://jira.codehaus.org/browse/MSKINS</url>
   </issueManagement>
   <distributionManagement>
     <site>
