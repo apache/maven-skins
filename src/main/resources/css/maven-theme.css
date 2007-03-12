@@ -18,18 +18,18 @@
  */
 
 body {
-    background-color: #fff;
-	font-family: Verdana, Helvetica, Arial, sans-serif;
-	margin-left: auto;
-	margin-right: auto;
-	background-repeat: repeat-y;
-	font-size: 13px;
-	padding: 0px;
+  background-color: #fff;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: repeat-y;
+  font-size: 13px;
+  padding: 0px;
 }
 td, select, input, li{
-	font-family: Verdana, Helvetica, Arial, sans-serif;
-	font-size: 12px;
-	color:#333333;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color:#333333;
 }
 code{
   font-size: 12px;
@@ -63,18 +63,18 @@ a.newWindow, a.newWindow:link, a.newWindow:visited, a.newWindow:active, a.newWin
   padding-right: 18px;
 }
 h2 {
-	font-size: 17px;
-	color: #333333;  
+  font-size: 17px;
+  color: #333333;  
 }
 h3 {
-	padding: 4px 4px 4px 24px;
-	color: #666;
-	background-color: #ccc;
-	font-weight: bold;
-	font-size: 14px;
-	background-image: url(../images/h3.jpg);
-	background-repeat: no-repeat;
-	background-position: left bottom;
+  padding: 4px 4px 4px 24px;
+  color: #666;
+  background-color: #ccc;
+  font-weight: bold;
+  font-size: 14px;
+  background-image: url(../images/h3.jpg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 p {
   line-height: 1.3em;
@@ -82,36 +82,36 @@ p {
   color: #000;
 }
 #breadcrumbs {
-	height: 13px;
-	background-image: url(../images/breadcrumbs.jpg);
-	padding: 5px 10px 14px 20px;
+  height: 13px;
+  background-image: url(../images/breadcrumbs.jpg);
+  padding: 5px 10px 14px 20px;
 }
 * html #breadcrumbs {
-	padding-bottom: 8px;
+  padding-bottom: 8px;
 }
 #leftColumn {
-	margin: 10px 0 10px 0;
-	border-top-color: #ccc;
-	border-top-style: solid;
-	border-top-width: 1px;
-	border-right-color: #ccc;
-	border-right-style: solid;
-	border-right-width: 1px;
-	border-bottom-color: #ccc;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	padding-right: 5px;
-	padding-left: 5px;
+  margin: 10px 0 10px 0;
+  border-top-color: #ccc;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: #ccc;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 #navcolumn h5 {
-	font-size: smaller;
-	border-bottom: 1px solid #aaaaaa;
-	padding-top: 2px;
-	padding-left: 9px;
-	color: #49635a;
-	background-image: url(../images/h5.jpg);
-	background-repeat: no-repeat;
-	background-position: left bottom;
+  font-size: smaller;
+  border-bottom: 1px solid #aaaaaa;
+  padding-top: 2px;
+  padding-left: 9px;
+  color: #49635a;
+  background-image: url(../images/h5.jpg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 table.bodyTable th {
@@ -138,24 +138,24 @@ table.bodyTable tr.b {
   overflow:auto
 }
 dt {
-	padding: 4px 4px 4px 24px;
-	color: #333333;
-	background-color: #ccc;
-	font-weight: bold;
-	font-size: 14px;
-	background-image: url(../images/h3.jpg);
-	background-repeat: no-repeat;
-	background-position: left bottom;
+  padding: 4px 4px 4px 24px;
+  color: #333333;
+  background-color: #ccc;
+  font-weight: bold;
+  font-size: 14px;
+  background-image: url(../images/h3.jpg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 .subsectionTitle {
-	font-size: 13px;
-	font-weight: bold;
-	color: #666;
+  font-size: 13px;
+  font-weight: bold;
+  color: #666;
 
 }
 
 table {
-	font-size: 10px;
+  font-size: 10px;
 }
 .xright a:link, .xright a:visited, .xright a:active {
   color: #666;
@@ -164,30 +164,30 @@ table {
   color: #003300;
 }
 #banner {
-	height: 93px;
-	background: url(../images/banner.jpg);
+  height: 93px;
+  background: url(../images/banner.jpg);
 }
 #navcolumn ul {
-	margin: 5px 0 15px -0em;
+  margin: 5px 0 15px -0em;
 }
 #navcolumn ul a {
-	color: #333333;
+  color: #333333;
 }
 #navcolumn ul a:hover {
-	color: red;
+  color: red;
 }
 #intro {
-	border: solid #ccc 1px;
-	margin: 6px 0px 0px 0px;
-	padding: 10px 40px 10px 40px;
+  border: solid #ccc 1px;
+  margin: 6px 0px 0px 0px;
+  padding: 10px 40px 10px 40px;
 }
 .subsection {
-	margin-left: 3px;
-	color: #333333;
+  margin-left: 3px;
+  color: #333333;
 }
 
 .subsection p {
-	font-size: 12px;
+  font-size: 12px;
 }
 #footer {
   padding: 10px;
