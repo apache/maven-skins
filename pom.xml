@@ -25,7 +25,7 @@ under the License.
   <parent>
     <artifactId>maven-parent</artifactId>
     <groupId>org.apache.maven</groupId>
-    <version>4</version>
+    <version>5</version>
     <relativePath>../pom/maven/pom.xml</relativePath>
   </parent>
   <groupId>org.apache.maven.skins</groupId>
@@ -54,7 +54,7 @@ under the License.
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/</connection>
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/</developerConnection>
-    <url>http://svn.apache.org/viewcvs.cgi/maven/skins/trunk/</url>
+    <url>http://svn.apache.org/viewvc/maven/skins/trunk/</url>
   </scm>
   <build>
     <pluginManagement>
