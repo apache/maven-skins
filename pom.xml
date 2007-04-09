@@ -31,7 +31,7 @@ under the License.
   <groupId>org.apache.maven.skins</groupId>
   <artifactId>maven-skins</artifactId>
   <packaging>pom</packaging>
-  <version>3</version>
+  <version>4-SNAPSHOT</version>
   <name>Maven Skins</name>
   <description>Maven Skins</description>
   <url>http://maven.apache.org/skins/</url>
@@ -52,9 +52,9 @@ under the License.
     <module>maven-stylus-skin</module>
   </modules>
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/tags/maven-skins-3/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/tags/maven-skins-3/</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/skins/tags/maven-skins-3/</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/skins/trunk/</url>
   </scm>
   <build>
     <pluginManagement>
