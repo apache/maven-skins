@@ -20,20 +20,7 @@ under the License.
 -->
 
 <project>
-  <bannerLeft>
-    <name>${project.name}</name>
-    <src>http://maven.apache.org/images/apache-maven-project-2.png</src>
-    <href>http://maven.apache.org/</href>
-  </bannerLeft>
-  <bannerRight>
-    <src>http://maven.apache.org/images/maven-logo-2.gif</src>
-  </bannerRight>
-  <skin>
-    <groupId>org.apache.maven.skins</groupId>
-    <artifactId>maven-stylus-skin</artifactId>
-  </skin>
   <publishDate format="dd MMM yyyy" />
-  <version position="left" />
   <body>
     <links>
       <item name="Apache" href="http://www.apache.org/"/>
