@@ -40,8 +40,8 @@ a {
 a:link {
   color:#47a;
 }
-a:visited  {
-  color:#666666;
+a:visited {
+  color:#68a;
 }
 a:active, a:hover {
   color:#990000;
@@ -212,3 +212,6 @@ table {
   background-image: url(../images/icon_info_sml.gif);
 }
 
+#navcolumn li.none {
+  background-image: url(../images/bullet.gif);
+}
