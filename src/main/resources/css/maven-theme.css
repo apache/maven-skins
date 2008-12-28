@@ -211,7 +211,3 @@ table {
 .infomark {
   background-image: url(../images/icon_info_sml.gif);
 }
-
-#navcolumn li.none {
-  background-image: url(../images/bullet.gif);
-}
