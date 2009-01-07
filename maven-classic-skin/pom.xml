@@ -33,5 +33,10 @@ under the License.
 
   <name>Maven Classic Skin</name>
   <description>Maven Classic Skin</description>
+
+  <issueManagement>
+    <system>jira</system>
+    <url>http://jira.codehaus.org/browse/MSKINS/component/12532</url>
+  </issueManagement>
 </project>
 
