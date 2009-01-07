@@ -33,5 +33,10 @@ under the License.
 
   <name>Maven Site Skin</name>
   <description>Maven Site Skin</description>
+
+  <issueManagement>
+    <system>jira</system>
+    <url>http://jira.codehaus.org/browse/MSKINS/component/12534</url>
+  </issueManagement>
 </project>
 
