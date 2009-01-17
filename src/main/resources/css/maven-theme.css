@@ -64,7 +64,7 @@ a.newWindow, a.newWindow:link, a.newWindow:visited, a.newWindow:active, a.newWin
 }
 h2 {
   font-size: 17px;
-  color: #333333;  
+  color: #333333;
 }
 h3 {
   padding: 4px 4px 4px 24px;
@@ -133,6 +133,10 @@ table.bodyTable tr.b {
   background-color: #eee;
 }
 
+table.bodyTable tr.a:hover, table.bodyTable tr.b:hover {
+  background: #dfe3db;
+}
+
 .source {
   border: 1px solid #999;
   overflow:auto
@@ -192,7 +196,7 @@ table {
 #footer {
   padding: 10px;
   margin: 20px 0px 20px 0px;
-  border-top: solid #ccc 1px; 
+  border-top: solid #ccc 1px;
   color: #333333;
 }
 
