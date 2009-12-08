@@ -10,6 +10,7 @@ table {
   width: 100%;
   margin-left: -2px;
   margin-right: -2px;
+  table-layout: fixed;
 }
 acronym {
   cursor: help;
@@ -140,4 +141,12 @@ div.clear hr{
 .source pre {
   margin: 0px;
   padding: 0px;
+}
+#navcolumn img.imageLink, .imageLink{
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-right: 2px;
+  border: 0px;
+  margin: 0px;
 }
