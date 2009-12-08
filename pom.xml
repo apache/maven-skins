@@ -23,9 +23,9 @@ under the License.
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <artifactId>maven-parent</artifactId>
     <groupId>org.apache.maven</groupId>
-    <version>11</version>
+    <artifactId>maven-parent</artifactId>
+    <version>15</version>
     <relativePath>../pom/maven/pom.xml</relativePath>
   </parent>
 
