@@ -25,15 +25,20 @@ under the License.
   <parent>
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-skins</artifactId>
-    <version>5-SNAPSHOT</version>
+    <version>5</version>
   </parent>
 
   <artifactId>maven-stylus-skin</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2</version>
 
   <name>Maven Site Skin</name>
   <description>Maven Site Skin</description>
 
+  <scm>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/tags/maven-stylus-skin-1.2</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/tags/maven-stylus-skin-1.2</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/skins/tags/maven-stylus-skin-1.2</url>
+  </scm>
   <issueManagement>
     <system>jira</system>
     <url>http://jira.codehaus.org/browse/MSKINS/component/12534</url>
