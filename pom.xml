@@ -31,7 +31,7 @@ under the License.
 
   <groupId>org.apache.maven.skins</groupId>
   <artifactId>maven-skins</artifactId>
-  <version>5-SNAPSHOT</version>
+  <version>5</version>
   <packaging>pom</packaging>
 
   <name>Maven Skins</name>
@@ -46,9 +46,9 @@ under the License.
   </modules>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/skins/trunk/</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/tags/maven-skins-5</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/tags/maven-skins-5</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/skins/tags/maven-skins-5</url>
   </scm>
   <issueManagement>
     <system>jira</system>
