@@ -27,7 +27,15 @@
 #macro ( banner $banner $id )
   #if ( $banner )
     #if( $banner.href )
-      <a href="$banner.href" id="$id">
+      #set ( $hrf = $banner.href )
+      #if ( ! ( $hrf.toLowerCase().startsWith("http") || $hrf.toLowerCase().startsWith("https") ) )
+        #set ( $hrf = $PathTool.calculateLink( $hrf, $relativePath ) )
+        #set ( $hrf = $hrf.replaceAll( '\\', '/' ) )
+        #if ( ( $hrf == '' ) )
+          #set ( $hrf = './' )
+        #end
+      #end
+      <a href="$hrf" id="$id">
     #else
       <span id="$id">
     #end
