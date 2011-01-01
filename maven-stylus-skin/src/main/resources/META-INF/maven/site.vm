@@ -70,21 +70,17 @@
 #end
 ##
 #macro ( breadcrumbs $breadcrumbs )
-  #set ( $counter = 0 )
   #foreach( $item in $breadcrumbs )
-    #set ( $counter = $counter + 1 )
     #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
     #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+    #if ( ( $currentItemHref == '' ) )
+      #set ( $currentItemHref = './' )
+    #end
 ##
-    #if ( $currentItemHref == $alignedFileName || $currentItemHref == "" )
-      $item.name
-    #else
       #link( $currentItemHref $item.name )
-    #end
-    #if ( $breadcrumbs.size() > $counter )
       &gt;
-    #end
   #end
+  $title
 #end
 ##
 #macro ( displayTree $display $item )
