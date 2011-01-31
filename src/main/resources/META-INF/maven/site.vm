@@ -491,7 +491,10 @@
       <hr/>
     </div>
     <div id="footer">
-      <div class="xright">&#169;#copyright()#publishDate( "bottom" $decoration.publishDate $decoration.version ) - <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a></div>
+      <div class="xright">
+        &#169;#copyright()#publishDate( "bottom" $decoration.publishDate $decoration.version ) - <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.
+        Apache Maven, Apache, the Apache feather logo, and the Apache Maven project logos are trademarks of The Apache Software Foundation.
+      </div>
       <div class="clear">
         <hr/>
       </div>
