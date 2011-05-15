@@ -54,6 +54,10 @@ under the License.
     <system>jira</system>
     <url>http://jira.codehaus.org/browse/MSKINS</url>
   </issueManagement>
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>https://builds.apache.org/hudson/job/maven-skins/</url>
+  </ciManagement>
   <distributionManagement>
     <site>
       <id>apache.website</id>
