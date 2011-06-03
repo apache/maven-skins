@@ -398,7 +398,7 @@
             $img.toLowerCase().startsWith("ftp:/") || $img.toLowerCase().startsWith("mailto:/") ||
             $img.toLowerCase().startsWith("file:/") || ($img.toLowerCase().indexOf("://") != -1) ) )
         #set ( $img = $PathTool.calculateLink( $img, $relativePath ) )
-        #set ( $img = $src.replaceAll( '\\', '/' ) )
+        #set ( $img = $img.replaceAll( '\\', '/' ) )
       #end
 ##
       #if( $item.alt )
