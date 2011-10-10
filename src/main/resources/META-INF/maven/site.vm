@@ -497,48 +497,52 @@
     $headContent
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
   </head>
-  <body class="composite">
+  <body>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="$relativePath/index.html">$project.name &trade;</a>
+          <ul class="nav">
+            #links( $decoration.body.links )#publishDate( "right" $decoration.publishDate $decoration.version )
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div id="banner">
-      #banner( $decoration.bannerLeft "bannerLeft" )
-      #banner( $decoration.bannerRight "bannerRight" )
-      <div class="clear">
-        <hr/>
-      </div>
+      <ul class="media-grid">
+        <li>#banner( $decoration.bannerLeft "bannerLeft" )</li>
+        <li>#banner( $decoration.bannerRight "bannerRight" )</li>
+      </ul>
     </div>
+
     <div id="breadcrumbs">
-      #publishDate( "left" $decoration.publishDate $decoration.version )
-      <div class="xright">#links( $decoration.body.links )#publishDate( "right" $decoration.publishDate $decoration.version )</div>
-      <div class="clear">
-        <hr/>
+      <ul class="breadcrumb">
+        #publishDate( "left" $decoration.publishDate $decoration.version )
+      </ul>
+    </div>
+
+    <div class="container-fluid">
+      <div id="leftColumn" class="sidebar">
+        #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
+        #mainMenu( $decoration.body.menus )
+        #poweredByLogo( $decoration.poweredBy )
+        #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
+      </div>
+
+      <div id="bodyColumn" class="content">
+        <div id="contentBox">
+          $bodyContent
+        </div>
       </div>
     </div>
-    <div id="leftColumn">
-      <div id="navcolumn">
-       #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
-       #mainMenu( $decoration.body.menus )
-       #poweredByLogo( $decoration.poweredBy )
-       #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
-      </div>
-    </div>
-    <div id="bodyColumn">
-      <div id="contentBox">
-        $bodyContent
-      </div>
-    </div>
-    <div class="clear">
-      <hr/>
-    </div>
-    <div id="footer">
-      <div class="xright">
+
+    <footer>
       #if($decoration.body.footer)
         $decoration.body.footer
       #else
-        Copyright &#169;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )
+        Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )
       #end
-      </div>
-      <div class="clear">
-        <hr/>
-      </div>
-    </div>
+    </footer>
   </body>
 </html>
