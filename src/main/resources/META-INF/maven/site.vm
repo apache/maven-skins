@@ -467,6 +467,11 @@
     <link rel="stylesheet" href="$relativePath/css/maven-base.css">
     <link rel="stylesheet" href="$relativePath/css/prettify.css" type="text/css" media="all" />
     <script type="text/javascript" src="$relativePath/js/prettify.js"></script>
+    <script type="text/javascript">
+        window.onload=function() {
+            prettyPrint();
+        }
+    </script>
 #foreach( $author in $authors )
       <meta name="author" content="$author" />
 #end
