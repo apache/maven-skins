@@ -464,6 +464,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=${outputEncoding}" />
     <title>$title</title>
     <link rel="stylesheet" href="$relativePath/css/bootstrap-1.3.0.min.css">
+    <link rel="stylesheet" href="$relativePath/css/maven-base.css">
     <link rel="stylesheet" href="$relativePath/css/prettify.css" type="text/css" media="all" />
     <script type="text/javascript" src="$relativePath/js/prettify.js"></script>
 #foreach( $author in $authors )
