@@ -109,10 +109,7 @@
     #set ( $counter = $counter + 1 )
     #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
     #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
-    #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
-    #if ( $links.size() > $counter )
-      |
-    #end
+    <li>#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )</li>
   #end
 #end
 ##
