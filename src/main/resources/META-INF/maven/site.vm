@@ -522,10 +522,12 @@
 
     <div class="container-fluid">
       <div id="leftColumn" class="sidebar">
-        #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
-        #mainMenu( $decoration.body.menus )
-        #poweredByLogo( $decoration.poweredBy )
-        #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
+        <div class="well">
+          #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
+          #mainMenu( $decoration.body.menus )
+          #poweredByLogo( $decoration.poweredBy )
+          #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
+        </div>
       </div>
 
       <div id="bodyColumn" class="content">
