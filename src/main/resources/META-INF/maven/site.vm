@@ -513,15 +513,21 @@
     </div>
 
     <div id="banner">
-      <ul class="media-grid">
-        <li>#banner( $decoration.bannerLeft "bannerLeft" )</li>
-        <li>#banner( $decoration.bannerRight "bannerRight" )</li>
-      </ul>
+      <div class="media-grid">
+        <div class=xleft">
+        #banner( $decoration.bannerLeft "bannerLeft" )
+        </div>
+        <div class="xright">
+        #banner( $decoration.bannerRight "bannerRight" )
+        </div>
+      </div>
     </div>
 
     <div id="breadcrumbs">
       <ul class="breadcrumb">
+        <li>
         #publishDate( "left" $decoration.publishDate $decoration.version )
+        </li>
       </ul>
     </div>
 

@@ -20,3 +20,15 @@
 /* $Id$ */
 
 body{padding-top: 60px;}
+.xleft, #bannerLeft img {
+    float: left;
+}
+
+.xright, #bannerRight img {
+    float: right;
+}
+
+#breadcrumbs {
+  font-size: x-small;
+  margin: 0pt;
+}
