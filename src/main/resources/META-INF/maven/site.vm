@@ -319,15 +319,11 @@
   #set ( $breadcrumbs = $decoration.body.breadcrumbs )
   #set ( $links = $decoration.body.links )
 
-  #if ( $datePosition.equalsIgnoreCase( "right" ) && $links && $links.size() > 0 )
-    #set ( $prefix = "&nbsp;<span class="divider pull-right">/</span>" )
-  #else
-    #set ( $prefix = "" )
-  #end
+
 ##
   #if ( $datePosition.equalsIgnoreCase( $position ) )
     #if ( ( $datePosition.equalsIgnoreCase( "right" ) ) || ( $datePosition.equalsIgnoreCase( "bottom" ) ) )
-        $prefix <li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li>
+        &nbsp;<li class="divider pull-right">/</li><li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li>
       #if ( $versionPosition.equalsIgnoreCase( $position ) )
         &nbsp;<li class="divider pull-right">|</li> <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
       #end
@@ -349,9 +345,9 @@
     #end
   #elseif ( $versionPosition.equalsIgnoreCase( $position ) )
     #if ( $versionPosition.equalsIgnoreCase( "right" ) )
-      $prefix <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+      &nbsp;<li class="divider pull-right">/</li> <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
     #elseif ( $versionPosition.equalsIgnoreCase( "bottom" ) )
-        $prefix <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
+      <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
     #elseif ( ( $versionPosition.equalsIgnoreCase( "navigation-bottom" ) ) || ( $versionPosition.equalsIgnoreCase( "navigation-top" ) ) )
       <div id="lastPublished">
         <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
