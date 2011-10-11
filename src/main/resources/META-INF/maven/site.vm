@@ -468,14 +468,36 @@
     <meta http-equiv="Content-Type" content="text/html; charset=${outputEncoding}" />
     <title>$title</title>
     <link rel="stylesheet" href="$relativePath/css/bootstrap-1.3.0.min.css">
-    <link rel="stylesheet" href="$relativePath/css/maven-base.css">
     <link rel="stylesheet" href="$relativePath/css/boostrap-override.css"
-    <link rel="stylesheet" href="$relativePath/css/prettify.css" type="text/css" media="all" />
-    <script type="text/javascript" src="$relativePath/js/prettify.js"></script>
+    <link rel="stylesheet" href="$relativePath/css/maven-base.css">
+    <script type="text/javascript" src="$relativePath/js/jquery-1.6.4.min.js"></script>
     <script type="text/javascript">
-        window.onload=function() {
-            prettyPrint();
-        }
+        jQuery( document ).ready( function()
+            {
+                // add prettyprint class to all <div class="source"><pre></pre><div> blocks
+                var prettify = false;
+
+                jQuery( 'div.source > pre' ).each( function()
+                {
+                    jQuery( this ).addClass( 'prettyprint' );
+                    prettify = true;
+                } );
+
+                // if code blocks were found, bring in the prettifier ...
+                if ( prettify )
+                {
+                    var link = jQuery( '<link>' );
+                    link.attr(
+                    {
+                        type: 'text/css',
+                        rel: 'stylesheet',
+                        href: '$relativePath/css/prettify.css'
+                    } );
+                    jQuery( 'head' ).append( link );
+                    jQuery.getScript( '$relativePath/js/prettify.js', function() { prettyPrint(); } );
+                }
+
+            } );
     </script>
 #foreach( $author in $authors )
       <meta name="author" content="$author" />
