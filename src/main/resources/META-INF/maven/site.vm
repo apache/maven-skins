@@ -469,7 +469,7 @@
 
                 jQuery( 'div.source > pre' ).each( function()
                 {
-                    jQuery( this ).addClass( 'prettyprint linenums' );
+                    jQuery( this ).addClass( 'prettyprint' );
                     prettify = true;
                 } );
 
