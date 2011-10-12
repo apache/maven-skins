@@ -464,6 +464,13 @@
     <script type="text/javascript">
         jQuery( document ).ready( function()
             {
+                // improve table layout
+                jQuery( 'table.bodyTable' ).each( function()
+                {
+                    jQuery( this ).removeClass( 'bodyTable' );
+                    jQuery( this ).addClass( 'zebra-striped' );
+                } );
+
                 // add prettyprint class to all <div class="source"><pre></pre><div> blocks
                 var prettify = false;
 
