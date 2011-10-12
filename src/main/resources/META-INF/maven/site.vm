@@ -529,11 +529,14 @@
       </div>
     </div>
 
-    <div id="banner">
-      <ul class="media-grid">
-       <li class="xleftbanner">#banner( $decoration.bannerLeft "bannerLeft" )</li>
-       <li class="xrightbanner">#banner( $decoration.bannerRight "bannerRight" )</li>
-      </ul>
+    <div id="banner" class="row">
+      <div class="span12">#banner( $decoration.bannerLeft "bannerLeft" )</div>
+      <div class="span4">#banner( $decoration.bannerRight "bannerRight" )</div>
+    </div>
+
+    <!-- just a separator -->
+    <div class="row">
+      <div class="span16">&nbsp;</div>
     </div>
 
     <div id="breadcrumbs">
