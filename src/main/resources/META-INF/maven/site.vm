@@ -471,7 +471,7 @@
                     jQuery( this ).addClass( 'zebra-striped' );
                 } );
 
-                // add prettyprint class to all <div class="source"><pre></pre><div> blocks
+                // add prettyprint class to all 'pre' element child of 'div' whit class="source"
                 var prettify = false;
 
                 jQuery( 'div.source > pre' ).each( function()
@@ -483,7 +483,7 @@
                 // if code blocks were found, bring in the prettifier ...
                 if ( prettify )
                 {
-                    var link = jQuery( '<link>' );
+                    var link = jQuery( document.createElement( 'link' ) );
                     link.attr(
                     {
                         type: 'text/css',
