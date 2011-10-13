@@ -323,7 +323,7 @@
 ##
   #if ( $datePosition.equalsIgnoreCase( $position ) )
     #if ( ( $datePosition.equalsIgnoreCase( "right" ) ) || ( $datePosition.equalsIgnoreCase( "bottom" ) ) )
-        <li class="divider pull-right">/</li><li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li>
+        <li class="divider pull-right">|</li><li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li>
       #if ( $versionPosition.equalsIgnoreCase( $position ) )
         <li class="divider pull-right">|</li> <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
       #end
@@ -335,17 +335,17 @@
         #end
       </div>
     #elseif ( $datePosition.equalsIgnoreCase("left") )
-        <li id="publishDate" class="pull-left">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li>
+        <li id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li>
         #if ( $versionPosition.equalsIgnoreCase( $position ) )
-          <li class="divider pull-left">|</li> <li id="projectVersion" class="pull-left">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+          <li class="divider">|</li> <li id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
         #end
         #if ( $breadcrumbs && $breadcrumbs.size() > 0 )
-          <li class="divider">|</li> #breadcrumbs( $breadcrumbs "pull-left" )
+          <li class="divider">|</li> #breadcrumbs( $breadcrumbs "" )
         #end
     #end
   #elseif ( $versionPosition.equalsIgnoreCase( $position ) )
     #if ( $versionPosition.equalsIgnoreCase( "right" ) )
-      <li class="divider pull-right">/</li> <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+      <li class="divider pull-right">|</li> <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
     #elseif ( $versionPosition.equalsIgnoreCase( "bottom" ) )
       <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
     #elseif ( ( $versionPosition.equalsIgnoreCase( "navigation-bottom" ) ) || ( $versionPosition.equalsIgnoreCase( "navigation-top" ) ) )
@@ -353,14 +353,14 @@
         <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
       </div>
     #elseif ( $versionPosition.equalsIgnoreCase("left") )
-        <li id="projectVersion" class="pull-left">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+        <li id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
         #if ( $breadcrumbs && $breadcrumbs.size() > 0 )
-          | #breadcrumbs( $breadcrumbs "pull-left")
+          | #breadcrumbs( $breadcrumbs "")
         #end
     #end
   #elseif ( $position.equalsIgnoreCase( "left" ) )
     #if ( $breadcrumbs && $breadcrumbs.size() > 0 )
-        #breadcrumbs( $breadcrumbs "pull-left" )
+        #breadcrumbs( $breadcrumbs "" )
     #end
   #end
 #end
