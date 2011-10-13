@@ -1,0 +1,115 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+/* $Id$ */
+
+div.clear{
+	clear:both;
+	visibility: hidden;
+}
+div.clear hr{
+	display: none;
+}
+
+/* Tweaks to the bootstrap theme
+--------------------------------- */
+body {
+	font-family: Verdana,Helvetica,Arial,sans-serif;
+}
+table th, table td { 
+	padding: 6px; 
+}
+table th { 
+	background-color: #F5F5F5; 
+}
+h2 { 
+	margin-bottom: 5px; 
+}
+li { 
+	color: inherit; 
+	line-height: 20px; 
+}
+tt {
+	font-family: Monaco, Andale Mono, Courier New, monospace;
+	font-size: 12px;
+	background-color: #F5F5F5;
+	padding: 2px;
+	border: 1px solid #ddd;
+}
+.section {
+	padding: 4px;
+	margin-top: 15px;
+}
+.breadcrumb {
+	font-size: 12px;
+	padding: 6px 14px;
+}
+a.externalLink {
+	background: url(../images/external.png) right center no-repeat;
+	padding-right: 18px;
+}
+a.newWindow {
+	background: url(../images/newwindow.png) right center no-repeat;
+	padding-right: 18px;
+}
+
+/* Sidebar menu 
+----------------- */
+
+.well {
+	padding: 10px;
+}
+.sidebar {
+	font-size: 11px;
+}
+.sidebar h5 {
+	font-size: 12px;
+	line-height: 24px;
+	border-bottom: 1px solid grey;
+}
+.sidebar ul {
+	margin: 0;
+}
+.sidebar li {
+	list-style-type: none;
+	line-height: 14px;
+	background-position: 0 0.4em;
+    background-repeat: no-repeat;
+    padding-left: 16px;
+}
+.sidebar li.expanded {
+	background-image: url(../images/expanded.gif);
+}
+.sidebar li.collapsed {
+	background-image: url(../images/collapsed.gif);
+}
+
+/* Footer 
+------------ */
+
+.footer {
+	background-color: #F5F5F5;
+	padding: 15px;
+    margin-top: 15px;
+	text-align: right;
+	border-top: 1px solid #EEEEEE;
+}
+.footer p {
+	font-size: 11px;
+}

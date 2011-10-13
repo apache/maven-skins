@@ -90,7 +90,7 @@
         #else
             #set ( $alt = $banner.name )
         #end
-        <img src="$src" alt="$alt" id="$id"/>
+        <img src="$src" alt="$alt" />
     #else
         $banner.name
     #end
@@ -109,11 +109,14 @@
     #set ( $counter = $counter + 1 )
     #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
     #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
-    <li>#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )</li>
+    #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
+    #if ( $links.size() > $counter )
+      |
+    #end
   #end
 #end
 ##
-#macro ( breadcrumbs $breadcrumbs $cssClass )
+#macro ( breadcrumbs $breadcrumbs )
   #foreach( $item in $breadcrumbs )
     #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
     #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
@@ -121,12 +124,10 @@
       #set ( $currentItemHref = './' )
     #end
 ##
-      <li class="$cssClass">
       #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
-      <li class="divider $cssClass">&gt;</li>
-      </li>
+      &gt;
   #end
-  <li class="$cssClass">$title</li>
+  $title
 #end
 ##
 #macro ( displayTree $display $item )
@@ -319,48 +320,56 @@
   #set ( $breadcrumbs = $decoration.body.breadcrumbs )
   #set ( $links = $decoration.body.links )
 
-
+  #if ( $datePosition.equalsIgnoreCase( "right" ) && $links && $links.size() > 0 )
+    #set ( $prefix = "&nbsp;|" )
+  #else
+    #set ( $prefix = "" )
+  #end
 ##
   #if ( $datePosition.equalsIgnoreCase( $position ) )
     #if ( ( $datePosition.equalsIgnoreCase( "right" ) ) || ( $datePosition.equalsIgnoreCase( "bottom" ) ) )
-        <li class="divider pull-right">/</li><li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li>
+      $prefix <span id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</span>
       #if ( $versionPosition.equalsIgnoreCase( $position ) )
-        <li class="divider pull-right">|</li> <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+        &nbsp;| <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
       #end
     #elseif ( ( $datePosition.equalsIgnoreCase( "navigation-bottom" ) ) || ( $datePosition.equalsIgnoreCase( "navigation-top" ) ) )
       <div id="lastPublished">
         <span id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</span>
         #if ( $versionPosition.equalsIgnoreCase( $position ) )
-          <span class="divider foo">|</span> <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
+          &nbsp;| <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
         #end
       </div>
     #elseif ( $datePosition.equalsIgnoreCase("left") )
-        <li id="publishDate" class="pull-left">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li>
+      <div class="xleft">
+        <span id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</span>
         #if ( $versionPosition.equalsIgnoreCase( $position ) )
-          <li class="divider pull-left">|</li> <li id="projectVersion" class="pull-left">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+          &nbsp;| <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
         #end
         #if ( $breadcrumbs && $breadcrumbs.size() > 0 )
-          <li class="divider">|</li> #breadcrumbs( $breadcrumbs "pull-left" )
+          | #breadcrumbs( $breadcrumbs )
         #end
+      </div>
     #end
   #elseif ( $versionPosition.equalsIgnoreCase( $position ) )
-    #if ( $versionPosition.equalsIgnoreCase( "right" ) )
-      <li class="divider pull-right">/</li> <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
-    #elseif ( $versionPosition.equalsIgnoreCase( "bottom" ) )
-      <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
+    #if ( ( $versionPosition.equalsIgnoreCase( "right" ) ) || ( $versionPosition.equalsIgnoreCase( "bottom" ) ) )
+      $prefix <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
     #elseif ( ( $versionPosition.equalsIgnoreCase( "navigation-bottom" ) ) || ( $versionPosition.equalsIgnoreCase( "navigation-top" ) ) )
       <div id="lastPublished">
         <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
       </div>
     #elseif ( $versionPosition.equalsIgnoreCase("left") )
-        <li id="projectVersion" class="pull-left">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+      <div class="xleft">
+        <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
         #if ( $breadcrumbs && $breadcrumbs.size() > 0 )
-          | #breadcrumbs( $breadcrumbs "pull-left")
+          | #breadcrumbs( $breadcrumbs )
         #end
+      </div>
     #end
   #elseif ( $position.equalsIgnoreCase( "left" ) )
     #if ( $breadcrumbs && $breadcrumbs.size() > 0 )
-        #breadcrumbs( $breadcrumbs "pull-left" )
+      <div class="xleft">
+        #breadcrumbs( $breadcrumbs )
+      </div>
     #end
   #end
 #end
@@ -457,45 +466,12 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=${outputEncoding}" />
     <title>$title</title>
-    <link rel="stylesheet" href="$relativePath/css/bootstrap-1.3.0.min.css" />
-    <link rel="stylesheet" href="$relativePath/css/maven-base.css" />
-    <link rel="stylesheet" href="$relativePath/css/maven-theme.css" />
-    <script type="text/javascript" src="$relativePath/js/jquery-1.6.4.min.js"></script>
-    <script type="text/javascript">
-        jQuery( document ).ready( function()
-            {
-                // improve table layout
-                jQuery( 'table.bodyTable' ).each( function()
-                {
-                    jQuery( this ).removeClass( 'bodyTable' );
-                    jQuery( this ).addClass( 'zebra-striped' );
-                } );
-
-                // add prettyprint class to all 'pre' element child of 'div' whit class="source"
-                var prettify = false;
-
-                jQuery( 'div.source > pre' ).each( function()
-                {
-                    jQuery( this ).addClass( 'prettyprint' );
-                    prettify = true;
-                } );
-
-                // if code blocks were found, bring in the prettifier ...
-                if ( prettify )
-                {
-                    var link = jQuery( document.createElement( 'link' ) );
-                    link.attr(
-                    {
-                        type: 'text/css',
-                        rel: 'stylesheet',
-                        href: '$relativePath/css/prettify.css'
-                    } );
-                    jQuery( 'head' ).append( link );
-                    jQuery.getScript( '$relativePath/js/prettify.js', function() { prettyPrint(); } );
-                }
-
-            } );
-    </script>
+    <style type="text/css" media="all">
+      @import url("$relativePath/css/maven-base.css");
+      @import url("$relativePath/css/maven-theme.css");
+      @import url("$relativePath/css/site.css");
+    </style>
+    <link rel="stylesheet" href="$relativePath/css/print.css" type="text/css" media="print" />
 #foreach( $author in $authors )
       <meta name="author" content="$author" />
 #end
@@ -524,54 +500,48 @@
     $headContent
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
   </head>
-  <body>
-    <div class="topbar">
-      <div class="topbar-inner">
-        <div class="container-fluid">
-          <a class="brand" href="$relativePath/index.html">$project.name</a>
-          <ul class="nav">
-            #links( $decoration.body.links )
-          </ul>
-        </div>
+  <body class="composite">
+    <div id="banner">
+      #banner( $decoration.bannerLeft "bannerLeft" )
+      #banner( $decoration.bannerRight "bannerRight" )
+      <div class="clear">
+        <hr/>
       </div>
     </div>
-
-    <div class="container-fluid">
-      <div id="banner">
-        <div class="pull-left">#banner( $decoration.bannerLeft "bannerLeft" )</div>
-        <div class="pull-right">#banner( $decoration.bannerRight "bannerRight" )</div>
-        <div class="clear"><hr/></div>
-      </div>
-  
-      <div id="breadcrumbs">
-        <ul class="breadcrumb">
-          #publishDate( "left" $decoration.publishDate $decoration.version )
-          #publishDate( "right" $decoration.publishDate $decoration.version )
-        </ul>
-      </div>
-
-      <div id="leftColumn" class="sidebar">
-        <div class="well">
-          #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
-          #mainMenu( $decoration.body.menus )
-          #poweredByLogo( $decoration.poweredBy )
-          #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
-        </div>
-      </div>
-
-      <div id="bodyColumn" class="content">
-        <div id="contentBox">
-          $bodyContent
-        </div>
+    <div id="breadcrumbs">
+      #publishDate( "left" $decoration.publishDate $decoration.version )
+      <div class="xright">#links( $decoration.body.links )#publishDate( "right" $decoration.publishDate $decoration.version )</div>
+      <div class="clear">
+        <hr/>
       </div>
     </div>
-
-    <footer class="footer">
+    <div id="leftColumn">
+      <div id="navcolumn">
+       #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
+       #mainMenu( $decoration.body.menus )
+       #poweredByLogo( $decoration.poweredBy )
+       #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
+      </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        $bodyContent
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">
       #if($decoration.body.footer)
         $decoration.body.footer
       #else
-        Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )
+        Copyright &#169;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )
       #end
-    </footer>
+      </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
   </body>
 </html>
