@@ -20,11 +20,11 @@
 /* $Id$ */
 
 .clear{
-	clear:both;
-	visibility: hidden;
+    clear:both;
+    visibility: hidden;
 }
 .clear hr{
-	display: none;
+    display: none;
 }
 
 /* Tweaks to the bootstrap theme
@@ -37,11 +37,10 @@ tt {
     padding: 1px 3px;
 }
 a.externalLink {
-	background: url(../images/external.png) right center no-repeat;
-	padding-right: 18px;
+    background: url(../images/external.png) right center no-repeat;
+    padding-right: 18px;
 }
 a.newWindow {
-	background: url(../images/newwindow.png) right center no-repeat;
-	padding-right: 18px;
+    background: url(../images/newwindow.png) right center no-repeat;
+    padding-right: 18px;
 }
-
