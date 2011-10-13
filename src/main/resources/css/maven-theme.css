@@ -19,46 +19,22 @@
 
 /* $Id$ */
 
-div.clear{
+.clear{
 	clear:both;
 	visibility: hidden;
 }
-div.clear hr{
+.clear hr{
 	display: none;
 }
 
 /* Tweaks to the bootstrap theme
 --------------------------------- */
-body {
-	font-family: Verdana,Helvetica,Arial,sans-serif;
-}
-table th, table td { 
-	padding: 6px; 
-}
-table th { 
-	background-color: #F5F5F5; 
-}
-h2 { 
-	margin-bottom: 5px; 
-}
-li { 
-	color: inherit; 
-	line-height: 20px; 
-}
+
+/* Copied from bootstrap <code> tag style. Maven translates <code> to <tt>. */
 tt {
-	font-family: Monaco, Andale Mono, Courier New, monospace;
-	font-size: 12px;
-	background-color: #F5F5F5;
-	padding: 2px;
-	border: 1px solid #ddd;
-}
-.section {
-	padding: 4px;
-	margin-top: 15px;
-}
-.breadcrumb {
-	font-size: 12px;
-	padding: 6px 14px;
+    background-color: #FEE9CC;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
 }
 a.externalLink {
 	background: url(../images/external.png) right center no-repeat;
@@ -69,47 +45,3 @@ a.newWindow {
 	padding-right: 18px;
 }
 
-/* Sidebar menu 
------------------ */
-
-.well {
-	padding: 10px;
-}
-.sidebar {
-	font-size: 11px;
-}
-.sidebar h5 {
-	font-size: 12px;
-	line-height: 24px;
-	border-bottom: 1px solid grey;
-}
-.sidebar ul {
-	margin: 0;
-}
-.sidebar li {
-	list-style-type: none;
-	line-height: 14px;
-	background-position: 0 0.4em;
-    background-repeat: no-repeat;
-    padding-left: 16px;
-}
-.sidebar li.expanded {
-	background-image: url(../images/expanded.gif);
-}
-.sidebar li.collapsed {
-	background-image: url(../images/collapsed.gif);
-}
-
-/* Footer 
------------- */
-
-.footer {
-	background-color: #F5F5F5;
-	padding: 15px;
-    margin-top: 15px;
-	text-align: right;
-	border-top: 1px solid #EEEEEE;
-}
-.footer p {
-	font-size: 11px;
-}
