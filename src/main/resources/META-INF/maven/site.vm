@@ -554,8 +554,10 @@
         <div class="well">
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
           #mainMenu( $decoration.body.menus )
-          #poweredByLogo( $decoration.poweredBy )
           #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
+        </div>
+        <div id="poweredBy">
+          #poweredByLogo( $decoration.poweredBy )
         </div>
       </div>
 
