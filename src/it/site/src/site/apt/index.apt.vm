@@ -1,9 +1,32 @@
-                                    ------
-                                    Title
-                                    ------
-                                    Author
-                                    ------
-                                     Date
+ ------
+ Title
+ ------
+ Author
+ ------
+ Date
+
+${skinName} test
+
+ This is a test for ${skinName}.
+
+* Usage
+
+ To use this skin in your project, use the skin element of
+ {{{/doxia/doxia-sitetools/doxia-decoration-model/decoration.html}the <<<site.xml>>> site descriptor}}:
+
++-----+
+<project name="xxx">
+  ...
+  <skin>
+    <groupId>${skinGroupId}</groupId>
+    <artifactId>${skinArtifactId}</artifactId>
+    <version>${skinVersion}</version>
+  </skin>
+  ...
+</project>
++-----+
+
+Sample result of every content
 
   Paragraph 1, line 1.
   Paragraph 1, line 2.
@@ -59,7 +82,10 @@ Verbatim text
                         in a box        
 +-------------------------------+
 
-  --- instead of +-- suppresses the box around verbatim text.
+---------------------------------
+Verbatim text
+                     without box        
+---------------------------------
 
 [figure] Figure caption
 

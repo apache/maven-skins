@@ -26,9 +26,9 @@
   name="APT">
 
   <skin>
-    <groupId>org.apache.maven.skins</groupId>
-    <artifactId>maven-fluido-skin</artifactId>
-    <version>${fluidoVersion}</version>
+    <groupId>${skinGroupId}</groupId>
+    <artifactId>${skinArtifactId}</artifactId>
+    <version>${skinVersion}</version>
   </skin>
 
   <publishDate format="yyyy-MM-dd" position="right" />
@@ -37,7 +37,7 @@
   <body>
     <breadcrumbs>
       <item name="skins" href="/skins/"/>
-      <item name="fluido" href="/skins/fluido/"/>
+      <item name="fluido" href="/skins/${skinArtifact}/"/>
     </breadcrumbs>
 
     <menu name="Overview">
