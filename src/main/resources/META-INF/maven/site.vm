@@ -551,7 +551,7 @@
         <div class="clear"><hr/></div>
       </div>
       #end
-      
+
       <div id="breadcrumbs">
         <ul class="breadcrumb">
           #publishDate( "left" $decoration.publishDate $decoration.version )
