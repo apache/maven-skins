@@ -544,12 +544,14 @@
     </div>
 
     <div class="container-fluid">
+      #if ( ($decoration.bannerLeft.name != $project.name || $decoration.bannerLeft.src || $decoration.bannerLeft.href ) || $decoration.bannerRight )
       <div id="banner">
         <div class="pull-left">#banner( $decoration.bannerLeft "bannerLeft" )</div>
         <div class="pull-right">#banner( $decoration.bannerRight "bannerRight" )</div>
         <div class="clear"><hr/></div>
       </div>
-  
+      #end
+      
       <div id="breadcrumbs">
         <ul class="breadcrumb">
           #publishDate( "left" $decoration.publishDate $decoration.version )
