@@ -44,14 +44,6 @@
     <maven.test.skip>true</maven.test.skip>
   </properties>
 
-  <build>
-    <resources>
-      <resource>
-        <directory>${basedir}/src/main/resources</directory>
-      </resource>
-    </resources>
-  </build>
-
   <profiles>
     <profile>
       <id>run-its</id>
