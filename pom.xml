@@ -83,6 +83,31 @@
     </profile>
     <profile>
       <id>reporting</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>copy-sample</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <resources>
+                    <resource>
+                      <directory>${project.build.directory}/it/site/target/site/</directory>
+                    </resource>
+                  </resources>
+                  <outputDirectory>${project.build.directory}/site/sample/</outputDirectory>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
       <reporting>
         <plugins>
           <plugin>

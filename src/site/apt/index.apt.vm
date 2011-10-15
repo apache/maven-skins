@@ -30,6 +30,8 @@ ${project.name}
 
  ${project.description}
 
+ A {{{./sample/}sample site}} is provided to see the skin in action.
+
 * Usage
 
  To use this skin in your project, use the skin element of
