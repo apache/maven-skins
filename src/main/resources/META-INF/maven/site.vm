@@ -630,15 +630,19 @@
     </div>
 
     <footer class="footer">
-      Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )<br />
-      ## turnaround for 
-      #if ( $decoration.custom.getChild("footer") )
-        #foreach( $item in $decoration.custom.getChild("footer").getChildren() )
-          #set ( $foot = $item.toString().trim() )
-          #removeheader ( $foot )
-          $StringUtils.replace( $foot, '@project.name@', ${project.name} )
-        #end
-      #end
+      <div class="container">
+        <p>Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )<p>
+        <p>
+          ## turnaround for 
+          #if ( $decoration.custom.getChild("footer") )
+            #foreach( $item in $decoration.custom.getChild("footer").getChildren() )
+              #set ( $foot = $item.toString().trim() )
+              #removeheader ( $foot )
+              $StringUtils.replace( $foot, '@project.name@', ${project.name} )
+            #end
+          #end
+        </p>
+      </div>
     </footer>
   </body>
 </html>
