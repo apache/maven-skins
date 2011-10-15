@@ -20,15 +20,6 @@ under the License.
 -->
 
 <settings>
-  <servers>
-    <server>
-      <id>MSITE-609</id>
-      <username>exampleuser</username>
-      <filePermissions>644</filePermissions>
-      <directoryPermissions>755</directoryPermissions>
-      <configuration/>
-    </server>
-  </servers>
   <profiles>
     <profile>
       <id>it-repo</id>

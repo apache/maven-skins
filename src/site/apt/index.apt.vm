@@ -28,7 +28,7 @@
 
 ${project.name}
 
- The ${project.name} is a skin for {{{/plugins/maven-site-plugin/examples/sitedescriptor.html#Skinning}maven-site-plugin}}.
+ ${project.description}
 
 * Usage
 
@@ -36,7 +36,7 @@ ${project.name}
  {{{/doxia/doxia-sitetools/doxia-decoration-model/decoration.html}the <<<site.xml>>> site descriptor}}:
 
 +-----+
-<project>
+<project name="xxx">
   ...
   <skin>
     <groupId>${project.groupId}</groupId>

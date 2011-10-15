@@ -1,9 +1,10 @@
  ------
- Title
+ ${skinName} test
  ------
- Author
+ Hervé Boutemy
  ------
- Date
+ 2011-10-15
+ ------
 
 ${skinName} test
 
@@ -26,7 +27,7 @@ ${skinName} test
 </project>
 +-----+
 
-Sample result of every content
+Sample content
 
   Paragraph 1, line 1.
   Paragraph 1, line 2.
@@ -114,9 +115,6 @@ Table caption
   Horizontal line:
 
 =======================================================================
-
-
-  New page.
 
   <Italic> font. <<Bold>> font. <<<Monospaced>>> font.
 
