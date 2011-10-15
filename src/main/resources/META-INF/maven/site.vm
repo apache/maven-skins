@@ -630,7 +630,7 @@
 
     <footer class="footer">
       <div class="container-fluid">
-        <p>Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )<p>
+        <p>Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
           ## turnaround for 
           #if ( $decoration.custom.getChild("footer") )
           #foreach( $item in $decoration.custom.getChild("footer").getChildren() )
