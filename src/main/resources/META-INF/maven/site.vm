@@ -581,15 +581,16 @@
             <li><h4><a href="$relativePath/index.html">$project.name</a></h4></li>
             #topMenu( $decoration.body.menus )
           </ul>
-
-          <ul class="nav secondary-nav">
-            <li class="menu">
-              <a href="#" class="menu">External Links</a>
-              <ul class="menu-dropdown">
-                #topLinks( $decoration.body.links )
-              </ul>
-            </li>
-          </ul>
+          #if( $decoration.body.links.size() > 0 )
+            <ul class="nav secondary-nav">
+              <li class="menu">
+                <a href="#" class="menu">External Links</a>
+                <ul class="menu-dropdown">
+                  #topLinks( $decoration.body.links )
+                </ul>
+              </li>
+            </ul>
+          #end
         </div>
       </div>
     </div>
