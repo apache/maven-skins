@@ -631,16 +631,14 @@
     <footer class="footer">
       <div class="container-fluid">
         <p>Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )<p>
-        <p>
           ## turnaround for 
           #if ( $decoration.custom.getChild("footer") )
-            #foreach( $item in $decoration.custom.getChild("footer").getChildren() )
-              #set ( $foot = $item.toString().trim() )
-              #removeheader ( $foot )
-              $StringUtils.replace( $foot, '@project.name@', ${project.name} )
-            #end
+          #foreach( $item in $decoration.custom.getChild("footer").getChildren() )
+            #set ( $foot = $item.toString().trim() )
+            #removeheader ( $foot )
+            <p>$StringUtils.replace( $foot, '@project.name@', ${project.name} )</p>
           #end
-        </p>
+        #end
       </div>
     </footer>
   </body>
