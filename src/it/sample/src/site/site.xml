@@ -37,7 +37,7 @@
   <body>
     <breadcrumbs>
       <item name="skins" href="/skins/"/>
-      <item name="fluido" href="/skins/${skinArtifactId}/"/>
+      <item name="${skinArtifactId}" href="/skins/${skinArtifactId}/"/>
     </breadcrumbs>
 
     <menu name="Overview">
