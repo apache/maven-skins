@@ -25,6 +25,12 @@
   xsi:schemaLocation="http://maven.apache.org/DECORATION/1.1.0 http://maven.apache.org/xsd/decoration-1.1.0.xsd"
   name="${skinName}">
 
+  <bannerLeft>
+    <name>${project.name}</name>
+    <src>http://maven.apache.org/images/apache-maven-project-blue.png</src>
+    <href>http://maven.apache.org/</href>
+  </bannerLeft>
+
   <skin>
     <groupId>${skinGroupId}</groupId>
     <artifactId>${skinArtifactId}</artifactId>
