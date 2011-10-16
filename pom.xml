@@ -98,7 +98,7 @@
                 <configuration>
                   <resources>
                     <resource>
-                      <directory>${project.build.directory}/it/site/target/site/</directory>
+                      <directory>${project.build.directory}/it/sample/target/site/</directory>
                     </resource>
                   </resources>
                   <outputDirectory>${project.build.directory}/site/sample/</outputDirectory>
