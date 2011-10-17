@@ -584,7 +584,6 @@
       <div class="topbar-inner">
         <div class="container-fluid">
           <ul>
-            <li><h4><a href="$relativePath/index.html">$project.name</a></h4></li>
             #topMenu( $decoration.body.menus )
           </ul>
           #if( $decoration.body.links.size() > 0 )
