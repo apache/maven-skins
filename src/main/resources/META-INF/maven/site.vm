@@ -8,7 +8,6 @@
 #end
 
 #macro ( topMenu $menus )
-  <!-- $menus -->
   #foreach( $menu in $menus )
     #if ( $menu.name )
       <li class="dropdown" data-dropdown="dropdown" >
@@ -505,6 +504,26 @@
     <link rel="stylesheet" href="$relativePath/css/bootstrap-1.3.0.min.css" />
     <link rel="stylesheet" href="$relativePath/css/maven-base.css" />
     <link rel="stylesheet" href="$relativePath/css/maven-theme.css" />
+
+    #if ( $decoration.body.head )
+      #foreach( $item in $decoration.body.head.getChildren() )
+        ## Workaround for DOXIA-150 due to a non-desired behaviour in p-u
+        ## @see org.codehaus.plexus.util.xml.Xpp3Dom#toString()
+        ## @see org.codehaus.plexus.util.xml.Xpp3Dom#toUnescapedString()
+
+        #set ( $head = $item.toString().trim() )
+        #set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
+
+        #if ( $item.name == "script" )
+          #set ( $head = $StringUtils.replace( $item.toUnescapedString(), $documentHeader, "" ) )
+        #else
+          #set ( $head = $StringUtils.replace( $item.toString(), $documentHeader, "" ) )
+        #end
+
+        $StringUtils.replace( $head, '@relativePath@', ${relativePath} )
+      #end
+    #end
+
     <script type="text/javascript" src="$relativePath/js/jquery-1.6.4.min.js"></script>
     <script type="text/javascript" src="$relativePath/js/bootstrap-1.3.0-dropdown.js"></script>
     <script type="text/javascript">
@@ -557,19 +576,6 @@
 #if ( $locale )
     <meta http-equiv="Content-Language" content="$locale.language" />
 #end
-    #if ( $decoration.body.head )
-      #foreach( $item in $decoration.body.head.getChildren() )
-        ## Workaround for DOXIA-150 due to a non-desired behaviour in p-u
-        ## @see org.codehaus.plexus.util.xml.Xpp3Dom#toString()
-        ## @see org.codehaus.plexus.util.xml.Xpp3Dom#toUnescapedString()
-        #set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
-        #if ( $item.name == "script" )
-          $StringUtils.replace( $item.toUnescapedString(), $documentHeader, "" )
-        #else
-          $StringUtils.replace( $item.toString(), $documentHeader, "" )
-        #end
-      #end
-    #end
     $headContent
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
   </head>
