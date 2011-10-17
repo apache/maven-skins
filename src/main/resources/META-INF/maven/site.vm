@@ -134,7 +134,7 @@
         #else
             #set ( $alt = $banner.name )
         #end
-        <img src="$src" alt="$alt" id="$id"/>
+        <img src="$src" alt="$alt"/>
     #else
         $banner.name
     #end
@@ -580,7 +580,7 @@
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
   </head>
   <body>
-    <div id="topbar-example" class="topbar" data-dropdown="dropdown">
+    <div id="topbar" class="topbar" data-dropdown="dropdown">
       <div class="topbar-inner">
         <div class="container-fluid">
           <ul>
