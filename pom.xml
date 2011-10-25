@@ -44,6 +44,19 @@
     <maven.test.skip>true</maven.test.skip>
   </properties>
 
+  <build>
+    <resources>
+      <resource>
+        <directory>.</directory>
+        <targetPath>META-INF</targetPath>
+        <includes>
+          <include>NOTICE.txt</include>
+          <include>LICENSE.txt</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
+
   <profiles>
     <profile>
       <id>run-its</id>
