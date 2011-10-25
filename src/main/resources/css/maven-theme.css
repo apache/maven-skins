@@ -38,11 +38,7 @@
 .hero-unit h2{font-size: 60px;}
 
 /* Copied from bootstrap <code> tag style. Maven translates <code> to <tt>. */
-tt {
-    background-color: #FEE9CC;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 1px 3px;
-}
+tt{padding:0 3px 2px;font-family:Monaco, Andale Mono, Courier New, monospace;font-size:12px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-color:#fee9cc;color:rgba(0, 0, 0, 0.75);padding:1px 3px;}
 a.externalLink {
     background: url(../images/external.png) right center no-repeat;
     padding-right: 18px;
