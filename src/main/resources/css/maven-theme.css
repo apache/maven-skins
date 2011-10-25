@@ -32,4 +32,5 @@
 /* Copied from bootstrap <code> tag style. Maven translates <code> to <tt>. */
 tt{padding:0 3px 2px;font-family:Monaco, Andale Mono, Courier New, monospace;font-size:12px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-color:#fee9cc;color:rgba(0, 0, 0, 0.75);padding:1px 3px;}
 a.externalLink{background: url(../images/external.png) right center no-repeat;padding-right: 18px;}
+a.mail{background: url(../images/mail.png) right center no-repeat;padding-right: 18px;}
 a.newWindow {background: url(../images/newwindow.png) right center no-repeat;padding-right: 18px;}
