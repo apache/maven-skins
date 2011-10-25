@@ -25,7 +25,7 @@ $Id$
 INTRODUCTION
 ============
 
-This is the Fluido Skin for Apache Maven, based on Twitter's Bootstrap.
+  The Apache Maven Fluido Skin is an Apache Maven site skin built on top of Twitter's bootstrap.
 
 IMPORTANT NOTES
 ================
