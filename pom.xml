@@ -54,6 +54,9 @@
           <include>LICENSE.txt</include>
         </includes>
       </resource>
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+      </resource>
     </resources>
   </build>
 
