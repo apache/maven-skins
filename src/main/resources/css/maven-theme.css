@@ -23,6 +23,16 @@
 .clear hr{display: none;}
 .section p,.section p,.section dt,.section dt{margin-right: 7px;margin-left: 7px;}
 
+/*IE6/7 don't support selectors*/
+a.externalLink{background: url('../images/external.png') right center no-repeat;padding-right: 18px;}
+a.newWindow{background: url('../images/newwindow.png') right center no-repeat;padding-right: 18px;}
+
+a[href^=http]{background: url('../images/external.png') right center no-repeat;padding-right: 18px;}
+a[href^=https]{background: url('../images/https.png') right center no-repeat;padding-right: 18px;}
+a[href^=file]{background: url('../images/file.png') right center no-repeat;padding-right: 18px;}
+a[href^=ftp]{background: url('../images/ftp.png') right center no-repeat;padding-right: 18px;}
+a[href^=mailto]{background: url('../images/mail.png') right center no-repeat;padding-right: 18px;}
+
 /* Tweaks to the bootstrap theme
 --------------------------------- */
 
@@ -31,6 +41,3 @@
 
 /* Copied from bootstrap <code> tag style. Maven translates <code> to <tt>. */
 tt{padding:0 3px 2px;font-family:Monaco, Andale Mono, Courier New, monospace;font-size:12px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-color:#fee9cc;color:rgba(0, 0, 0, 0.75);padding:1px 3px;}
-a.externalLink{background: url(../images/external.png) right center no-repeat;padding-right: 18px;}
-a.mail{background: url(../images/mail.png) right center no-repeat;padding-right: 18px;}
-a.newWindow {background: url(../images/newwindow.png) right center no-repeat;padding-right: 18px;}

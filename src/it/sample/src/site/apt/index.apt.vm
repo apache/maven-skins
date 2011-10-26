@@ -118,9 +118,13 @@ Table caption
 
   <Italic> font. <<Bold>> font. <<<Monospaced>>> font.
 
-  {Anchor}. Link to {{Anchor}}. Link to {{http://www.pixware.fr}}. 
+  {Anchor}. Link to {{Anchor}}.
   Link to {{{Anchor}showing alternate text}}.
   Link to {{{http://www.pixware.fr}Pixware home page}}.
+  Link to {{{https://www.pixware.fr}Secure Pixware home page}}.
+  Link to {{{file:///tmp}Your temporary directory}}.
+  Link to {{{ftp://ftp.apache.org}FTP file}}.
+  Link to {{{mailto:dev at maven dot apache dot org}Maven dev ML}}.
 
   Force line\
   break.
