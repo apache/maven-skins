@@ -27,11 +27,11 @@
 a.externalLink{background: url('../images/external.png') right center no-repeat;padding-right: 18px;}
 a.newWindow{background: url('../images/newwindow.png') right center no-repeat;padding-right: 18px;}
 
-a[href^=http]{background: url('../images/external.png') right center no-repeat;padding-right: 18px;}
-a[href^=https]{background: url('../images/https.png') right center no-repeat;padding-right: 18px;}
-a[href^=file]{background: url('../images/file.png') right center no-repeat;padding-right: 18px;}
-a[href^=ftp]{background: url('../images/ftp.png') right center no-repeat;padding-right: 18px;}
-a[href^=mailto]{background: url('../images/mail.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href^=http]{background: url('../images/external.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href^=https]{background: url('../images/https.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href^=file]{background: url('../images/file.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href^=ftp]{background: url('../images/ftp.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href^=mailto]{background: url('../images/mail.png') right center no-repeat;padding-right: 18px;}
 
 /* Tweaks to the bootstrap theme
 --------------------------------- */
