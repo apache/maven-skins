@@ -527,8 +527,10 @@
     <script type="text/javascript">
         jQuery( document ).ready( function()
             {
+                #if ( $topBarEnabled )
                 // initialize the dropdown menu
                 $( '.topbar' ).dropdown();
+                #end
 
                 // improve table layout
                 jQuery( 'table.bodyTable' ).each( function()
