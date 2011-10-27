@@ -19,4 +19,6 @@
 
 /* $Id$ */
 
-body{padding-top: 60px;}
+.clear{clear:both;visibility: hidden;}
+.clear hr{display: none;}
+.section p,.section p,.section dt,.section dt{margin-right: 7px;margin-left: 7px;}

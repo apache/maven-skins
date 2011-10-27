@@ -19,10 +19,6 @@
 
 /* $Id$ */
 
-.clear{clear:both;visibility: hidden;}
-.clear hr{display: none;}
-.section p,.section p,.section dt,.section dt{margin-right: 7px;margin-left: 7px;}
-
 /*IE6/7 don't support selectors*/
 a.externalLink{background: url('../images/external.png') right center no-repeat;padding-right: 18px;}
 a.newWindow{background: url('../images/newwindow.png') right center no-repeat;padding-right: 18px;}
