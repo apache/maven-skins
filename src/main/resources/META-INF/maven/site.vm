@@ -598,7 +598,19 @@
     </div>
     #end
 
+    #if ( $decoration.custom.getChild('fluidoSkin')
+              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' )
+              && 'false' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' ).getValue() )
+        #set ( $sideBarEnabled = false )
+    #else
+        #set ( $sideBarEnabled = true )
+    #end
+
+    #if ( $sideBarEnabled )
     <div class="container-fluid">
+    #else
+    <div class="container">
+    #end
       #if ( ($decoration.bannerLeft.name && $decoration.bannerLeft.name != $project.name || $decoration.bannerLeft.src || $decoration.bannerLeft.href ) || $decoration.bannerRight )
       <div id="banner">
         <div class="pull-left">#banner( $decoration.bannerLeft "bannerLeft" )</div>
@@ -614,6 +626,7 @@
         </ul>
       </div>
 
+      #if ( $sideBarEnabled )
       <div id="leftColumn" class="sidebar">
         <div class="well">
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
@@ -624,6 +637,7 @@
           #poweredByLogo( $decoration.poweredBy )
         </div>
       </div>
+      #end
 
       <div id="bodyColumn" class="content">
         <div id="contentBox">
@@ -641,6 +655,11 @@
             #set ( $foot = $item.toString().trim() )
             <p>$StringUtils.replace( $foot, '@project.name@', ${project.name} )</p>
           #end
+        #end
+        #if ( !$sideBarEnabled )
+        <p id="poweredBy" class="pull-right">
+          #poweredByLogo( $decoration.poweredBy )
+        </p>
         #end
       </div>
     </footer>
