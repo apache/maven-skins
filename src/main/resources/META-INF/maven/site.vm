@@ -497,7 +497,7 @@
     <link rel="stylesheet" href="$relativePath/css/bootstrap-1.3.0.min.css" />
     #if ( $decoration.custom.getChild( 'fluidoSkin' )
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' )
-              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' ).getValue() )
+              && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' ).getValue() )
         #set( $topBarEnabled = true )
     <style>body{padding-top: 60px;}</style>
     #else
