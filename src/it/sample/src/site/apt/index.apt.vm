@@ -29,15 +29,19 @@ ${skinName} test
 +-----+
 
  The skin supports different layouts, enabling/disabling the left sidebar menu and the topbar menu.
- Users have just play with flags in the <<<custom/fluidoSkin>>> element in <<<site.xml>>>.
+ Users have just play with flags in the <<<custom/fluidoSkin>>> element in <<<site.xml>>>:
 
 +-----+
-<custom>
-  <fluidoSkin>
-    <topBarEnabled>true</topBarEnabled>
-    <sideBarEnabled>false</sideBarEnabled>
-  </fluidoSkin>
-</custom>
+<project name="xxx">
+  ...
+  <custom>
+    <fluidoSkin>
+      <topBarEnabled>true</topBarEnabled>
+      <sideBarEnabled>false</sideBarEnabled>
+    </fluidoSkin>
+  </custom>
+  ...
+</project>
 +-----+
 
  That allows users having 4 skins in only 1!
