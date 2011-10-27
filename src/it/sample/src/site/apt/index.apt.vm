@@ -9,6 +9,7 @@
 ${skinName} test
 
  This is a test for ${skinName}.
+ ${skinName}  is an Apache Maven site skin built on top of Twitter's bootstrap.
 
 * Usage
 
@@ -26,6 +27,30 @@ ${skinName} test
   ...
 </project>
 +-----+
+
+ The skin supports different layouts, enabling/disabling the left sidebar menu and the topbar menu.
+ Users have just play with flags in the <<<custom/fluidoSkin>>> element in <<<site.xml>>>.
+
++-----+
+<custom>
+  <fluidoSkin>
+    <topBarEnabled>true</topBarEnabled>
+    <sideBarEnabled>false</sideBarEnabled>
+  </fluidoSkin>
+</custom>
++-----+
+
+ That allows users having 4 skins in only 1!
+
+  [[1]] sidebar only;
+
+  [[2]] topbar only;
+
+  [[3]] both side/top bars;
+
+  [[4]] none at all.
+
+ Default skin setting is the option <<1>>.
 
 Sample content
 
