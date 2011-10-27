@@ -578,10 +578,22 @@
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
   </head>
   <body>
+    #if ( $decoration.custom.getChild('fluidoSkin')
+              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' )
+              && 'false' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' ).getValue() )
+        #set ( $sideBarEnabled = false )
+    #else
+        #set ( $sideBarEnabled = true )
+    #end
+
     #if ( $topBarEnabled )
     <div id="topbar" class="topbar" data-dropdown="dropdown">
       <div class="topbar-inner">
+        #if ( $sideBarEnabled )
         <div class="container-fluid">
+        #else
+        <div class="container">
+        #end
           <ul>
             #topMenu( $decoration.body.menus )
           </ul>
@@ -600,14 +612,10 @@
     </div>
     #end
 
-    #if ( $decoration.custom.getChild('fluidoSkin')
-              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' )
-              && 'false' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' ).getValue() )
-        #set ( $sideBarEnabled = false )
-    <div class="container">
-    #else
-        #set ( $sideBarEnabled = true )
+    #if ( $sideBarEnabled )
     <div class="container-fluid">
+    #else
+    <div class="container">
     #end
       #if ( ($decoration.bannerLeft.name && $decoration.bannerLeft.name != $project.name || $decoration.bannerLeft.src || $decoration.bannerLeft.href ) || $decoration.bannerRight )
       <div id="banner">
@@ -645,7 +653,11 @@
     </div>
 
     <footer class="footer">
+      #if ( $sideBarEnabled )
       <div class="container-fluid">
+      #else
+      <div class="container">
+      #end
         <p>Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
           ## turnaround for 
           #if ( $decoration.custom.getChild("footer") )
