@@ -9,7 +9,7 @@
 ${skinName} test
 
  This is a test for ${skinName}.
- ${skinName}  is an Apache Maven site skin built on top of Twitter's bootstrap.
+ ${skinDescription}
 
 * Usage
 
