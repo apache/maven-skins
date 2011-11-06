@@ -56,6 +56,27 @@ ${skinName} test
 
  Default skin setting is the option <<1>>.
 
+ When users decide to enable the topbar, they can plug a small icon/logo there (typically 108*20 px) just configuring
+ the <<<custom/fluidoSkin/topBarIcon>>> element in <<<site.xml>>>:
+
++-----+
+<project name="xxx">
+  ...
+  <custom>
+    <fluidoSkin>
+      <topBarEnabled>true</topBarEnabled>
+      <topBarIcon>
+        <name>Maven Fluido Skin</name>
+        <alt>Maven Fluido Skin</alt>
+        <src>/images/topbar-logo.png</src>
+        <href>/index.html</href>
+      </topBarIcon>
+    </fluidoSkin>
+  </custom>
+  ...
+</project>
++-----+
+
 Sample content
 
   Paragraph 1, line 1.

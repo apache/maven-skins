@@ -44,6 +44,27 @@ ${skinName} test
 </project>
 +-----+
 
+ When users decide to enable the topbar, they can plug a small icon/logo there (typically 108*20 px) just configuring
+ the <<<custom/fluidoSkin/topBarIcon>>> element in <<<site.xml>>>:
+
++-----+
+<project name="xxx">
+  ...
+  <custom>
+    <fluidoSkin>
+      <topBarEnabled>true</topBarEnabled>
+      <topBarIcon>
+        <name>Maven Fluido Skin</name>
+        <alt>Maven Fluido Skin</alt>
+        <src>/images/topbar-logo.png</src>
+        <href>/index.html</href>
+      </topBarIcon>
+    </fluidoSkin>
+  </custom>
+  ...
+</project>
++-----+
+
  That allows users having 4 skins in only 1!
 
   [[1]] sidebar only;
