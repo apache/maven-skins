@@ -596,6 +596,51 @@
         #else
         <div class="container">
         #end
+        #if ( $decoration.custom.getChild('fluidoSkin')
+              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarIcon' ) )
+            #set ( $topBarIcon = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarIcon' ) )
+
+            #if ( $topBarIcon.getChild( 'href' ) )
+                #set ( $hrf = $topBarIcon.getChild( 'href' ).getValue() )
+                #if ( ! ( $hrf.toLowerCase().startsWith("http:/") || $hrf.toLowerCase().startsWith("https:/") ||
+                    $hrf.toLowerCase().startsWith("ftp:/") || $hrf.toLowerCase().startsWith("mailto:/") ||
+                    $hrf.toLowerCase().startsWith("file:/") || ($hrf.toLowerCase().indexOf("://") != -1) ) )
+                    #set ( $hrf = $PathTool.calculateLink( $hrf, $relativePath ) )
+                    #set ( $hrf = $hrf.replaceAll( '\\', '/' ) )
+                    #if ( ( $hrf == '' ) )
+                        #set ( $hrf = './' )
+                    #end
+                #end
+                <a class="brand" href="$hrf" #if( $topBarIcon.getChild( 'alt' ) ) title="$topBarIcon.getChild( 'alt' ).getValue()"#end>
+
+                #if( $topBarIcon.getChild( 'name' ) )
+                    #set ( $topBarIconName = $topBarIcon.getChild( 'name' ).getValue() )
+                #else
+                    #set ( $topBarIconName = $project.name )
+                #end
+
+                #if( $topBarIcon.getChild( 'src' ) )
+                    #set ( $src = $topBarIcon.getChild( 'src' ).getValue() )
+                    #if ( ! ( $src.toLowerCase().startsWith("http:/") || $src.toLowerCase().startsWith("https:/") ||
+                          $src.toLowerCase().startsWith("ftp:/") || $src.toLowerCase().startsWith("mailto:/") ||
+                          $src.toLowerCase().startsWith("file:/") || ($src.toLowerCase().indexOf("://") != -1) ) )
+                        #set ( $src = $PathTool.calculateLink( $src, $relativePath ) )
+                        #set ( $src = $src.replaceAll( '\\', '/' ) )
+                    #end
+                    #if ( $topBarIcon.getChild( 'alt' ) )
+                          #set ( $alt = $topBarIcon.getChild( 'alt' ).getValue() )
+                    #else
+                          #set ( $alt = $topBarIconName )
+                    #end
+                    <img src="$src" alt="$alt" />
+                #else
+                    $topBarIconName
+                #end
+
+                </a>
+            #end
+        #end
+
           <ul>
             #topMenu( $decoration.body.menus )
           </ul>

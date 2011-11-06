@@ -34,6 +34,12 @@
   <custom>
     <fluidoSkin>
       <topBarEnabled>true</topBarEnabled>
+      <topBarIcon>
+        <name>Maven Fluido Skin</name>
+        <alt>Maven Fluido Skin</alt>
+        <src>/images/topbar-logo.png</src>
+        <href>/index.html</href>
+      </topBarIcon>
       <sideBarEnabled>false</sideBarEnabled>
     </fluidoSkin>
   </custom>
@@ -42,6 +48,10 @@
   <version position="right" />
 
   <body>
+    <links>
+      <item name="Just Test" href="http://nowhere.com/"/>
+    </links>
+
     <breadcrumbs>
       <item name="skins" href="/skins/"/>
       <item name="${skinArtifactId}" href="/skins/${skinArtifactId}/"/>
