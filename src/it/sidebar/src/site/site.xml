@@ -46,6 +46,28 @@
 
     <menu ref="reports"/>
 
+    <footer>
+      <div class="row">
+        <div class="span4">
+          <address>
+            <strong>The Apache Software Foundation</strong><br/>
+            <i>Dept. 9660</i><br/>
+            <i>Los Angeles, CA 90084-9660</i><br/>
+            <i>USA</i><br/>
+            <abbr title="Fax">Fax:</abbr> <i>+1.919.573.9199</i>
+          </address>
+        </div>
+        <div class="span4">
+          <address>
+            <strong>The Apache Software Foundation</strong><br/>
+            <i>1901 Munsey Drive</i><br/>
+            <i>Forest Hill, MD 21050-2747</i><br/>
+            <i>USA</i><br/>
+            <a href="mailto:apache at apache dot org">apache at apache dot org</a>
+          </address>
+        </div>
+      </div>
+    </footer>
   </body>
 
 </project>

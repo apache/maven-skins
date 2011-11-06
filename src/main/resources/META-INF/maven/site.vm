@@ -705,10 +705,12 @@
       #else
       <div class="container">
       #end
-        <p>Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
-          ## turnaround for 
-          #if ( $decoration.custom.getChild( "footer" ) )
-          #foreach( $item in $decoration.custom.getChild("footer").getChildren() )
+        <div class="row">
+          <div class="span16">Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</div>
+        </div>
+
+        #if ( $decoration.body.footer )
+          #foreach( $item in $decoration.body.footer.getChildren() )
             #set ( $foot = $item.toString().trim() )
             $StringUtils.replace( $foot, '@project.name@', ${project.name} )
           #end
