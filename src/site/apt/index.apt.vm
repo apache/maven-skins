@@ -97,3 +97,34 @@ ${project.name}
   ...
 </project>
 +-----+
+
+ Users can optionally enable the <<Google Search>> for the generated site, requirements are:
+
+ * the <<<project/url>>> property in <<<pom.xml>>>:
+
++-----+
+<project
+...
+  <url>http://maven.apache.org/skins/${project.artifactId}</url>
+...
+</project>
++-----+
+
+ * the <<<custom/fluidoSkin/searchEnabled>>> element in <<<site.xml>>>:
+
++-----+
+<project name="xxx">
+  ...
+  <custom>
+    <fluidoSkin>
+      <searchEnabled>true</searchEnabled>
+    </fluidoSkin>
+  </custom>
+  ...
+</project>
++-----+
+
+ By default, the search form:
+
+ * is <not> enabled;
+ * is rendered in the sidebar, if the topbar only is available it will be rendered there.

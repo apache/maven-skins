@@ -30,7 +30,7 @@
   <packaging>jar</packaging>
 
   <name>@project.artifactId@ IT</name>
-  <url>http://maven.apache.org/skins/@project.artifactId@/sample/</url>
+  <url>http://maven.apache.org/skins/@project.artifactId@/sidebar/</url>
 
   <properties>
     <skinName>@project.name@</skinName>

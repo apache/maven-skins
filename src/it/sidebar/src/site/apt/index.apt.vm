@@ -65,17 +65,36 @@ ${skinName} test
 </project>
 +-----+
 
- That allows users having 4 skins in only 1!
+ Users can optionally enable the <<Google Search>> for the generated site, requirements are:
 
-  [[1]] sidebar only;
+ * the <<<project/url>>> property in <<<pom.xml>>>:
 
-  [[2]] topbar only;
++-----+
+<project
+...
+  <url>http://maven.apache.org/skins/${project.artifactId}</url>
+...
+</project>
++-----+
 
-  [[3]] both side/top bars;
+ * the <<<custom/fluidoSkin/searchEnabled>>> element in <<<site.xml>>>:
 
-  [[4]] none at all.
++-----+
+<project name="xxx">
+  ...
+  <custom>
+    <fluidoSkin>
+      <searchEnabled>true</searchEnabled>
+    </fluidoSkin>
+  </custom>
+  ...
+</project>
++-----+
 
- Default skin setting is the option <<1>>.
+ By default, the search form:
+
+ * is <not> enabled;
+ * is rendered in the sidebar, if the topbar only is available it will be rendered there.
 
 Sample content
 

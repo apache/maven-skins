@@ -490,6 +490,15 @@
   #end
 #end
 ##
+#macro ( enableSearch $top )
+    #set( $startIndex = $project.url.indexOf("://") + 3 )
+<form action="http://www.google.com/search" method="get" #if ( $top )class="pull-right"#end>
+  <input value="$project.url.substring( $startIndex, $project.url.length() )" name="sitesearch" type="hidden"/>
+  <input class="mini" size="5" name="q" id="query" type="text" value="search..." onclick="if(this.value == 'search...') {this.value = ''}"/>
+  <input name="Search" value="Go" type="submit"/>
+</form>
+#end
+##
 <html xmlns="http://www.w3.org/1999/xhtml"#if ( $locale ) xml:lang="$locale.language" lang="$locale.language"#end>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=${outputEncoding}" />
@@ -580,12 +589,22 @@
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
   </head>
   <body>
-    #if ( $decoration.custom.getChild('fluidoSkin')
-              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' )
+    #if ( $decoration.custom.getChild('fluidoSkin') )
+        #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' )
               && 'false' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' ).getValue() )
-        #set ( $sideBarEnabled = false )
-    #else
-        #set ( $sideBarEnabled = true )
+            #set ( $sideBarEnabled = false )
+        #else
+            #set ( $sideBarEnabled = true )
+        #end
+
+        #if ( $project.url
+              && $project.url.length() > 0
+              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'searchEnabled' )
+              && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'searchEnabled' ).getValue() )
+            #set ( $searchEnabled = true )
+        #else
+            #set ( $searchEnabled = false )
+        #end
     #end
 
     #if ( $topBarEnabled )
@@ -644,6 +663,9 @@
           <ul>
             #topMenu( $decoration.body.menus )
           </ul>
+          #if ( $searchEnabled && !$sideBarEnabled )
+            #enableSearch(true)
+          #end
           #if( $decoration.body.links.size() > 0 )
             <ul class="nav secondary-nav">
               <li class="menu">
@@ -685,9 +707,14 @@
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
           #mainMenu( $decoration.body.menus )
           #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
-        </div>
-        <div id="poweredBy">
-          #poweredByLogo( $decoration.poweredBy )
+
+          #if ( $searchEnabled )
+            #enableSearch( false )
+          #end
+
+          <div id="poweredBy">
+            #poweredByLogo( $decoration.poweredBy )
+          </div>
         </div>
       </div>
       #end
