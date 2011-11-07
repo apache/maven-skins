@@ -32,6 +32,8 @@ a.externalLink[href$=".asc"]{background: url('../images/key.png') right center n
 a.externalLink[href$=".jpg"]{background: url('../images/image.png') right center no-repeat;padding-right: 18px;}
 a.externalLink[href$=".gif"]{background: url('../images/image.png') right center no-repeat;padding-right: 18px;}
 a.externalLink[href$=".png"]{background: url('../images/image.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href$=".tar.gz"]{background: url('../images/box.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href$=".zip"]{background: url('../images/box.png') right center no-repeat;padding-right: 18px;}
 
 li.none{list-style: none;}
 li.expanded{list-style-image: url('../images/expanded.png');}
