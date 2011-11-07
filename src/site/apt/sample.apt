@@ -36,15 +36,15 @@ Sample content
   {{{file:///tmp}to file:}},
   {{{ftp://ftp.apache.org}to ftp:}},
   {{{mailto:dev at maven dot apache dot org}to e-mail}},
-  {{{./unkown.asc}to .asc}},
-  {{{./unkown.jpg}to .jpg}},
-  {{{./unkown.jpeg}to .jpeg}},
-  {{{./unkown.gif}to .gif}},
-  {{{./unkown.png}to .png}},
-  {{{./unkown.tar.gz}to .tar.gz}},
-  {{{./unkown.zip}to .zip}},
-  {{{./unkown.md5}to .md5}},
-  {{{./unkown.sha1}to .sha1}}.
+  {{{./unknown.asc}to .asc}},
+  {{{./unknown.jpg}to .jpg}},
+  {{{./unknown.jpeg}to .jpeg}},
+  {{{./unknown.gif}to .gif}},
+  {{{./unknown.png}to .png}},
+  {{{./unknown.tar.gz}to .tar.gz}},
+  {{{./unknown.zip}to .zip}},
+  {{{./unknown.md5}to .md5}},
+  {{{./unknown.sha1}to .sha1}}.
 
 Section title
 
