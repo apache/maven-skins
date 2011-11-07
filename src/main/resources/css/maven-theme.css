@@ -29,6 +29,9 @@ a.externalLink[href^=file]{background: url('../images/file.png') right center no
 a.externalLink[href^=ftp]{background: url('../images/ftp.png') right center no-repeat;padding-right: 18px;}
 a.externalLink[href^=mailto]{background: url('../images/mail.png') right center no-repeat;padding-right: 18px;}
 a.externalLink[href$=".asc"]{background: url('../images/key.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href$=".jpg"]{background: url('../images/image.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href$=".gif"]{background: url('../images/image.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href$=".png"]{background: url('../images/image.png') right center no-repeat;padding-right: 18px;}
 
 li.none{list-style: none;}
 li.expanded{list-style-image: url('../images/expanded.png');}
