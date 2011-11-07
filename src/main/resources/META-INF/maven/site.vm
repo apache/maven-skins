@@ -590,12 +590,11 @@
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
   </head>
   <body>
+    #set ( $sideBarEnabled = true )
     #if ( $decoration.custom.getChild('fluidoSkin') )
         #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' )
               && 'false' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' ).getValue() )
             #set ( $sideBarEnabled = false )
-        #else
-            #set ( $sideBarEnabled = true )
         #end
 
         #if ( $project.url
