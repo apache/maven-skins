@@ -82,7 +82,7 @@ ${skinName} test
  * the <<<project/url>>> property in <<<pom.xml>>>:
 
 +-----+
-<project
+<project>
 ...
   <url>http://maven.apache.org/skins/${project.artifactId}</url>
 ...
