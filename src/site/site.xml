@@ -39,6 +39,7 @@ under the License.
 
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
+      <item name="Sample" href="sample.html"/>
       <!--item name="FAQ" href="faq.html"/-->
     </menu>
 
