@@ -46,6 +46,22 @@ Sample content
   {{{./unknown.md5}to .md5}},
   {{{./unknown.sha1}to .sha1}}.
 
+  Basic icons = Success, Warning, Error, Info:
+
+[images/icon_success_sml.gif] Success
+
+[images/icon_warning_sml.gif] Warning
+
+[images/icon_error_sml.gif] Error
+
+[images/icon_info_sml.gif] Info
+
+  Checkstyle's plugin rss icon:
+
+[images/rss.png] rss
+
+
+
 Section title
 
 * Sub-section title
