@@ -56,11 +56,21 @@ Sample content
 
 [images/icon_info_sml.gif] Info
 
-  Checkstyle's plugin rss icon:
+  Changes plugin legend = Add, Fix, Help, Remove, Update:
+
+[images/add.gif] Add
+
+[images/fix.gif] Fix
+
+[images/icon_help_sml.gif] Help
+
+[images/remove.gif] Remove
+
+[images/update.gif] Update
+
+  RSS icon (shared across multiple plugins):
 
 [images/rss.png] rss
-
-
 
 Section title
 
