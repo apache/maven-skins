@@ -361,8 +361,6 @@
   #else
     #set ( $prefix = "" )
   #end
-
-  <!-- prefix: $prefix -->
 ##
   #if ( $datePosition.equalsIgnoreCase( $position ) )
     #if ( ( $datePosition.equalsIgnoreCase( "right" ) ) || ( $datePosition.equalsIgnoreCase( "bottom" ) ) )
