@@ -369,7 +369,7 @@
       <div id="lastPublished">
         <span id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</span>
         #if ( $versionPosition.equalsIgnoreCase( $position ) )
-          <span class="divider foo">|</span> <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
+          <span class="divider">|</span> <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
         #end
       </div>
     #elseif ( $datePosition.equalsIgnoreCase("left") )
