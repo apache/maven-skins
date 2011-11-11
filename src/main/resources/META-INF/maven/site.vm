@@ -356,12 +356,17 @@
   #set ( $breadcrumbs = $decoration.body.breadcrumbs )
   #set ( $links = $decoration.body.links )
 
+  #if ( $datePosition.equalsIgnoreCase( "right" ) && $versionPosition.equalsIgnoreCase( "right" ) )
+    #set ( $prefix = '<li class="divider pull-right">|</li>' )
+  #else
+    #set ( $prefix = "" )
+  #end
 
+  <!-- prefix: $prefix -->
 ##
   #if ( $datePosition.equalsIgnoreCase( $position ) )
     #if ( ( $datePosition.equalsIgnoreCase( "right" ) ) || ( $datePosition.equalsIgnoreCase( "bottom" ) ) )
-        <li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li>
-        <li class="divider pull-right">|</li>
+        <li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li> $prefix
       #if ( $versionPosition.equalsIgnoreCase( $position ) )
         <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
       #end
@@ -383,7 +388,7 @@
     #end
   #elseif ( $versionPosition.equalsIgnoreCase( $position ) )
     #if ( $versionPosition.equalsIgnoreCase( "right" ) )
-      <li class="divider pull-right">|</li> <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+      $prefix <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
     #elseif ( $versionPosition.equalsIgnoreCase( "bottom" ) )
       <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
     #elseif ( ( $versionPosition.equalsIgnoreCase( "navigation-bottom" ) ) || ( $versionPosition.equalsIgnoreCase( "navigation-top" ) ) )
