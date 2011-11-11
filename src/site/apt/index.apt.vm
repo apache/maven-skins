@@ -30,7 +30,7 @@ ${project.name}
 
  ${project.description}
 
- A {{{./sample/}sample site}} is provided to see the skin in action.
+ A {{{./sample.html}sample page}} is provided to see the skin in action.
 
 * Usage
 
