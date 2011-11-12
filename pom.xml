@@ -106,7 +106,7 @@
             <artifactId>maven-resources-plugin</artifactId>
             <executions>
               <execution>
-                <id>copy-sample</id>
+                <id>copy-sidebar</id>
                 <phase>site</phase>
                 <goals>
                   <goal>copy-resources</goal>
@@ -114,10 +114,25 @@
                 <configuration>
                   <resources>
                     <resource>
-                      <directory>${project.build.directory}/it/sample/target/site/</directory>
+                      <directory>${project.build.directory}/it/sidebar/target/site/</directory>
                     </resource>
                   </resources>
-                  <outputDirectory>${project.build.directory}/site/sample/</outputDirectory>
+                  <outputDirectory>${project.build.directory}/site/sidebar/</outputDirectory>
+                </configuration>
+              </execution>
+              <execution>
+                <id>copy-topbar</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <resources>
+                    <resource>
+                      <directory>${project.build.directory}/it/topbar/target/site/</directory>
+                    </resource>
+                  </resources>
+                  <outputDirectory>${project.build.directory}/site/topbar/</outputDirectory>
                 </configuration>
               </execution>
             </executions>
