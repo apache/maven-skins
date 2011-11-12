@@ -50,3 +50,6 @@ li.collapsed{list-style-image: url('../images/collapsed.png');}
 
 /* Copied from bootstrap <code> tag style. Maven translates <code> to <tt>. */
 tt{padding:0 3px 2px;font-family:Monaco, Andale Mono, Courier New, monospace;font-size:12px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-color:#fee9cc;color:rgba(0, 0, 0, 0.75);padding:1px 3px;}
+
+/* avoid greyed list items */
+li{color:#404040;}
