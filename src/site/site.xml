@@ -39,8 +39,13 @@ under the License.
 
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
-      <item name="Sample" href="sample.html"/>
+      <item name="Sample Page" href="sample.html"/>
       <!--item name="FAQ" href="faq.html"/-->
+    </menu>
+
+    <menu name="Layouts">
+      <item name="Sidebar" href="sidebar/"/>
+      <item name="Topbar" href="topbar/"/>
     </menu>
 
     <menu ref="reports"/>

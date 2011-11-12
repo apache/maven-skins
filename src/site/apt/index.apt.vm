@@ -30,7 +30,8 @@ ${project.name}
 
  ${project.description}
 
- A {{{./sample.html}sample page}} is provided to see the skin in action.
+ A {{{./sample.html}sample page}} is provided to see the skin in action, and 2 complete sites: one for
+ {{{./sidebar/}sidebar layout (default)}} and the other for {{{./topbar/}topbar layout (default)}}.
 
 * Usage
 
