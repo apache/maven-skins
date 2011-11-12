@@ -76,6 +76,8 @@ ${project.name}
   [[3]] both side/top bars;
 
   [[4]] none at all.
+  
+  []
 
  Default skin setting is the option <<1>>.
 
@@ -126,7 +128,12 @@ ${project.name}
 </project>
 +-----+
 
+ []
+
  By default, the search form:
 
  * is <not> enabled;
+ 
  * is rendered in the sidebar, if the topbar only is available it will be rendered there.
+ 
+ []
