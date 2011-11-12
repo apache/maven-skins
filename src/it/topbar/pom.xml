@@ -29,7 +29,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>@project.artifactId@ IT</name>
+  <name>@project.artifactId@ IT, topbar layout</name>
   <url>http://maven.apache.org/skins/@project.artifactId@/topbar/</url>
 
   <properties>

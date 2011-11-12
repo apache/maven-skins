@@ -31,11 +31,13 @@
     <version>${skinVersion}</version>
   </skin>
 
+  <!-- START SNIPPET: skin-custom-config -->
   <custom>
     <fluidoSkin>
       <searchEnabled>true</searchEnabled>
     </fluidoSkin>
   </custom>
+  <!-- END SNIPPET: skin-custom-config -->
 
   <publishDate format="yyyy-MM-dd" position="right" />
   <version position="right" />
