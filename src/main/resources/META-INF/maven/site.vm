@@ -511,6 +511,7 @@
     <link rel="stylesheet" href="$relativePath/css/maven-base.css" />
     <link rel="stylesheet" href="$relativePath/css/maven-theme.css" />
     <link rel="stylesheet" href="$relativePath/css/site.css" />
+    <link rel="stylesheet" href="$relativePath/css/print.css" media="print" />
     #if ( $decoration.custom.getChild( 'fluidoSkin' )
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' )
               && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' ).getValue() )
