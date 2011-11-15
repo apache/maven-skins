@@ -96,7 +96,7 @@
               <nomunge>true</nomunge>
               <cssSourceDir>css</cssSourceDir>
               <cssSourceFiles>
-                <cssSourceFile>bootstrap-1.3.0.min.css</cssSourceFile>
+                <cssSourceFile>bootstrap-1.3.0.css</cssSourceFile>
                 <cssSourceFile>maven-base.css</cssSourceFile>
                 <cssSourceFile>maven-theme.css</cssSourceFile>
                 <cssSourceFile>prettify.css</cssSourceFile>
@@ -104,7 +104,7 @@
               <cssFinalFile>apache-maven-fluido.css</cssFinalFile>
               <jsSourceDir>js</jsSourceDir>
               <jsSourceFiles>
-                <jsSourceFile>jquery-1.6.4.min.js</jsSourceFile>
+                <jsSourceFile>jquery-1.6.4.js</jsSourceFile>
                 <jsSourceFile>bootstrap-1.3.0-dropdown.js</jsSourceFile>
                 <jsSourceFile>prettify.js</jsSourceFile>
                 <jsSourceFile>fluido.js</jsSourceFile>
