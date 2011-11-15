@@ -507,9 +507,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=${outputEncoding}" />
     <title>$title</title>
-    <link rel="stylesheet" href="$relativePath/css/bootstrap-1.3.0.min.css" />
-    <link rel="stylesheet" href="$relativePath/css/maven-base.css" />
-    <link rel="stylesheet" href="$relativePath/css/maven-theme.css" />
+    <link rel="stylesheet" href="$relativePath/css/apache-maven-fluido.min.css" />
     <link rel="stylesheet" href="$relativePath/css/site.css" />
     <link rel="stylesheet" href="$relativePath/css/print.css" media="print" />
     #if ( $decoration.custom.getChild( 'fluidoSkin' )
@@ -520,6 +518,8 @@
     #else
     <style>body{padding-top: 20px;}</style>
     #end
+
+    <script type="text/javascript" src="$relativePath/js/apache-maven-fluido.min.js"></script>
 
     #if ( $decoration.body.head )
       #foreach( $item in $decoration.body.head.getChildren() )
@@ -535,50 +535,6 @@
       #end
     #end
 
-    <script type="text/javascript" src="$relativePath/js/jquery-1.6.4.min.js"></script>
-    #if ( $topBarEnabled )
-    <script type="text/javascript" src="$relativePath/js/bootstrap-1.3.0-dropdown.js"></script>
-    #end
-    <script type="text/javascript">
-        jQuery( document ).ready( function()
-            {
-                #if ( $topBarEnabled )
-                // initialize the dropdown menu
-                $( '.topbar' ).dropdown();
-                #end
-
-                // improve table layout
-                jQuery( 'table.bodyTable' ).each( function()
-                {
-                    jQuery( this ).removeClass( 'bodyTable' );
-                    jQuery( this ).addClass( 'zebra-striped' );
-                } );
-
-                // add prettyprint class to all 'pre' element child of 'div' whit class="source"
-                var prettify = false;
-
-                jQuery( 'div.source > pre' ).each( function()
-                {
-                    jQuery( this ).addClass( 'prettyprint' );
-                    prettify = true;
-                } );
-
-                // if code blocks were found, bring in the prettifier ...
-                if ( prettify )
-                {
-                    var link = jQuery( document.createElement( 'link' ) );
-                    link.attr(
-                    {
-                        type: 'text/css',
-                        rel: 'stylesheet',
-                        href: '$relativePath/css/prettify.css'
-                    } );
-                    jQuery( 'head' ).append( link );
-                    jQuery.getScript( '$relativePath/js/prettify.js', function() { prettyPrint(); } );
-                }
-
-            } );
-    </script>
 #foreach( $author in $authors )
       <meta name="author" content="$author" />
 #end
