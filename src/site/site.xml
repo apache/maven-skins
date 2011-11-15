@@ -44,8 +44,8 @@ under the License.
     </menu>
 
     <menu name="Layouts">
-      <item name="Sidebar" href="sidebar/"/>
-      <item name="Topbar" href="topbar/"/>
+      <item name="Sidebar" href="sidebar/index.html"/>
+      <item name="Topbar" href="topbar/index.html"/>
     </menu>
 
     <menu ref="reports"/>
