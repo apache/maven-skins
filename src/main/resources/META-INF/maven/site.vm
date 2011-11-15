@@ -129,7 +129,7 @@
         #end
         <img src="$src" alt="$alt"/>
     #else
-        $banner.name
+        <h2>$banner.name</h2>
     #end
 ##
     #if( $banner.href )
