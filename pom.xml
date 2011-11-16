@@ -38,6 +38,10 @@
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/sandbox/trunk/skin/</developerConnection>
     <url>http://svn.apache.org/viewvc/maven/sandbox/trunk/skin/</url>
   </scm>
+  <issueManagement>
+    <system>JIRA</system>
+    <url>https://jira.codehaus.org/browse/MSKINS/</url>
+  </issueManagement>
 
   <!-- Workaround for SUREFIRE-300 -->
   <properties>
