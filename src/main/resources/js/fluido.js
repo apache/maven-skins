@@ -30,18 +30,6 @@ jQuery( document ).ready( function()
     } );
 
     // add prettyprint class to all 'pre' element child of 'div' whit class="source"
-    var prettify = false;
-
-    jQuery( 'div.source > pre' ).each( function()
-    {
-        jQuery( this ).addClass( 'prettyprint' );
-        prettify = true;
-    } );
-
-    // if code blocks were found, invoke the prettifier ...
-    if ( prettify )
-    {
-        prettyPrint();
-    }
+    prettyPrint();
 
 } );
