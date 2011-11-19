@@ -682,7 +682,7 @@
 
       <div id="bodyColumn" class="content">
         <div id="contentBox">
-          $bodyContent
+          $bodyContent.replaceAll("<div class=\"source\"><pre>", "<div class=\"source\"><pre class=\"prettyprint\">")
         </div>
       </div>
     </div>
