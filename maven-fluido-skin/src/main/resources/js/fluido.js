@@ -22,14 +22,6 @@ jQuery( document ).ready( function()
     // initialize the dropdown menu if found
     $( '.topbar' ).dropdown();
 
-    // improve table layout
-    jQuery( 'table.bodyTable' ).each( function()
-    {
-        jQuery( this ).removeClass( 'bodyTable' );
-        jQuery( this ).addClass( 'zebra-striped' );
-    } );
-
-    // add prettyprint class to all 'pre' element child of 'div' whit class="source"
     prettyPrint();
 
 } );
