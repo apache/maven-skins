@@ -683,7 +683,7 @@
       <div id="bodyColumn" class="content">
         <div id="contentBox">
           #if ( "Project License" != $title )
-          $bodyContent.replaceAll("<div class=\"source\"><pre>", "<div class=\"source\"><pre class=\"prettyprint\">")
+          $bodyContent.replaceAll( "<div class=\"source\"><pre>", "<div class=\"source\"><pre class=\"prettyprint\">" ).replaceAll( "class=\"bodyTable\"", "class=\"zebra-striped\"" )
           #else
           $bodyContent
           #end
