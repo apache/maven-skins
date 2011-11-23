@@ -42,6 +42,12 @@
     <system>JIRA</system>
     <url>https://jira.codehaus.org/browse/MSKINS/</url>
   </issueManagement>
+  <distributionManagement>
+    <site>
+      <id>apache.website</id>
+      <url>scp://people.apache.org/www/maven.apache.org/skins/${project.artifactId}</url>
+    </site>
+  </distributionManagement>
 
   <!-- Workaround for SUREFIRE-300 -->
   <properties>
