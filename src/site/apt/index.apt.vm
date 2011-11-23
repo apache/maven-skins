@@ -138,7 +138,7 @@ ${project.name}
  
  []
 
- Source code sections are enhanced by {{{http://code.google.com/p/google-code-prettify/}Google Code Prettify}, users can
+ Source code sections are enhanced by {{{http://code.google.com/p/google-code-prettify/}Google Code Prettify}}, users can
  optionally enable line numbers rendering (disabled by default):
 
 +-----+
