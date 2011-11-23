@@ -137,3 +137,8 @@ ${project.name}
  * is rendered in the sidebar, if the topbar only is available it will be rendered there.
  
  []
+
+Footers placeholders
+
+ Since <<<#eval>>> Velocity macro is not supported yet, the only placeholder
+ available in additional footers is <<<@project.name@>>>.
