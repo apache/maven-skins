@@ -35,6 +35,7 @@
   <custom>
     <fluidoSkin>
       <searchEnabled>true</searchEnabled>
+      <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
     </fluidoSkin>
   </custom>
   <!-- END SNIPPET: skin-custom-config -->
