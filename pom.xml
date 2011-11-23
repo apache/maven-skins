@@ -43,6 +43,7 @@ under the License.
     <module>maven-default-skin</module>
     <module>maven-classic-skin</module>
     <module>maven-stylus-skin</module>
+    <module>maven-fluido-skin</module>
   </modules>
 
   <scm>
