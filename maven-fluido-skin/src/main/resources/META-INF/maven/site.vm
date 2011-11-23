@@ -697,13 +697,12 @@
       #else
       <div class="container">
       #end
-        <div class="row">
-          <div class="span16">Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</div>
-        </div>
+        <div class="row span16">Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</div>
 
         #if ( $decoration.body.footer )
           #foreach( $item in $decoration.body.footer.getChildren() )
             #set ( $foot = $item.toString().trim() )
+            ## #eval macro not supported yet, that is a silly turnaround to allow ASF projects adopt fluido
             $StringUtils.replace( $foot, '@project.name@', ${project.name} )
           #end
         #end
