@@ -138,6 +138,21 @@ ${project.name}
  
  []
 
+ Source code sections are enhanced by {{{http://code.google.com/p/google-code-prettify/}Google Code Prettify}, users can
+ optionally enable line numbers rendering (disabled by default):
+
++-----+
+<project name="xxx">
+  ...
+  <custom>
+    <fluidoSkin>
+      <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+    </fluidoSkin>
+  </custom>
+  ...
+</project>
++-----+
+
 Footers placeholders
 
  Since <<<#eval>>> Velocity macro is not supported yet, the only placeholder
