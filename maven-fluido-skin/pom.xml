@@ -26,7 +26,7 @@
 
   <groupId>org.apache.maven.skins</groupId>
   <artifactId>maven-fluido-skin</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
 
   <name>Apache Maven Fluido Skin</name>
   <description>The Apache Maven Fluido Skin is an Apache Maven site skin
