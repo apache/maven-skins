@@ -683,7 +683,15 @@
       <div id="bodyColumn" class="content">
         <div id="contentBox">
           #if ( "Project License" != $title )
-          $bodyContent.replaceAll( "<div class=\"source\"><pre>", "<div class=\"source\"><pre class=\"prettyprint\">" ).replaceAll( "class=\"bodyTable\"", "class=\"zebra-striped\"" )
+          #if ( $decoration.custom.getChild('fluidoSkin')
+              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sourceLineNumbersEnabled' )
+              && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sourceLineNumbersEnabled' ).getValue() )
+            #set ( $sourceStyle = "prettyprint linenums" )
+          #else
+            #set ( $sourceStyle = "prettyprint" )
+          #end
+
+          $bodyContent.replaceAll( "<div class=\"source\"><pre>", "<div class=\"source\"><pre class=\"$sourceStyle\">" ).replaceAll( "class=\"bodyTable\"", "class=\"zebra-striped\"" )
           #else
           $bodyContent
           #end
