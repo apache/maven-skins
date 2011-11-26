@@ -60,8 +60,8 @@
         <directory>.</directory>
         <targetPath>META-INF</targetPath>
         <includes>
-          <include>NOTICE.txt</include>
-          <include>LICENSE.txt</include>
+          <include>NOTICE</include>
+          <include>LICENSE</include>
         </includes>
       </resource>
 
