@@ -150,6 +150,16 @@
   #end
 #end
 ##
+#macro ( externalLinks $links )
+  #set ( $counter = 0 )
+  #foreach( $item in $links )
+    #set ( $counter = $counter + 1 )
+    #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
+    #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+    <li class="none">#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )</li>
+  #end
+#end
+##
 #macro ( breadcrumbs $breadcrumbs $cssClass )
   #foreach( $item in $breadcrumbs )
     #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
@@ -667,12 +677,16 @@
         <div class="well">
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
           #mainMenu( $decoration.body.menus )
+          #if( $decoration.body.links.size() > 0 && !$topBarEnabled )
+            <h5>External Links</h5>
+            <ul>
+              #externalLinks( $decoration.body.links )
+            </ul>
+          #end
           #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
-
           #if ( $searchEnabled )
             #enableSearch( false )
           #end
-
           <div id="poweredBy">
             #poweredByLogo( $decoration.poweredBy )
           </div>
