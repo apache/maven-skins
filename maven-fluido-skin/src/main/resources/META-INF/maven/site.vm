@@ -350,19 +350,26 @@
   #end
 #end
 ##
-#macro ( publishDate $position $publishDate $version )
-  #if ( $publishDate && $publishDate.format )
-    #set ( $format = $publishDate.format )
+#macro ( publishDate $position $decorationPublishDate $version )
+  #if ( $decorationPublishDate && $decorationPublishDate.format )
+    #set ( $format = $decorationPublishDate.format )
   #else
     #set ( $format = "yyyy-MM-dd" )
   #end
 ##
   $dateFormat.applyPattern( $format )
 ##
-  #set ( $dateToday = $dateFormat.format( $currentDate ) )
+  #if ( $publishDate )
+    #set ( $dateValue = $dateFormat.format( $publishDate ) )
+  #elseif ( $decoration.custom.getChild( 'fluidoSkin' )
+              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'publishDate' ) )
+    #set ( $dateValue = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'publishDate' ) )
+  #else  
+    #set ( $dateValue = $dateFormat.format( $currentDate ) )
+  #end
 ##
-  #if ( $publishDate && $publishDate.position )
-    #set ( $datePosition = $publishDate.position )
+  #if ( $decorationPublishDate && $decorationPublishDate.position )
+    #set ( $datePosition = $decorationPublishDate.position )
   #else
     #set ( $datePosition = "left" )
   #end
@@ -389,19 +396,19 @@
 ##
   #if ( $datePosition.equalsIgnoreCase( $position ) )
     #if ( ( $datePosition.equalsIgnoreCase( "right" ) ) || ( $datePosition.equalsIgnoreCase( "bottom" ) ) )
-        <li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li> $prefix
+        <li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li> $prefix
       #if ( $versionPosition.equalsIgnoreCase( $position ) )
         <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
       #end
     #elseif ( ( $datePosition.equalsIgnoreCase( "navigation-bottom" ) ) || ( $datePosition.equalsIgnoreCase( "navigation-top" ) ) )
       <div id="lastPublished">
-        <span id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</span>
+        <span id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</span>
         #if ( $versionPosition.equalsIgnoreCase( $position ) )
           <span class="divider">|</span> <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
         #end
       </div>
     #elseif ( $datePosition.equalsIgnoreCase("left") )
-        <li id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateToday</li>
+        <li id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li>
         #if ( $versionPosition.equalsIgnoreCase( $position ) )
           <li class="divider">|</li> <li id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
         #end
