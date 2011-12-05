@@ -127,7 +127,22 @@
         #else
             #set ( $alt = $banner.name )
         #end
-        <img src="$src" alt="$alt"/>
+        #if( $banner.border )
+          #set ( $imgBorder = ' border="' + $border + '"' )
+        #else
+          #set ( $imgBorder = "" )
+        #end
+        #if( $banner.width )
+            #set ( $imgWidth = ' width="' + $banner.width + '"' )
+        #else
+            #set ( $imgWidth = "" )
+        #end
+        #if( $banner.height )
+           #set ( $imgHeight = ' height="' + $banner.height + '"' )
+        #else
+           #set ( $imgHeight = "" )
+        #end
+        <img src="$src" alt="$alt"$imgBorder$imgWidth$imgHeight/>
     #else
         <h2>$banner.name</h2>
     #end
