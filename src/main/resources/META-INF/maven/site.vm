@@ -123,12 +123,14 @@
             #set ( $src = $src.replaceAll( '\\', '/' ) )
         #end
         #if ( $banner.alt )
-            #set ( $alt = $banner.alt )
-        #else
-            #set ( $alt = $banner.name )
+            #set ( $alt = ' alt="' + $banner.alt + '"' )
+        #elseif ( $banner.name )
+            #set ( $alt = ' alt="' + $banner.name + '"' )
+        #else 
+            #set ( $alt = "" )
         #end
         #if( $banner.border )
-          #set ( $imgBorder = ' border="' + $border + '"' )
+          #set ( $imgBorder = ' border="' + $banner.border + '"' )
         #else
           #set ( $imgBorder = "" )
         #end
@@ -142,7 +144,7 @@
         #else
            #set ( $imgHeight = "" )
         #end
-        <img src="$src" alt="$alt"$imgBorder$imgWidth$imgHeight/>
+        <img src="$src" $alt$imgBorder$imgWidth$imgHeight/>
     #else
         <h2>$banner.name</h2>
     #end
@@ -526,7 +528,7 @@
   #end
 #end
 ##
-#macro ( enableSearch $top )
+#macro ( googleSearch $top )
     #set( $startIndex = $project.url.indexOf("://") + 3 )
 <form action="http://www.google.com/search" method="get" #if ( $top )class="pull-right"#end>
   <input value="$project.url.substring( $startIndex, $project.url.length() )" name="sitesearch" type="hidden"/>
@@ -591,8 +593,11 @@
         #end
 
         #if ( $project.url
-              && $project.url.length() > 0
-              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'searchEnabled' )
+              || $project.url.length() > 0 )
+            #set ( $searchEnabled = false )
+        #elseif ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ) )
+            #set ( $searchEnabled = true )
+        #elseif ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'searchEnabled' )
               && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'searchEnabled' ).getValue() )
             #set ( $searchEnabled = true )
         #else
@@ -657,7 +662,7 @@
             #topMenu( $decoration.body.menus )
           </ul>
           #if ( $searchEnabled && !$sideBarEnabled )
-            #enableSearch(true)
+            #googleSearch(true)
           #end
           #if( $decoration.body.links.size() > 0 )
             <ul class="nav secondary-nav">
@@ -707,7 +712,7 @@
           #end
           #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
           #if ( $searchEnabled )
-            #enableSearch( false )
+            #googleSearch( false )
           #end
           <div id="poweredBy">
             #poweredByLogo( $decoration.poweredBy )
