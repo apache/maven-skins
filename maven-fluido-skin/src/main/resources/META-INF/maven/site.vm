@@ -539,7 +539,11 @@
     #end         
   <input value="$sitesearchValue" name="sitesearch" type="hidden"/>
   <input class="mini" size="5" name="q" id="query" type="text" value="search..." onclick="if(this.value == 'search...') {this.value = ''}"/>
-  <input name="Search" value="Go" type="submit"/>
+  #if ( $top )
+    <button type="submit" class="btn">Go</button>
+  #else
+    <input name="Search" value="Go" type="submit"/>
+  #end
 </form>
 #end
 ##
