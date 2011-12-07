@@ -51,6 +51,8 @@ ${project.name}
 </project>
 +-----+
 
+** TopBar and/or sideBar
+
  The skin supports different layouts, enabling/disabling the left sidebar menu and the topbar menu.
  Users have just play with flags in the <<<custom/fluidoSkin>>> element in <<<site.xml>>>:
 
@@ -81,6 +83,8 @@ ${project.name}
 
  Default skin setting is the option <<1>>.
 
+** TopBarIcon
+
  When users decide to enable the topbar, they can plug a small icon/logo there (typically 108*20 px) just configuring
  the <<<custom/fluidoSkin/topBarIcon>>> element in <<<site.xml>>>:
 
@@ -101,6 +105,8 @@ ${project.name}
   ...
 </project>
 +-----+
+
+** GoogleSearch
 
  Users can optionally enable the <<Google Search>> for the generated site, requirements are:
 
@@ -140,6 +146,11 @@ ${project.name}
  
  []
 
+ External links are either rendered in the sidebar or the topbar. When both sidebar and topbar are enabled,
+ they are rendered as dropdown in the topbar only.
+
+** SourceLineNumbers
+
  Source code sections are enhanced by {{{http://code.google.com/p/google-code-prettify/}Google Code Prettify}}, users can
  optionally enable line numbers rendering (disabled by default):
 
@@ -155,7 +166,7 @@ ${project.name}
 </project>
 +-----+
 
-Footers placeholders
+** Footers placeholders
 
  Since <<<#eval>>> Velocity macro is not supported yet, the only placeholder
  available in additional footers is <<<@project.name@>>>.
