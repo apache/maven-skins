@@ -104,7 +104,7 @@ ${project.name}
 
  Users can optionally enable the <<Google Search>> for the generated site, requirements are:
 
- * the <<<project/url>>> property in <<<pom.xml>>>:
+ * the <<<project/url>>> property in <<<pom.xml>>>, unless the <<<custom/fluidoSkin/googleSearch/sitesearch>>> property is set in the <<<site.xml>>>:
 
 +-----+
 <project
@@ -114,14 +114,16 @@ ${project.name}
 </project>
 +-----+
 
- * the <<<custom/fluidoSkin/searchEnabled>>> element in <<<site.xml>>>:
+ * the <<<custom/fluidoSkin/googleSearch>>> element in <<<site.xml>>> or the deprecated <<<custom/fluidoSkin/searchEnabled>>> :
 
 +-----+
 <project name="xxx">
   ...
   <custom>
     <fluidoSkin>
-      <searchEnabled>true</searchEnabled>
+      <googleSearch>
+        <sitesearch/>
+      </googleSearch>
     </fluidoSkin>
   </custom>
   ...
@@ -132,7 +134,7 @@ ${project.name}
 
  By default, the search form:
 
- * is <not> enabled;
+ * is <not> enabled; adding <<\<googleSearch/\>>>> is enough to enable the searchbox.
  
  * is rendered in the sidebar, if the topbar only is available it will be rendered there.
  

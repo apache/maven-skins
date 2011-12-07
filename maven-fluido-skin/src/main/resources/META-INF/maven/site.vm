@@ -531,7 +531,13 @@
 #macro ( googleSearch $top )
     #set( $startIndex = $project.url.indexOf("://") + 3 )
 <form action="http://www.google.com/search" method="get" #if ( $top )class="pull-right"#end>
-  <input value="$project.url.substring( $startIndex, $project.url.length() )" name="sitesearch" type="hidden"/>
+    #if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ) 
+             && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ) )
+      #set( $sitesearchValue = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ).getValue() )
+    #else
+      #set( $sitesearchValue = $project.url.substring( $startIndex, $project.url.length() ) )
+    #end         
+  <input value="$sitesearchValue" name="sitesearch" type="hidden"/>
   <input class="mini" size="5" name="q" id="query" type="text" value="search..." onclick="if(this.value == 'search...') {this.value = ''}"/>
   <input name="Search" value="Go" type="submit"/>
 </form>
