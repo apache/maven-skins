@@ -38,6 +38,11 @@
       <googleSearch/>
     </fluidoSkin>
   </custom>
-  
-  <body/>
+
+  <body>
+    <menu name="Main">
+      <item name="Sub" href="nowhere.html" />
+    </menu>
+  </body>
+
 </project>
