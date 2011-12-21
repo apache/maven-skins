@@ -120,7 +120,7 @@ ${project.name}
 </project>
 +-----+
 
- * the <<<custom/fluidoSkin/googleSearch>>> element in <<<site.xml>>> or the deprecated <<<custom/fluidoSkin/searchEnabled>>> :
+ * the <<<custom/fluidoSkin/googleSearch>>> element in <<<site.xml>>>:
 
 +-----+
 <project name="xxx">
