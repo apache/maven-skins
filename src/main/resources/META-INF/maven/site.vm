@@ -163,17 +163,12 @@
     #set ( $counter = $counter + 1 )
     #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
     #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
-    <li>#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )</li>
-  #end
-#end
-##
-#macro ( externalLinks $links )
-  #set ( $counter = 0 )
-  #foreach( $item in $links )
-    #set ( $counter = $counter + 1 )
-    #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
-    #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
-    <li class="none">#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )</li>
+
+    <li class="pull-right">#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )</li>
+
+    #if ( $counter > 0 && $counter < $links.size() )
+    <li class="divider pull-right">|</li>
+    #end
   #end
 #end
 ##
@@ -704,6 +699,11 @@
       <div id="breadcrumbs">
         <ul class="breadcrumb">
           #publishDate( "left" $decoration.publishDate $decoration.version )
+
+          #if ( !$topBarEnabled && $decoration.body.links.size() > 0 )
+          #links( $decoration.body.links )
+          #end
+
           #publishDate( "right" $decoration.publishDate $decoration.version )
         </ul>
       </div>
@@ -713,12 +713,6 @@
         <div class="well">
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
           #mainMenu( $decoration.body.menus )
-          #if( $decoration.body.links.size() > 0 && !$topBarEnabled )
-            <h5>External Links</h5>
-            <ul>
-              #externalLinks( $decoration.body.links )
-            </ul>
-          #end
           #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
           #if ( $searchEnabled )
             #googleSearch( false )
