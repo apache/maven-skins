@@ -22,6 +22,7 @@
   <groupId>org.apache.maven.skins.its</groupId>
   <artifactId>mskins-13</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <url>http://maven.apache.org/skins/maven-fluido-skin/</url>
 
   <properties>
     <skinName>Apache Maven Fluido Skin</skinName>

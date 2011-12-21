@@ -526,8 +526,7 @@
     #set( $startIndex = $project.url.indexOf("://") + 3 )
 
 <form id="search-form" action="http://www.google.com/search" method="get" #if ( $top )class="pull-right" #end>
-    #if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ) 
-             && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ) )
+    #if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ) )
       #set( $sitesearchValue = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ).getValue() )
     #else
       #set( $sitesearchValue = $project.url.substring( $startIndex, $project.url.length() ) )
@@ -599,16 +598,12 @@
             #set ( $sideBarEnabled = false )
         #end
 
-        #if ( $project.url
-              || $project.url.length() > 0 )
-            #set ( $searchEnabled = false )
-        #elseif ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ) )
-            #set ( $searchEnabled = true )
-        #elseif ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'searchEnabled' )
-              && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'searchEnabled' ).getValue() )
-            #set ( $searchEnabled = true )
+        #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' )
+              && ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' )
+                    || $project.url ) )
+          #set ( $searchEnabled = true )
         #else
-            #set ( $searchEnabled = false )
+          #set ( $searchEnabled = false )
         #end
     #end
 
