@@ -697,11 +697,19 @@
         <ul class="breadcrumb">
           #publishDate( "left" $decoration.publishDate $decoration.version )
 
+          #publishDate( "right" $decoration.publishDate $decoration.version )
+
           #if ( !$topBarEnabled && $decoration.body.links.size() > 0 )
+            #if ( ( $decoration.publishDate
+                    && $decoration.publishDate.position
+                    && $decoration.publishDate.position.equalsIgnoreCase( "right" ) )
+                || ( $decoration.version
+                    && $decoration.version.position
+                    && $decoration.version.position.equalsIgnoreCase( "right" ) ) )
+            <li class="divider pull-right">|</li>
+          #end
           #links( $decoration.body.links )
           #end
-
-          #publishDate( "right" $decoration.publishDate $decoration.version )
         </ul>
       </div>
 
