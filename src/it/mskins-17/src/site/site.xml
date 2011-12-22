@@ -33,9 +33,7 @@
 
   <!-- START SNIPPET: skin-custom-config -->
   <custom>
-    <fluidoSkin>
-      <publishDate>1970-01-01</publishDate>
-    </fluidoSkin>
+    <publishDate>1970-01-01</publishDate>
   </custom>
   <!-- END SNIPPET: skin-custom-config -->
 

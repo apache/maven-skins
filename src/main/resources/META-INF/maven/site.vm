@@ -359,7 +359,7 @@
   #if ( $publishDate )
     #set ( $dateValue = $dateFormat.format( $publishDate ) )
   #elseif ( $decoration.custom.getChild( 'publishDate' ) )
-    #set ( $dateValue = $decoration.custom.getChild( 'publishDate' ) )
+    #set ( $dateValue = $decoration.custom.getChild( 'publishDate' ).getValue() )
   #else  
     #set ( $dateValue = $dateFormat.format( $currentDate ) )
   #end
