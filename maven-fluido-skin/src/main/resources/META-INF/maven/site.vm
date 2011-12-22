@@ -523,12 +523,11 @@
 #end
 ##
 #macro ( googleSearch $top )
-    #set( $startIndex = $project.url.indexOf("://") + 3 )
-
 <form id="search-form" action="http://www.google.com/search" method="get" #if ( $top )class="pull-right" #end>
     #if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ) )
       #set( $sitesearchValue = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ).getValue() )
     #else
+      #set( $startIndex = $project.url.indexOf("://") + 3 )
       #set( $sitesearchValue = $project.url.substring( $startIndex, $project.url.length() ) )
     #end
 
