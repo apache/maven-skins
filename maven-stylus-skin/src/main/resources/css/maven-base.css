@@ -52,6 +52,7 @@ div.clear hr{
  width: 170px;
  float:left;
  overflow: auto;
+ padding-bottom: 2px; /* IE-9 scrollbar-fix */
 }
 #bodyColumn {
   margin-right: 1.5em;
