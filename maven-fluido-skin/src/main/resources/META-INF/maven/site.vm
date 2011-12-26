@@ -538,8 +538,9 @@
     #set( $searchClass = 'span2' )
   #end
 
-  <input class="$searchClass" name="q" id="query" type="text" placeholder="search..." "/>
+  <input class="$searchClass search" name="q" id="query" type="text" />
 </form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
 #end
 ##
 <html xmlns="http://www.w3.org/1999/xhtml"#if ( $locale ) xml:lang="$locale.language" lang="$locale.language"#end>
