@@ -1,0 +1,16 @@
+ ------
+ ${project.name}
+ ------
+ Robert Scholte
+ ------
+ 2011-12-23
+ ------
+
+${project.name}
+
+ This is a test for ${skinName} to verify the custom publish date.
+ ${skinDescription}
+
+* Actual configuration
+
+%{snippet|id=skin-custom-config|file=${project.basedir}/src/site/site.xml}
