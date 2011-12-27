@@ -41,13 +41,13 @@ ${project.name}
 
 +-----+
 <project name="xxx">
-  ...
+  [...]
   <skin>
     <groupId>${project.groupId}</groupId>
     <artifactId>${project.artifactId}</artifactId>
     <version>${project.version}</version>
   </skin>
-  ...
+  [...]
 </project>
 +-----+
 
@@ -58,14 +58,14 @@ ${project.name}
 
 +-----+
 <project name="xxx">
-  ...
+  [...]
   <custom>
     <fluidoSkin>
       <topBarEnabled>true</topBarEnabled>
       <sideBarEnabled>false</sideBarEnabled>
     </fluidoSkin>
   </custom>
-  ...
+  [...]
 </project>
 +-----+
 
@@ -90,7 +90,7 @@ ${project.name}
 
 +-----+
 <project name="xxx">
-  ...
+  [...]
   <custom>
     <fluidoSkin>
       <topBarEnabled>true</topBarEnabled>
@@ -102,7 +102,7 @@ ${project.name}
       </topBarIcon>
     </fluidoSkin>
   </custom>
-  ...
+  [...]
 </project>
 +-----+
 
@@ -113,10 +113,10 @@ ${project.name}
  * the <<<project.url>>> property in <<<pom.xml>>>, unless the <<<custom.fluidoSkin.googleSearch.sitesearch>>> property is set in the <<<site.xml>>>:
 
 +-----+
-<project
-...
+<project name="xxx">
+  [...]
   <url>http://maven.apache.org/skins/${project.artifactId}</url>
-...
+  [...]
 </project>
 +-----+
 
@@ -124,7 +124,7 @@ ${project.name}
 
 +-----+
 <project name="xxx">
-  ...
+  [...]
   <custom>
     <fluidoSkin>
       <googleSearch>
@@ -132,7 +132,7 @@ ${project.name}
       </googleSearch>
     </fluidoSkin>
   </custom>
-  ...
+  [...]
 </project>
 +-----+
 
@@ -156,13 +156,13 @@ ${project.name}
 
 +-----+
 <project name="xxx">
-  ...
+  [...]
   <custom>
     <fluidoSkin>
       <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
     </fluidoSkin>
   </custom>
-  ...
+  [...]
 </project>
 +-----+
 
@@ -183,7 +183,7 @@ ${project.name}
  * <<<custom.fluidoSkin.gitHub.ribbonColor>>>: <<optional>>, it is the the ribbon color, <<<red>>>/<<<green>>>/<<<black>>>/<<<orange>>>/<<<gray>>> only accepted only accepted (<<<red>>> by default).
 
 +-----+
-<project>
+<project name="xxx">
   [...]
   <custom>
     <fluidoSkin>
