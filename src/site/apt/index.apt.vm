@@ -54,7 +54,7 @@ ${project.name}
 ** TopBar and/or sideBar
 
  The skin supports different layouts, enabling/disabling the left sidebar menu and the topbar menu.
- Users have just play with flags in the <<<custom/fluidoSkin>>> element in <<<site.xml>>>:
+ Users have just play with flags in the <<<custom.fluidoSkin>>> element in <<<site.xml>>>:
 
 +-----+
 <project name="xxx">
@@ -86,7 +86,7 @@ ${project.name}
 ** TopBarIcon
 
  When users decide to enable the topbar, they can plug a small icon/logo there (typically 108*20 px) just configuring
- the <<<custom/fluidoSkin/topBarIcon>>> element in <<<site.xml>>>:
+ the <<<custom.fluidoSkin.topBarIcon>>> element in <<<site.xml>>>:
 
 +-----+
 <project name="xxx">
@@ -110,7 +110,7 @@ ${project.name}
 
  Users can optionally enable the <<Google Search>> for the generated site, requirements are:
 
- * the <<<project/url>>> property in <<<pom.xml>>>, unless the <<<custom/fluidoSkin/googleSearch/sitesearch>>> property is set in the <<<site.xml>>>:
+ * the <<<project.url>>> property in <<<pom.xml>>>, unless the <<<custom.fluidoSkin.googleSearch.sitesearch>>> property is set in the <<<site.xml>>>:
 
 +-----+
 <project
@@ -120,7 +120,7 @@ ${project.name}
 </project>
 +-----+
 
- * the <<<custom/fluidoSkin/googleSearch>>> element in <<<site.xml>>>:
+ * the <<<custom.fluidoSkin.googleSearch>>> element in <<<site.xml>>>:
 
 +-----+
 <project name="xxx">
@@ -140,7 +140,7 @@ ${project.name}
 
  By default, the search form:
 
- * is <not> enabled; adding <<\<googleSearch/\>>>> is enough to enable the searchbox.
+ * is <not> enabled; adding <<custom.fluidoSkin.googleSearch>>> is enough to enable the searchbox.
  
  * is rendered in the sidebar, if the topbar only is available it will be rendered there.
  
