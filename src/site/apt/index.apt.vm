@@ -170,3 +170,30 @@ ${project.name}
 
  Since <<<#eval>>> Velocity macro is not supported yet, the only placeholder
  available in additional footers is <<<@project.name@>>>.
+
+** GitHub ribbons
+
+ Since version <<1.1>>, fluido-skin supports {{{https://github.com/blog/273-github-ribbons}GitHub ribbons}} to simplify
+ the <Fork me on GitHub> banner integration. Users must define:
+ 
+ * <<<custom.fluidoSkin.gitHub.projectId>>>: <<required>>, it is the project id on GitHub and will be used to build the project page URL;
+
+ * <<<custom.fluidoSkin.gitHub.ribbonOrientation>>>: <<optional>>, it is the the ribbon position, <<<left>>>/<<<right>>> only accepted (<<<left>>> by default);
+
+ * <<<custom.fluidoSkin.gitHub.ribbonColor>>>: <<optional>>, it is the the ribbon color, <<<red>>>/<<<green>>>/<<<black>>>/<<<orange>>>/<<<gray>>> only accepted only accepted (<<<red>>> by default).
+
++-----+
+<project>
+  [...]
+  <custom>
+    <fluidoSkin>
+      <gitHub>
+        <projectId>99soft/backport-spi</projectId>
+        <ribbonOrientation>right</ribbonOrientation>
+        <ribbonColor>black</ribbonColor>
+      </gitHub>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
