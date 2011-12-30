@@ -197,3 +197,28 @@ ${project.name}
   [...]
 </project>
 +-----+
+
+** Project profile
+
+ As shown in the MOJOs {{{http://mojo.codehaus.org/plugins.html}list}}, plugins life-cycle are characterized by
+ different status/stages:
+
+ * Production
+ * Pre-release
+ * Sandbox
+ * Graveyard
+
+ Users can configure different backgrounds depending on the project status (except the production) to warrant users they
+ are not using a production ready software:
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+      <profile>sandbox</profile>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
