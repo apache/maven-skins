@@ -216,7 +216,7 @@ ${project.name}
   [...]
   <custom>
     <fluidoSkin>
-      <profile>sandbox</profile>
+      <profile>(pre-release|sandbox|graveyard)</profile>
     </fluidoSkin>
   </custom>
   [...]
