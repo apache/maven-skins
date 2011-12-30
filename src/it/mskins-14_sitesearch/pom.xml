@@ -20,8 +20,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.apache.maven.skins.its</groupId>
-  <artifactId>mskins-14_sitesearch</artifactId>
+  <artifactId>@project.artifactId@-mskins-14_sitesearch</artifactId>
   <version>1.0-SNAPSHOT</version>
+
+  <name>@project.name@ IT, MSKINS-14 (sitesearch)</name>
+  <url>http://maven.apache.org/skins/@project.artifactId@/mskins-14_sitesearch/</url>
 
   <properties>
     <skinName>@project.name@</skinName>
