@@ -580,6 +580,20 @@
   #end
 #end
 ##
+#macro ( prjProfile )
+  #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'profile' ) )
+
+    #set ( $profile = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'profile' ).getValue() )
+
+    #if ( $profile.equalsIgnoreCase( "graveyard" )
+          || $profile.equalsIgnoreCase( "pre-release" )
+          || $profile.equalsIgnoreCase( "sandbox" ) )
+      <style>body{background-image: url('$relativePath/images/profiles/${profile}.png');}</style>
+    #end
+
+  #end
+#end
+##
 <html xmlns="http://www.w3.org/1999/xhtml"#if ( $locale ) xml:lang="$locale.language" lang="$locale.language"#end>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=${outputEncoding}" />
@@ -595,6 +609,8 @@
     #else
     <style>body{padding-top: 20px;}</style>
     #end
+
+    #prjProfile()
 
     <script type="text/javascript" src="$relativePath/js/apache-maven-fluido.min.js"></script>
 
