@@ -33,6 +33,13 @@
     built on top of Twitter's bootstrap.</description>
   <inceptionYear>2011</inceptionYear>
 
+  <contributors>
+    <contributor>
+      <name>Carlos Villaronga</name>
+      <email>cvillaronga AT gmail DOT com</email>
+    </contributor>
+  </contributors>
+
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/maven-fluido-skin</connection>
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/maven-fluido-skin</developerConnection>
