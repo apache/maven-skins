@@ -58,3 +58,6 @@ li{color:#404040;}
 
 /* avoid transparent background of table */
 table.zebra-striped{background-color:#FFF}
+
+/* avoid transparent footer */
+.footer{background-color:#EEE}
