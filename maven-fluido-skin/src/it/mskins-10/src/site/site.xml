@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -16,10 +19,23 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ -->
 
-/* $Id$ */
+<project xmlns="http://maven.apache.org/DECORATION/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.1.0 http://maven.apache.org/xsd/decoration-1.1.0.xsd"
+  name="${skinName}">
 
-.clear{clear:both;visibility: hidden;}
-.clear hr{display: none;}
-.section p,.section p,.section dt,.section dt{margin-right: 7px;margin-left: 7px;}
-#leftColumn li.none {text-indent: -1em;margin-left: 1em;}
+  <skin>
+    <groupId>${skinGroupId}</groupId>
+    <artifactId>${skinArtifactId}</artifactId>
+    <version>${skinVersion}</version>
+  </skin>
+
+  <body>
+    <menu>
+      <item name="Suppress line wrapping in navigation caused by spaces or hyphens" href="./"/>
+    </menu>
+    
+    <menu ref="reports"/>
+  </body>
+</project>
