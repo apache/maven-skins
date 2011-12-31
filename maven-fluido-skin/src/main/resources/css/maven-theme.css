@@ -55,3 +55,6 @@ tt{padding:0 3px 2px;font-family:Monaco, Andale Mono, Courier New, monospace;fon
 
 /* avoid greyed list items */
 li{color:#404040;}
+
+/* avoid transparent background of table */
+table.zebra-striped{background-color:#FFF}
