@@ -206,7 +206,7 @@ ${project.name}
  * Production
  * Pre-release
  * Sandbox
- * Graveyard
+ * Graveyard (retired projects)
 
  Users can configure different backgrounds depending on the project status (except the production) to warrant users they
  are not using a production ready software:
@@ -216,7 +216,7 @@ ${project.name}
   [...]
   <custom>
     <fluidoSkin>
-      <profile>(pre-release|sandbox|graveyard)</profile>
+      <profile>(pre-release|sandbox|retired)</profile>
     </fluidoSkin>
   </custom>
   [...]
