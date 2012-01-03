@@ -585,7 +585,7 @@
 
     #set ( $profile = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'profile' ).getValue() )
 
-    #if ( $profile.equalsIgnoreCase( "graveyard" )
+    #if ( $profile.equalsIgnoreCase( "retired" )
           || $profile.equalsIgnoreCase( "pre-release" )
           || $profile.equalsIgnoreCase( "sandbox" ) )
       <style>body{background-image: url('$relativePath/images/profiles/${profile}.png');}</style>

@@ -34,7 +34,7 @@
   <!-- START SNIPPET: skin-custom-config -->
   <custom>
     <fluidoSkin>
-      <profile>sandbox</profile>
+      <profile>retired</profile>
     </fluidoSkin>
   </custom>
   <!-- END SNIPPET: skin-custom-config -->
