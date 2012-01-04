@@ -251,3 +251,55 @@ ${project.name}
 +-----+
 
  By default, it is rendered in the sidebar, if the topbar only is available it will be rendered there.
+
+** Ohloh widgets
+
+ Since version <<1.1>>, fluido-skin supports the Ohloh {{{https://www.ohloh.net/p/maven2/widgets}widgets}}
+ to simplify its integration. Users must define:
+
+ * <<<custom.fluidoSkin.ohloh.projectId>>>: <<required>>, it is the project identifier in Ohloh (could be the numeric id or the project name);
+
+ * <<<custom.fluidoSkin.ohloh.widget>>>: <<optional>>, it is the kind of widget has to be rendered, admitted values are:
+
+   * <<<users-logo>>> (default)
+
+   * <<<users-green>>>
+
+   * <<<users-red>>>
+
+   * <<<users-blue>>>
+
+   * <<<users-gray>>>
+
+   * <<<users-rainbow>>>
+
+   * <<<users>>>
+
+   * <<<thin-badge>>>
+
+   * <<<partner-badge>>>
+
+   * <<<languages>>>
+
+   * <<<factoids>>>
+
+   * <<<cocomo>>>
+
+   * <<<stats>>>
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+      <ohloh>
+        <projectId>3499</projectId>
+        <widget>factoids</widget>
+      </ohloh>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
+
+ Ohloh widgets will be rendered always in the footer as last element
