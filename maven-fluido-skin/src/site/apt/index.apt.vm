@@ -222,3 +222,32 @@ ${project.name}
   [...]
 </project>
 +-----+
+
+** Twitter follow button
+
+ Since version <<1.1>>, fluido-skin supports the Twitter {{{https://dev.twitter.com/docs/follow-button}follow button}}
+ to simplify its integration. Users must define:
+
+ * <<<custom.fluidoSkin.twitter.user>>>: <<required>>, it is the Twitter id to suggest to follow;
+
+ * <<<custom.fluidoSkin.twitter.showUser>>>: <<optional>>, flag to mark the user has to be shown (<<<false>>> by default);
+
+ * <<<custom.fluidoSkin.twitter.showFollowers>>>: <<optional>>, flag to mark the followers ribbon has to be shown (<<<false>>> by default).
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+      <twitter>
+        <user>simonetripodi</user>
+        <showUser>true</showUser>
+        <showFollowers>true</showFollowers>
+      </twitter>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
+
+ By default, it is rendered in the sidebar, if the topbar only is available it will be rendered there.
