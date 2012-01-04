@@ -594,6 +594,46 @@
   #end
 #end
 ##
+#macro ( followTwitter $sideBarEnabled )
+  #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' )
+        && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'user' ) )
+    #set ( $user = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'user' ).getValue() )
+
+    #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'showUser' )
+            && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'showUser' ).getValue().equalsIgnoreCase( "true" ) )
+      #set( $showUser = true )
+    #else
+      #set( $showUser = false )
+    #end
+
+    #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'showFollowers' )
+            && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'showFollowers' ).getValue().equalsIgnoreCase( "true" ) )
+      #set( $showFollowers = true )
+    #else
+      #set( $showFollowers = false )
+    #end
+
+    #if ( $sideBarEnabled )
+      #set( $dataSize = "medium" )
+      #set( $dataAlign = "left" )
+    <div id="twitter">
+    #else
+      #set( $dataSize = "large" )
+      #set( $dataAlign = "right" )
+    <ul class="nav secondary-nav"><li>
+    #end
+
+    <a href="https://twitter.com/${user}" class="twitter-follow-button" data-show-count="${showFollowers}" data-align="${dataAlign}" data-size="${dataSize}" data-show-screen-name="${showUser}" data-lang="${locale}">Follow ${user}</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    #if ( $sideBarEnabled )
+    </div>
+    #else
+    </li></ul>
+    #end
+  #end
+#end
+##
 <html xmlns="http://www.w3.org/1999/xhtml"#if ( $locale ) xml:lang="$locale.language" lang="$locale.language"#end>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=${outputEncoding}" />
@@ -721,6 +761,11 @@
           #if ( $searchEnabled && !$sideBarEnabled )
             #googleSearch(true)
           #end
+
+          #if ( !$sideBarEnabled )
+            #followTwitter( $sideBarEnabled )
+          #end
+
           #if( $decoration.body.links.size() > 0 )
             <ul class="nav secondary-nav">
               <li class="menu">
@@ -778,6 +823,9 @@
           #if ( $searchEnabled )
             #googleSearch( false )
           #end
+
+          #followTwitter( $sideBarEnabled )
+
           <div id="poweredBy">
             #poweredByLogo( $decoration.poweredBy )
           </div>
