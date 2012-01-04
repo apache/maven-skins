@@ -25,12 +25,12 @@
   </parent>
 
   <groupId>org.apache.maven.skins.its</groupId>
-  <artifactId>@project.artifactId@-sidebar</artifactId>
+  <artifactId>@project.artifactId@-mskins-25</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>@project.name@ IT, sidebar layout</name>
-  <url>http://maven.apache.org/skins/@project.artifactId@/sidebar/</url>
+  <name>@project.name@ IT, MSKINS-25</name>
+  <url>http://maven.apache.org/skins/@project.artifactId@/mskins-25/</url>
 
   <properties>
     <skinName>@project.name@</skinName>
