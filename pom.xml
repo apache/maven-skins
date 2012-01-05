@@ -33,7 +33,7 @@ under the License.
 
   <name>Maven Default Skin</name>
   <description>Maven Default Skin</description>
-  <url>http://maven.apache.org/skins/${project.artifactId}</url>
+  <url>http://maven.apache.org/skins/${site.destination}</url>
 
   <issueManagement>
     <system>jira</system>
@@ -47,7 +47,7 @@ under the License.
         <!-- Cannot define in parent -->
         <site>
           <id>apache.website</id>
-          <url>scp://people.apache.org/www/maven.apache.org/skins/${project.artifactId}-${project.version}</url>
+          <url>scp://people.apache.org/www/maven.apache.org/skins/${site.destination}</url>
         </site>
       </distributionManagement>
     </profile>
