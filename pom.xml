@@ -66,6 +66,11 @@ under the License.
     </site>
   </distributionManagement>
 
+  <!-- Workaround for SUREFIRE-300 -->
+  <properties>
+    <maven.test.skip>true</maven.test.skip>
+  </properties>
+
   <build>
     <pluginManagement>
       <plugins>
