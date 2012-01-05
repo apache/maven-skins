@@ -55,11 +55,6 @@
     <url>http://svn.apache.org/viewvc/maven/skins/trunk/maven-fluido-skin</url>
   </scm>
 
-  <!-- Workaround for SUREFIRE-300 -->
-  <properties>
-    <maven.test.skip>true</maven.test.skip>
-  </properties>
-
   <build>
     <resources>
       <resource>
