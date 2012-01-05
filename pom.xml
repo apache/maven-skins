@@ -33,7 +33,7 @@ under the License.
 
   <name>Maven Site Skin</name>
   <description>Maven Site Skin</description>
-  <url>http://maven.apache.org/skins/${project.artifactId}</url>
+  <url>http://maven.apache.org/skins/${site.destination}</url>
 
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/maven-stylus-skin/</connection>
@@ -52,7 +52,7 @@ under the License.
         <!-- Cannot define in parent -->
         <site>
           <id>apache.website</id>
-          <url>scp://people.apache.org/www/maven.apache.org/skins/${project.artifactId}-${project.version}</url>
+          <url>scp://people.apache.org/www/maven.apache.org/skins/${site.destination}</url>
         </site>
       </distributionManagement>
     </profile>
