@@ -78,7 +78,7 @@ ${project.name}
   [[3]] both side/top bars;
 
   [[4]] none at all.
-  
+
   []
 
  Default skin setting is the option <<1>>.
@@ -204,8 +204,11 @@ ${project.name}
  different status/stages:
 
  * Production
+
  * Pre-release
+
  * Sandbox
+
  * Graveyard (retired projects)
 
  Users can configure different backgrounds depending on the project status (except the production) to warrant users they
