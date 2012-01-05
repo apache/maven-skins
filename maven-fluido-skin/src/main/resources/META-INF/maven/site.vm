@@ -532,13 +532,7 @@
   #end
 
   <input value="$sitesearchValue" name="sitesearch" type="hidden"/>
-
-  #set( $searchClass = 'span3' )
-  #if ( $top )
-    #set( $searchClass = 'span2' )
-  #end
-
-  <input class="$searchClass search" name="q" id="query" type="text" />
+  <input class="span3 search" name="q" id="query" type="text" />
 </form>
 <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
 #end
