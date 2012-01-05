@@ -54,16 +54,6 @@
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/maven-fluido-skin</developerConnection>
     <url>http://svn.apache.org/viewvc/maven/skins/trunk/maven-fluido-skin</url>
   </scm>
-  <issueManagement>
-    <system>JIRA</system>
-    <url>https://jira.codehaus.org/browse/MSKINS/</url>
-  </issueManagement>
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>scp://people.apache.org/www/maven.apache.org/skins/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
 
   <!-- Workaround for SUREFIRE-300 -->
   <properties>
