@@ -69,6 +69,7 @@ under the License.
   <!-- Workaround for SUREFIRE-300 -->
   <properties>
     <maven.test.skip>true</maven.test.skip>
+    <site.destination>${project.artifactId}</site.destination>
   </properties>
 
   <build>
@@ -84,5 +85,14 @@ under the License.
       </plugins>
     </pluginManagement>
   </build>
+
+  <profiles>
+    <profile>
+      <id>rc</id>
+      <properties>
+        <site.destination>${project.artifactId}-${project.version}</site.destination>
+      </properties>
+    </profile>
+  </profiles>
 
 </project>
