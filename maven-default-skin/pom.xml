@@ -33,6 +33,7 @@ under the License.
 
   <name>Maven Default Skin</name>
   <description>Maven Default Skin</description>
+  <url>http://maven.apache.org/skins/${project.artifactId}</url>
 
   <issueManagement>
     <system>jira</system>
