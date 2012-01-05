@@ -41,14 +41,30 @@ under the License.
     <menu ref="parent"/>
 
     <menu name="Overview">
-      <item name="Introduction" href="index.html"/>
-      <item name="Sample Page" href="sample.html"/>
+      <item name="Introduction" href="./index.html"/>
+      <item name="Sample Page" href="./sample.html"/>
       <!--item name="FAQ" href="faq.html"/-->
     </menu>
 
     <menu name="Layouts">
-      <item name="Sidebar" href="sidebar/index.html"/>
-      <item name="Topbar" href="topbar/index.html"/>
+      <item name="Sidebar" href="./sidebar/index.html"/>
+      <item name="Topbar" href="./topbar/index.html"/>
+    </menu>
+
+    <menu name="Issues ITs">
+      <item name="MSKINS-10" href="./mskins-10/index.html"/>
+      <item name="MSKINS-13" href="./mskins-13/index.html"/>
+      <item name="MSKINS-14" href="./mskins-14/index.html"/>
+      <item name="MSKINS-14 (sitesearch)" href="./mskins-14_sitesearch/index.html"/>
+      <item name="MSKINS-15" href="./mskins-15/index.html"/>
+      <item name="MSKINS-16" href="./mskins-16/index.html"/>
+      <item name="MSKINS-17" href="./mskins-17/index.html"/>
+      <item name="MSKINS-22" href="./mskins-22/index.html"/>
+      <item name="MSKINS-22 (default)" href="./mskins-22_default/index.html"/>
+      <item name="MSKINS-23" href="./mskins-23/index.html"/>
+      <item name="MSKINS-24" href="./mskins-24/index.html"/>
+      <item name="MSKINS-24 (topbar)" href="./mskins-24_topbar/index.html"/>
+      <item name="MSKINS-25" href="./mskins-25/index.html"/>
     </menu>
 
     <menu ref="reports"/>
