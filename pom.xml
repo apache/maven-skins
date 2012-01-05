@@ -33,6 +33,7 @@ under the License.
 
   <name>Maven Site Skin</name>
   <description>Maven Site Skin</description>
+  <url>http://maven.apache.org/skins/${project.artifactId}</url>
 
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/maven-stylus-skin/</connection>
