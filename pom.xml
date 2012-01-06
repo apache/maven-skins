@@ -80,6 +80,7 @@ under the License.
           <configuration>
             <tagBase>https://svn.apache.org/repos/asf/maven/skins/tags</tagBase>
             <arguments>-Prc,run-its,reporting</arguments>
+            <goals>deploy site-deploy</goals>
           </configuration>
         </plugin>
       </plugins>
@@ -92,6 +93,23 @@ under the License.
       <properties>
         <site.destination>${project.artifactId}-${project.version}</site.destination>
       </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
   </profiles>
 
