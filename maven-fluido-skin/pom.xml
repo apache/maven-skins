@@ -21,12 +21,12 @@
   <parent>
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-skins</artifactId>
-    <version>6</version>
+    <version>7-SNAPSHOT</version>
   </parent>
 
   <groupId>org.apache.maven.skins</groupId>
   <artifactId>maven-fluido-skin</artifactId>
-  <version>1.1</version>
+  <version>1.2-SNAPSHOT</version>
 
   <name>Apache Maven Fluido Skin</name>
   <description>The Apache Maven Fluido Skin is an Apache Maven site skin
@@ -56,9 +56,9 @@
   </contributors>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/tags/maven-skins-6/maven-fluido-skin</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/tags/maven-skins-6/maven-fluido-skin</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/skins/tags/maven-skins-6/maven-fluido-skin</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/maven-fluido-skin</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/maven-fluido-skin</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/skins/trunk/maven-fluido-skin</url>
   </scm>
 
   <build>
