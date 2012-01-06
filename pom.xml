@@ -21,12 +21,12 @@
   <parent>
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-skins</artifactId>
-    <version>7-SNAPSHOT</version>
+    <version>6-SNAPSHOT</version>
   </parent>
 
   <groupId>org.apache.maven.skins</groupId>
   <artifactId>maven-fluido-skin</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.1-SNAPSHOT</version>
 
   <name>Apache Maven Fluido Skin</name>
   <description>The Apache Maven Fluido Skin is an Apache Maven site skin
