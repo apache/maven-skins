@@ -25,11 +25,11 @@ under the License.
   <parent>
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-skins</artifactId>
-    <version>6-SNAPSHOT</version>
+    <version>6</version>
   </parent>
 
   <artifactId>maven-classic-skin</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
 
   <name>Maven Classic Skin</name>
   <description>Maven Classic Skin</description>
