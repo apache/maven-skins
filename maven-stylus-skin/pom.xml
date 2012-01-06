@@ -31,8 +31,8 @@ under the License.
   <artifactId>maven-stylus-skin</artifactId>
   <version>1.5-SNAPSHOT</version>
 
-  <name>Maven Site Skin</name>
-  <description>Maven Site Skin</description>
+  <name>Maven Stylus Skin</name>
+  <description>Maven Stylus Skin</description>
   <url>http://maven.apache.org/skins/${site.destination}</url>
 
   <scm>
