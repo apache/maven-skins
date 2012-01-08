@@ -27,12 +27,11 @@
   <url>http://maven.apache.org/skins/@project.artifactId@/mskins-13/</url>
 
   <properties>
-    <skinName>Apache Maven Fluido Skin</skinName>
-    <skinDescription>The Apache Maven Fluido Skin is an Apache Maven site skin
-    built on top of Twitter's bootstrap.</skinDescription>
-    <skinGroupId>org.apache.maven.skins</skinGroupId>
-    <skinArtifactId>maven-fluido-skin</skinArtifactId>
-    <skinVersion>1.1-SNAPSHOT</skinVersion>
+    <skinName>@project.name@</skinName>
+    <skinDescription>@project.description@</skinDescription>
+    <skinGroupId>@project.groupId@</skinGroupId>
+    <skinArtifactId>@project.artifactId@</skinArtifactId>
+    <skinVersion>@project.version@</skinVersion>
   </properties>
 
   <build>
