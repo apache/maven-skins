@@ -25,12 +25,12 @@ under the License.
   <parent>
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-skins</artifactId>
-    <version>7-SNAPSHOT</version>
+    <version>6-SNAPSHOT</version>
     <relativePath>../maven-skins/pom.xml</relativePath>
   </parent>
 
   <artifactId>maven-stylus-skin</artifactId>
-  <version>1.5-SNAPSHOT</version>
+  <version>1.4-SNAPSHOT</version>
 
   <name>Maven Stylus Skin</name>
   <description>Maven Stylus Skin</description>

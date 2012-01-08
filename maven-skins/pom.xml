@@ -31,7 +31,7 @@ under the License.
 
   <groupId>org.apache.maven.skins</groupId>
   <artifactId>maven-skins</artifactId>
-  <version>7-SNAPSHOT</version>
+  <version>6-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Maven Skins</name>
