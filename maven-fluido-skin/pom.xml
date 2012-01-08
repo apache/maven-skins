@@ -35,6 +35,11 @@
   <url>http://maven.apache.org/skins/${site.destination}</url>
   <inceptionYear>2011</inceptionYear>
 
+  <scm>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/maven-fluido-skin/</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/maven-fluido-skin/</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/skins/trunk/maven-fluido-skin/</url>
+  </scm>
   <issueManagement>
     <system>jira</system>
     <url>http://jira.codehaus.org/browse/MSKINS/component/15253</url>

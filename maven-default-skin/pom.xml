@@ -36,6 +36,11 @@ under the License.
   <description>Maven Default Skin</description>
   <url>http://maven.apache.org/skins/${site.destination}</url>
 
+  <scm>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/maven-default-skin/</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/maven-default-skin/</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/skins/trunk/maven-default-skin/</url>
+  </scm>
   <issueManagement>
     <system>jira</system>
     <url>http://jira.codehaus.org/browse/MSKINS/component/12533</url>
