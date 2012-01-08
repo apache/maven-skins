@@ -30,87 +30,19 @@ under the License.
   </parent>
 
   <groupId>org.apache.maven.skins</groupId>
-  <artifactId>maven-skins</artifactId>
-  <version>7-SNAPSHOT</version>
+  <artifactId>maven-skins-aggregator</artifactId>
+  <version>1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Maven Skins</name>
-  <description>Maven Skins</description>
-  <url>http://maven.apache.org/skins/</url>
+  <name>Maven Skins Aggregator</name>
+  <description>Maven Skins Aggregator</description>
 
   <modules>
+    <module>maven-skins</module>
     <module>maven-application-skin</module>
     <module>maven-default-skin</module>
     <module>maven-classic-skin</module>
     <module>maven-stylus-skin</module>
     <module>maven-fluido-skin</module>
   </modules>
-
-  <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/skins/trunk/</url>
-  </scm>
-  <issueManagement>
-    <system>jira</system>
-    <url>http://jira.codehaus.org/browse/MSKINS</url>
-  </issueManagement>
-  <ciManagement>
-    <system>Jenkins</system>
-    <url>https://builds.apache.org/job/maven-skins/</url>
-  </ciManagement>
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>scp://people.apache.org/www/maven.apache.org/skins/</url>
-    </site>
-  </distributionManagement>
-
-  <!-- Workaround for SUREFIRE-300 -->
-  <properties>
-    <maven.test.skip>true</maven.test.skip>
-    <site.destination>${project.artifactId}</site.destination>
-  </properties>
-
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-release-plugin</artifactId>
-          <configuration>
-            <tagBase>https://svn.apache.org/repos/asf/maven/skins/tags</tagBase>
-            <arguments>-Prc,run-its,reporting</arguments>
-            <goals>deploy site-deploy</goals>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
-
-  <profiles>
-    <profile>
-      <id>rc</id>
-      <properties>
-        <site.destination>${project.artifactId}-${project.version}</site.destination>
-      </properties>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
-
 </project>
