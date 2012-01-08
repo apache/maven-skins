@@ -59,9 +59,7 @@ under the License.
     </site>
   </distributionManagement>
 
-  <!-- Workaround for SUREFIRE-300 -->
   <properties>
-    <maven.test.skip>true</maven.test.skip>
     <site.destination>${project.artifactId}</site.destination>
   </properties>
 
