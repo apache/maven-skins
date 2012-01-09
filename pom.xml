@@ -60,12 +60,6 @@
     </contributor>
   </contributors>
 
-  <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/maven-fluido-skin</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/maven-fluido-skin</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/skins/trunk/maven-fluido-skin</url>
-  </scm>
-
   <build>
     <resources>
       <resource>
