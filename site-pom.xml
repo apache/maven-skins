@@ -47,7 +47,7 @@ under the License.
   </issueManagement>
   <ciManagement>
     <system>Jenkins</system>
-    <url>https://builds.apache.org//view/M-R/view/Maven/job/maven-skins/</url>
+    <url>https://builds.apache.org/job/maven-skins/</url>
   </ciManagement>
   <distributionManagement>
     <site>
