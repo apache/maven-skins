@@ -906,6 +906,7 @@
             $StringUtils.replace( $foot, '@project.name@', ${project.name} )
           #end
         #end
+
         #if ( !$sideBarEnabled )
         <p id="poweredBy" class="pull-right">
           #poweredByLogo( $decoration.poweredBy )
