@@ -26,7 +26,7 @@ under the License.
     <groupId>org.apache.maven</groupId>
     <artifactId>maven-parent</artifactId>
     <version>21</version>
-    <relativePath>../pom/maven/pom.xml</relativePath>
+    <relativePath>../../pom/maven/pom.xml</relativePath>
   </parent>
 
   <groupId>org.apache.maven.skins</groupId>
@@ -37,14 +37,6 @@ under the License.
   <name>Maven Skins</name>
   <description>Maven Skins</description>
   <url>http://maven.apache.org/skins/</url>
-
-  <modules>
-    <module>maven-application-skin</module>
-    <module>maven-default-skin</module>
-    <module>maven-classic-skin</module>
-    <module>maven-stylus-skin</module>
-    <module>maven-fluido-skin</module>
-  </modules>
 
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/tags/maven-skins-6</connection>
@@ -59,6 +51,7 @@ under the License.
     <system>Jenkins</system>
     <url>https://builds.apache.org/job/maven-skins/</url>
   </ciManagement>
+
   <distributionManagement>
     <site>
       <id>apache.website</id>
@@ -66,9 +59,7 @@ under the License.
     </site>
   </distributionManagement>
 
-  <!-- Workaround for SUREFIRE-300 -->
   <properties>
-    <maven.test.skip>true</maven.test.skip>
     <site.destination>${project.artifactId}</site.destination>
   </properties>
 
@@ -79,8 +70,14 @@ under the License.
           <artifactId>maven-release-plugin</artifactId>
           <configuration>
             <tagBase>https://svn.apache.org/repos/asf/maven/skins/tags</tagBase>
-            <arguments>-Prc,run-its,reporting</arguments>
+            <arguments>-Prc,apache-release,run-its,reporting</arguments>
             <goals>deploy site-deploy</goals>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <configuration>
+            <stagingSiteURL>scp://people.apache.org/www/maven.apache.org/skins/${project.artifactId}-${project.version}</stagingSiteURL>
           </configuration>
         </plugin>
       </plugins>
@@ -93,23 +90,6 @@ under the License.
       <properties>
         <site.destination>${project.artifactId}-${project.version}</site.destination>
       </properties>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
     </profile>
   </profiles>
 
