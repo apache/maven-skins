@@ -30,16 +30,16 @@ under the License.
   </parent>
 
   <artifactId>maven-stylus-skin</artifactId>
-  <version>1.4-SNAPSHOT</version>
+  <version>1.4</version>
 
   <name>Maven Stylus Skin</name>
   <description>Maven Stylus Skin</description>
   <url>http://maven.apache.org/skins/${site.destination}</url>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/maven-stylus-skin/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/maven-stylus-skin/</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/skins/trunk/maven-stylus-skin/</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/tags/maven-stylus-skin-1.4</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/tags/maven-stylus-skin-1.4</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/skins/tags/maven-stylus-skin-1.4</url>
   </scm>
   <issueManagement>
     <system>jira</system>
