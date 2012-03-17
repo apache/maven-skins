@@ -126,7 +126,7 @@
             #set ( $alt = ' alt="' + $banner.alt + '"' )
         #elseif ( $banner.name )
             #set ( $alt = ' alt="' + $banner.name + '"' )
-        #else 
+        #else
             #set ( $alt = "" )
         #end
         #if( $banner.border )
@@ -360,7 +360,7 @@
     #set ( $dateValue = $dateFormat.format( $publishDate ) )
   #elseif ( $decoration.custom.getChild( 'publishDate' ) )
     #set ( $dateValue = $decoration.custom.getChild( 'publishDate' ).getValue() )
-  #else  
+  #else
     #set ( $dateValue = $dateFormat.format( $currentDate ) )
   #end
 ##
@@ -507,7 +507,7 @@
   #if( $accountId && $accountId != "" )
     <!-- Google Analytics -->
     <script type="text/javascript">
-    
+
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', '$accountId']);
       _gaq.push(['_trackPageview']);
@@ -825,13 +825,26 @@
     #else
     <div class="container">
     #end
-      #if ( ($decoration.bannerLeft.name && $decoration.bannerLeft.name != $project.name || $decoration.bannerLeft.src || $decoration.bannerLeft.href ) || $decoration.bannerRight )
       <div id="banner">
-        <div class="pull-left">#banner( $decoration.bannerLeft "bannerLeft" )</div>
+        <!-- sideBarEnabled=$sideBarEnabled; topBarEnabled=$topBarEnabled -->
+        <!-- sideBarEnabled=false; topBarEnabled=true -->
+        <div class="pull-left">
+        #if( $decoration.bannerLeft )
+          #banner( $decoration.bannerLeft "bannerLeft" )
+        #else
+          ## MSKINS-32
+          <h2>
+            #if( $project.name && $project.name != '' )
+              $project.name
+            #else
+              $project.artifactId
+            #end
+          </h2>
+        #end
+        </div>
         <div class="pull-right">#banner( $decoration.bannerRight "bannerRight" )</div>
         <div class="clear"><hr/></div>
       </div>
-      #end
 
       <div id="breadcrumbs">
         <ul class="breadcrumb">
