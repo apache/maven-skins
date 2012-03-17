@@ -26,7 +26,7 @@
 ~~ NOTE: For help with the syntax of this file, see:
 ~~ http://maven.apache.org/doxia/references/apt-format.html
 
-${project.name}
+Welcome to ${project.name}!
 
  The Apache Maven Fluido Skin is an Apache Maven site skin built on top of
  {{{http://twitter.github.com/bootstrap/}Twitter's bootstrap}}.
@@ -141,9 +141,9 @@ ${project.name}
  By default, the search form:
 
  * is <not> enabled; adding <<custom.fluidoSkin.googleSearch>>> is enough to enable the searchbox.
- 
+
  * is rendered in the sidebar, if the topbar only is available it will be rendered there.
- 
+
  []
 
  External links are either rendered in the sidebar or the topbar. When both sidebar and topbar are enabled,
