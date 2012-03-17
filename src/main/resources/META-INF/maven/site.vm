@@ -680,14 +680,6 @@
     <link rel="stylesheet" href="$relativePath/css/apache-maven-fluido.min.css" />
     <link rel="stylesheet" href="$relativePath/css/site.css" />
     <link rel="stylesheet" href="$relativePath/css/print.css" media="print" />
-    #if ( $decoration.custom.getChild( 'fluidoSkin' )
-              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' )
-              && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' ).getValue() )
-        #set( $topBarEnabled = true )
-    <style>body{padding-top: 60px;}</style>
-    #else
-    <style>body{padding-top: 20px;}</style>
-    #end
 
     #prjProfile()
 
@@ -722,7 +714,14 @@
     $headContent
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
   </head>
-  <body>
+    #if ( $decoration.custom.getChild( 'fluidoSkin' )
+              && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' )
+              && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' ).getValue() )
+        #set( $topBarEnabled = true )
+    <body class="topBarEnabled">
+    #else
+    <body class="topBarDisabled">
+    #end
     #forkMeOnGitHub()
 
     #set ( $sideBarEnabled = true )
