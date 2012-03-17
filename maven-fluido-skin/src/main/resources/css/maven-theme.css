@@ -47,6 +47,8 @@ li.collapsed{list-style-image: url('../images/collapsed.png');}
 body.topBarEnabled{padding-top: 60px;}
 body.topBarDisabled{padding-top: 20px;}
 
+#poweredBy{text-align: center;}
+
 /* Tweaks to the bootstrap theme
 --------------------------------- */
 
