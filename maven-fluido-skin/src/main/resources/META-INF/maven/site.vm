@@ -794,9 +794,13 @@
             #end
         #end
 
+          ## MSKINS-31
+          #if( $decoration.body && $decoration.body.menus )
           <ul>
             #topMenu( $decoration.body.menus )
           </ul>
+          #end
+
           #if ( $searchEnabled && !$sideBarEnabled )
             #googleSearch(true)
           #end
@@ -805,7 +809,10 @@
             #followTwitter( $sideBarEnabled )
           #end
 
-          #if( $decoration.body.links.size() > 0 )
+         ## MSKINS-31
+          #if( $decoration.body
+              && $decoration.body.links
+              && $decoration.body.links.size() > 0 )
             <ul class="nav secondary-nav">
               <li class="menu">
                 <a href="#" class="menu">External Links</a>
