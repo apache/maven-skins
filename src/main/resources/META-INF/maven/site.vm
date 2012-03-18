@@ -526,7 +526,7 @@
 #end
 ##
 #macro ( googleSearch $top )
-<form id="search-form" action="http://www.google.com/search" method="get" class="navbar-search #if ( $top ) pull-right #end>
+<form id="search-form" action="http://www.google.com/search" method="get" #if ( $top ) class="navbar-search pull-right" #end>
   #if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ) )
     #set( $sitesearchValue = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ).getValue() )
   #else
