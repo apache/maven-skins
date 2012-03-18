@@ -438,6 +438,51 @@
                   <outputDirectory>${project.build.directory}/site/mskins-31/</outputDirectory>
                 </configuration>
               </execution>
+              <execution>
+                <id>copy-mskins-33</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <resources>
+                    <resource>
+                      <directory>${project.build.directory}/it/mskins-33/target/site/</directory>
+                    </resource>
+                  </resources>
+                  <outputDirectory>${project.build.directory}/site/mskins-33/</outputDirectory>
+                </configuration>
+              </execution>
+              <execution>
+                <id>copy-mskins-33_default</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <resources>
+                    <resource>
+                      <directory>${project.build.directory}/it/mskins-33_default/target/site/</directory>
+                    </resource>
+                  </resources>
+                  <outputDirectory>${project.build.directory}/site/mskins-33_default/</outputDirectory>
+                </configuration>
+              </execution>
+              <execution>
+                <id>copy-mskins-33_default-topbar</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <resources>
+                    <resource>
+                      <directory>${project.build.directory}/it/mskins-33_default-topbar/target/site/</directory>
+                    </resource>
+                  </resources>
+                  <outputDirectory>${project.build.directory}/site/mskins-33_default-topbar/</outputDirectory>
+                </configuration>
+              </execution>
             </executions>
           </plugin>
         </plugins>

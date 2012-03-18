@@ -36,6 +36,12 @@ under the License.
     <version>${project.version}</version>
   </skin>
 
+  <custom>
+    <fluidoSkin>
+      <facebookLike />
+    </fluidoSkin>
+  </custom>
+
   <body>
 
     <menu ref="parent"/>
@@ -66,6 +72,9 @@ under the License.
       <item name="MSKINS-24 (topbar)" href="./mskins-24_topbar/index.html"/>
       <item name="MSKINS-25" href="./mskins-25/index.html"/>
       <item name="MSKINS-31" href="./mskins-31/index.html"/>
+      <item name="MSKINS-33" href="./mskins-33/index.html"/>
+      <item name="MSKINS-33 (default)" href="./mskins-33_default/index.html"/>
+      <item name="MSKINS-33 (default, topbar)" href="./mskins-33_default-topbar/index.html"/>
     </menu>
 
     <menu ref="reports"/>
