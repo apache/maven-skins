@@ -6,8 +6,8 @@
 #macro ( topMenu $menus )
   #foreach( $menu in $menus )
     #if ( $menu.name )
-      <li class="dropdown" data-dropdown="dropdown" >
-        <a href="#" class="dropdown-toggle">$menu.name</a>
+      <li class="dropdown" data-toggle="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">$menu.name <b class="caret"></b></a>
         <ul class="dropdown-menu">
           #foreach( $item in $menu.items )
             #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
@@ -306,12 +306,12 @@
         #set ( $img = '<img class="imageLink"' + $src + $alt + $border + $width + $height + "/>" )
 ##
         #if ( $position == "left" )
-        <h5>$img $menu.name</h5>
+        <h3>$img $menu.name</h3>
         #else
-        <h5>$menu.name $img</h5>
+        <h3>$menu.name $img</h3>
         #end
       #else
-       <h5>$menu.name</h5>
+        <h3>$menu.name</h3>
       #end
     #end
     #if ( $menu.items && $menu.items.size() > 0 )
@@ -526,7 +526,7 @@
 #end
 ##
 #macro ( googleSearch $top )
-<form id="search-form" action="http://www.google.com/search" method="get" #if ( $top )class="pull-right" #end>
+<form id="search-form" action="http://www.google.com/search" method="get" class="navbar-search #if ( $top ) pull-right #end>
   #if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ) )
     #set( $sitesearchValue = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ).getValue() )
   #else
@@ -535,7 +535,7 @@
   #end
 
   <input value="$sitesearchValue" name="sitesearch" type="hidden"/>
-  <input class="span3 search" name="q" id="query" type="text" />
+  <input class="span2 search-query" name="q" id="query" type="text" />
 </form>
 <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
 #end
@@ -679,6 +679,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"#if ( $locale ) xml:lang="$locale.language" lang="$locale.language"#end>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=${outputEncoding}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>$title</title>
     <link rel="stylesheet" href="$relativePath/css/apache-maven-fluido.min.css" />
     <link rel="stylesheet" href="$relativePath/css/site.css" />
@@ -744,8 +745,8 @@
     #end
 
     #if ( $topBarEnabled )
-    <div id="topbar" class="topbar" data-dropdown="dropdown">
-      <div class="topbar-inner">
+    <div id="topbar" class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
         #if ( $sideBarEnabled )
         <div class="container-fluid">
         #else
@@ -798,7 +799,7 @@
 
           ## MSKINS-31
           #if( $decoration.body && $decoration.body.menus )
-          <ul>
+          <ul class="nav">
             #topMenu( $decoration.body.menus )
           </ul>
           #end
@@ -815,10 +816,10 @@
           #if( $decoration.body
               && $decoration.body.links
               && $decoration.body.links.size() > 0 )
-            <ul class="nav secondary-nav">
-              <li class="menu">
-                <a href="#" class="menu">External Links</a>
-                <ul class="menu-dropdown">
+            <ul class="nav pull-right">
+              <li class="dropdown" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">External Links <b class="caret"></b></a>
+                <ul class="dropdown-menu">
                   #topLinks( $decoration.body.links )
                 </ul>
               </li>
@@ -835,20 +836,18 @@
     <div class="container">
     #end
       <div id="banner">
-        <!-- sideBarEnabled=$sideBarEnabled; topBarEnabled=$topBarEnabled -->
-        <!-- sideBarEnabled=false; topBarEnabled=true -->
         <div class="pull-left">
         #if( $decoration.bannerLeft )
           #banner( $decoration.bannerLeft "bannerLeft" )
         #else
           ## MSKINS-32
-          <h2>
+          <h1>
             #if( $project.name && $project.name != '' )
               $project.name
             #else
               $project.artifactId
             #end
-          </h2>
+          </h1>
         #end
         </div>
         <div class="pull-right">#banner( $decoration.bannerRight "bannerRight" )</div>
@@ -876,8 +875,9 @@
       </div>
 
       #if ( $sideBarEnabled )
-      <div id="leftColumn" class="sidebar">
-        <div class="well">
+      <div class="row-fluid">
+        <div id="leftColumn" class="span3">
+          <div class="well sidebar-nav">
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
           #mainMenu( $decoration.body.menus )
           #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
@@ -885,17 +885,18 @@
             #googleSearch( false )
           #end
 
+          <hr class="divider" />
+
           #followTwitter( $sideBarEnabled )
 
-          <div id="poweredBy">
+            <div id="poweredBy">
             #poweredByLogo( $decoration.poweredBy )
+            </div>
           </div>
         </div>
-      </div>
-      #end
+        #end
 
-      <div id="bodyColumn" class="content">
-        <div id="contentBox">
+        <div id="bodyColumn" #if ( $sideBarEnabled ) class="span9" #end>
           #if ( "Project License" != $title )
           #if ( $decoration.custom.getChild('fluidoSkin')
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sourceLineNumbersEnabled' )
@@ -910,10 +911,13 @@
           $bodyContent
           #end
         </div>
+      #if ( $sideBarEnabled )
       </div>
-    </div>
+      #end
 
-    <footer class="footer">
+    <hr/>
+
+    <footer>
       #if ( $sideBarEnabled )
       <div class="container-fluid">
       #else
