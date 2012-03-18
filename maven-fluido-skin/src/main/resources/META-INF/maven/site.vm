@@ -591,6 +591,33 @@
   #end
 #end
 ##
+#macro ( facebookLike $sideBarEnabled )
+  #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'facebookLike' )
+          && $project.url )
+    #set( $facebookLike = $decoration.custom.getChild( 'facebookLike' ) )
+    ## kindly hardcoded
+
+    #set( $layout = 'box_count' )
+    #if( !$sideBarEnabled )
+      #set( $layout = 'button_count' )
+    #end
+
+    #set( $colorscheme = 'light' )
+    #if( !$sideBarEnabled )
+      #set( $colorscheme = 'dark' )
+    #end
+
+    #set( $frameWidth = 'width:48px; height:80px' )
+    #if( !$sideBarEnabled )
+      #set( $frameWidth = 'width:80px; height:20px' )
+    #end
+
+    <iframe src="http://www.facebook.com/plugins/like.php?href=$project.url&send=false&layout=$layout&show-faces=false&action=like&colorscheme=$colorscheme"
+        scrolling="no" frameborder="0"
+        style="border:none; $frameWidth; margin-top: 10px;" #if( !$sideBarEnabled ) class="pull-right" #end></iframe>
+  #end
+#end
+##
 #macro ( followTwitter $sideBarEnabled )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' )
         && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'user' ) )
@@ -809,6 +836,10 @@
           #end
 
           #if ( !$sideBarEnabled )
+            #facebookLike( $sideBarEnabled )
+          #end
+
+          #if ( !$sideBarEnabled )
             #followTwitter( $sideBarEnabled )
           #end
 
@@ -887,10 +918,12 @@
 
           <hr class="divider" />
 
-          #followTwitter( $sideBarEnabled )
-
-            <div id="poweredBy">
-            #poweredByLogo( $decoration.poweredBy )
+           <div id="poweredBy">
+             #facebookLike( $sideBarEnabled )
+             <div class="clear"></div>
+             #followTwitter( $sideBarEnabled )
+             <div class="clear"></div>
+             #poweredByLogo( $decoration.poweredBy )
             </div>
           </div>
         </div>

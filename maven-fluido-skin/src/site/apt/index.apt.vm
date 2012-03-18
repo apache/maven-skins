@@ -307,3 +307,33 @@ Welcome to ${project.name}!
 +-----+
 
  Ohloh widgets will be rendered always in the footer as last element
+
+** Facebook like button
+
+ Since version <<1.2>>, fluido-skin supports the Facebook {{{http://developers.facebook.com/docs/reference/plugins/like/}like}}
+ to simplify its integration. Users must define:
+
+ * <<<custom.fluidoSkin.facebookLike.send>>>: <<optional>>, specifies whether to include a Send button with the Like button (<<<true>>> by default);
+
+ * <<<custom.fluidoSkin.facebookLike.showFaces>>>: <<optional>>, specifies whether to display profile photos below the button (standard layout only) (<<<false>>> by default);
+
+ * <<<custom.fluidoSkin.facebookLike.action>>>: <<optional>>, the verb to display on the button. Options: 'like', 'recommend' (<<<like>>> by default);
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+      <facebookLike>
+        <send>true</send>
+        <showFaces>true</showFaces>
+        <action>like</action>
+      </facebookLike>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
+
+ By default, it is rendered in the sidebar, if the topbar only is available it will be rendered there.
+
