@@ -38,6 +38,7 @@ under the License.
 
   <custom>
     <fluidoSkin>
+      <googlePlusOne />
       <facebookLike />
     </fluidoSkin>
   </custom>
@@ -73,7 +74,9 @@ under the License.
       <item name="MSKINS-25" href="./mskins-25/index.html"/>
       <item name="MSKINS-31" href="./mskins-31/index.html"/>
       <item name="MSKINS-33" href="./mskins-33/index.html"/>
-      <item name="MSKINS-33 topbar)" href="./mskins-33_topbar/index.html"/>
+      <item name="MSKINS-33 (topbar)" href="./mskins-33_topbar/index.html"/>
+      <item name="MSKINS-34" href="./mskins-34/index.html"/>
+      <item name="MSKINS-34 (topbar)" href="./mskins-34_topbar/index.html"/>
     </menu>
 
     <menu ref="reports"/>

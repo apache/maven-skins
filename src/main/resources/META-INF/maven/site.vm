@@ -591,6 +591,19 @@
   #end
 #end
 ##
+#macro ( googlePlusOne $sideBarEnabled )
+  #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googlePlusOne' )
+          && $project.url )
+    #set( $dataSize = 'tall' )
+    #if( !$sideBarEnabled )
+      #set( $dataSize = 'medium' )
+    #end
+
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <div class="g-plusone" data-href="$project.url" data-size="$dataSize" #if( !$sideBarEnabled ) class="pull-right" style="margin-top: 10px;" #end></div>
+  #end
+#end
+##
 #macro ( facebookLike $sideBarEnabled )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'facebookLike' )
           && $project.url )
@@ -607,7 +620,7 @@
       #set( $colorscheme = 'dark' )
     #end
 
-    #set( $frameWidth = 'width:48px; height:80px' )
+    #set( $frameWidth = 'width:48px; height:63px' )
     #if( !$sideBarEnabled )
       #set( $frameWidth = 'width:80px; height:20px' )
     #end
@@ -837,9 +850,7 @@
 
           #if ( !$sideBarEnabled )
             #facebookLike( $sideBarEnabled )
-          #end
-
-          #if ( !$sideBarEnabled )
+            #googlePlusOne( $sideBarEnabled )
             #followTwitter( $sideBarEnabled )
           #end
 
@@ -919,6 +930,8 @@
           <hr class="divider" />
 
            <div id="poweredBy">
+             #googlePlusOne( $sideBarEnabled )
+             <div class="clear"></div>
              #facebookLike( $sideBarEnabled )
              <div class="clear"></div>
              #followTwitter( $sideBarEnabled )
