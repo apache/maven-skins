@@ -1,0 +1,16 @@
+ ------
+ ${project.name}
+ ------
+ Simo
+ ------
+ 2012-03-18
+ ------
+
+${project.name}
+
+ This is a test for ${skinName} with Facebook like button.
+ ${skinDescription}
+
+* Actual configuration
+
+%{snippet|id=skin-custom-config|file=${project.basedir}/src/site/site.xml}
