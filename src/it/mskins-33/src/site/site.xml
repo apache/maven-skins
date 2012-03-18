@@ -34,12 +34,7 @@
   <!-- START SNIPPET: skin-custom-config -->
   <custom>
     <fluidoSkin>
-      <facebookLike>
-        <send>false</send>
-        <layout>button_count</layout>
-        <showFaces>true</showFaces>
-        <action>like</action>
-      </facebookLike>
+      <facebookLike />
     </fluidoSkin>
   </custom>
   <!-- END SNIPPET: skin-custom-config -->
