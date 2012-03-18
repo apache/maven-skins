@@ -6,14 +6,14 @@
 #macro ( topMenu $menus )
   #foreach( $menu in $menus )
     #if ( $menu.name )
-      <li class="dropdown" data-toggle="dropdown">
+      <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">$menu.name <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          #foreach( $item in $menu.items )
-            #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
-            #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
-            <li>#topLink( $currentItemHref $item.name $item.target )</li>
-          #end
+        #foreach( $item in $menu.items )
+          #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
+          #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+          <li>#topLink( $currentItemHref $item.name $item.target )</li>
+        #end
         </ul>
       </li>
     #end
@@ -817,10 +817,10 @@
               && $decoration.body.links
               && $decoration.body.links.size() > 0 )
             <ul class="nav pull-right">
-              <li class="dropdown" data-toggle="dropdown">
+              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">External Links <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  #topLinks( $decoration.body.links )
+                #topLinks( $decoration.body.links )
                 </ul>
               </li>
             </ul>
