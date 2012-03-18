@@ -48,6 +48,7 @@ body.topBarEnabled{padding-top: 60px;}
 body.topBarDisabled{padding-top: 20px;}
 
 #poweredBy{text-align: center;}
+.poweredBy{margin-top: 10px;}
 
 /* Tweaks to the bootstrap theme
 --------------------------------- */
