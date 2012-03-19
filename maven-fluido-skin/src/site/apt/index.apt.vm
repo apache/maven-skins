@@ -1,7 +1,7 @@
  ------
  Introduction
  ------
- Hervé Boutemy
+ Hervé Boutemy, Simone "Simo" Tripodi
  ------
  2011-10-11
  ------
@@ -311,7 +311,7 @@ Welcome to ${project.name}!
 ** Facebook like button
 
  Since version <<1.2>>, fluido-skin supports the Facebook {{{http://developers.facebook.com/docs/reference/plugins/like/}like}}
- to simplify its integration. Users have just to declare:
+ integration. Users have just to declare:
 
 +-----+
 <project name="xxx">
@@ -327,3 +327,25 @@ Welcome to ${project.name}!
 
  By default, it is rendered in the sidebar, if the topbar only is available it will be rendered there.
 
+ <<Note>> in order the Facebook like button appears, <<<$\{project.url\}>>> property <<must>> be set in the <<<pom.xml>>>!
+
+** Google plusone button
+
+ Since version <<1.2>>, fluido-skin supports the Google {{{https://developers.google.com/+/plugins/+1button/}plusone}}
+ integration. Users have just to declare:
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+      <googlePlusOne />
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
+
+ By default, it is rendered in the sidebar, if the topbar only is available it will be rendered there.
+
+ <<Note>> in order the Google plusone button appears, <<<$\{project.url\}>>> property <<must>> be set in the <<<pom.xml>>>!
