@@ -86,6 +86,7 @@
           <exclude>css/**</exclude>
           <exclude>js/**</exclude>
         </excludes>
+        <filtering>true</filtering> <!-- add skin-info -->
       </resource>
 
       <!-- include the print.css -->
@@ -107,6 +108,16 @@
     </resources>
 
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <configuration>
+          <delimiters>
+            <delimiter>@</delimiter>
+          </delimiters>
+          <useDefaultDelimiters>false</useDefaultDelimiters>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>com.samaxes.maven</groupId>
         <artifactId>maven-minify-plugin</artifactId>
