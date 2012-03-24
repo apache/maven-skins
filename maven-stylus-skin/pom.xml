@@ -45,6 +45,40 @@ under the License.
     <system>jira</system>
     <url>http://jira.codehaus.org/browse/MSKINS/component/12534</url>
   </issueManagement>
+  
+  <build>
+    <resources>
+    
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+        <includes>
+          <include>META-INF/maven/site.vm</include>
+        </includes>
+        <filtering>true</filtering> <!-- add skin-info -->
+      </resource>
+      
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+        <excludes>
+          <exclude>META-INF/maven/site.vm</exclude>
+        </excludes>
+      </resource>
+      
+    </resources>
+    
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <configuration>
+          <delimiters>
+            <delimiter>@</delimiter>
+          </delimiters>
+          <useDefaultDelimiters>false</useDefaultDelimiters>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
   <profiles>
     <profile>
