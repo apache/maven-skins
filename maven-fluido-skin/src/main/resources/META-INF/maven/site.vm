@@ -961,7 +961,7 @@
             #set ( $sourceStyle = "prettyprint" )
           #end
 
-          $bodyContent.replaceAll( "<div class=\"source\"><pre>", "<div class=\"source\"><pre class=\"$sourceStyle\">" ).replaceAll( "class=\"bodyTable\"", "class=\"zebra-striped\"" )
+          $bodyContent.replaceAll( "<div class=\"source\"><pre>", "<div class=\"source\"><pre class=\"$sourceStyle\">" ).replaceAll( "class=\"bodyTable\"", "class=\"table table-striped\"" )
           #else
           $bodyContent
           #end
