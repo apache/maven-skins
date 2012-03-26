@@ -952,18 +952,18 @@
         #end
 
         <div id="bodyColumn" #if ( $sideBarEnabled ) class="span9" #end>
-          #if ( "Project License" != $title )
-          #if ( $decoration.custom.getChild('fluidoSkin')
+          #if ( $title && $title.endsWith( "Project License" ) )
+            $bodyContent
+          #else
+            #if ( $decoration.custom.getChild('fluidoSkin')
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sourceLineNumbersEnabled' )
               && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sourceLineNumbersEnabled' ).getValue() )
-            #set ( $sourceStyle = "prettyprint linenums" )
-          #else
-            #set ( $sourceStyle = "prettyprint" )
-          #end
+              #set ( $sourceStyle = "prettyprint linenums" )
+            #else
+              #set ( $sourceStyle = "prettyprint" )
+            #end
 
-          $bodyContent.replaceAll( "<div class=\"source\"><pre>", "<div class=\"source\"><pre class=\"$sourceStyle\">" ).replaceAll( "class=\"bodyTable\"", "class=\"table table-striped\"" )
-          #else
-          $bodyContent
+            $bodyContent.replaceAll( "<div class=\"source\"><pre>", "<div class=\"source\"><pre class=\"$sourceStyle\">" ).replaceAll( "class=\"bodyTable\"", "class=\"table table-striped\"" )
           #end
         </div>
       #if ( $sideBarEnabled )
