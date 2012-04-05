@@ -188,7 +188,11 @@
       <li class="divider $cssClass">/</li>
       </li>
   #end
-  <li class="$cssClass">$title</li>
+  #if ( $shortTitle )
+    <li class="$cssClass">$shortTitle</li>
+  #else
+    <li class="$cssClass">$title</li>
+  #end
 #end
 ##
 #macro ( displayTree $display $item )
