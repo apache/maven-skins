@@ -915,7 +915,10 @@
 
           #publishDate( "right" $decoration.publishDate $decoration.version )
 
-          #if ( !$topBarEnabled && $decoration.body.links.size() > 0 )
+          ## MSITE-44
+          #if ( !$topBarEnabled
+              && $decoration.body.links
+              && $decoration.body.links.size() > 0 )
             #if ( ( $decoration.publishDate
                     && $decoration.publishDate.position
                     && $decoration.publishDate.position.equalsIgnoreCase( "right" ) )
