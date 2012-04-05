@@ -99,7 +99,11 @@
       #link( $currentItemHref $item.name )
       &gt;
   #end
-  $title
+  #if ( $shortTitle )
+    $shortTitle
+  #else
+    $title
+  #end
 #end
 ##
 #macro ( displayTree $display $item )
