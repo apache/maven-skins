@@ -768,7 +768,7 @@
 #if ( $locale )
     <meta http-equiv="Content-Language" content="$locale.language" />
 #end
-    $headContent
+    #if( $headContent )$headContent#end
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
   </head>
     #if ( $decoration.custom.getChild( 'fluidoSkin' )

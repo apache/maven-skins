@@ -1,0 +1,16 @@
+ ------
+ ${project.name}
+ ------
+ Robert Scholte
+ ------
+ 2012-04-09
+ ------
+
+${project.name}
+
+ This is a test for ${skinName} and a very old version of the maven-site-plugin
+ ${skinDescription}
+
+* Actual configuration
+
+%{snippet|id=skin-custom-config|file=${project.basedir}/src/site/site.xml}
