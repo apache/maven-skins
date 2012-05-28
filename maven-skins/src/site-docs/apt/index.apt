@@ -28,7 +28,7 @@
 
 Maven Skins Parent POM
 
-    This POM is the common parent of all of the Maven Skins
+    This POM is the common parent of all of the {{{/skins/}Maven Skins}}
     in the Apache Maven project.
 
 History
