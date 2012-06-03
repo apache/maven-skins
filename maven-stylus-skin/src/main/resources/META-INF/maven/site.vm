@@ -504,6 +504,7 @@
         #end
       #end
     #end
+    #if( $headContent )$headContent#end
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
   </head>
   <body class="composite">
