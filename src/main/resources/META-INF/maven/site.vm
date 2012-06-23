@@ -162,7 +162,10 @@
 ##
 #macro ( links $links )
   #set ( $counter = 0 )
-  #foreach( $item in $links )
+  ## MSKINS-41
+  #set ( $begin = $links.size() - 1 )
+  #foreach( $index in [$begin..0] )
+    #set ( $item = $links.get( $index ) )
     #set ( $counter = $counter + 1 )
     #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
     #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )

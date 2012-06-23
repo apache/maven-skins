@@ -1,0 +1,16 @@
+ ------
+ ${project.name}
+ ------
+ Andreas Sewe
+ ------
+ 2012-12-29
+ ------
+
+${project.name}
+
+ This is a test for ${skinName} with multiple links. They should be ordered as
+ listed in the <<<site.xml>>>. ${skinDescription}
+
+* Actual configuration
+
+%{snippet|id=skin-custom-config|file=${project.basedir}/src/site/site.xml}
