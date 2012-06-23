@@ -934,7 +934,7 @@
 
       #if ( $sideBarEnabled )
       <div class="row-fluid">
-        <div id="leftColumn" class="span3">
+        <div id="leftColumn" class="span2">
           <div class="well sidebar-nav">
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
           #mainMenu( $decoration.body.menus )
@@ -958,7 +958,7 @@
         </div>
         #end
 
-        <div id="bodyColumn" #if ( $sideBarEnabled ) class="span9" #end>
+        <div id="bodyColumn" #if ( $sideBarEnabled ) class="span10" #end>
           #if ( $title && $title.endsWith( "Project License" ) )
             $bodyContent
           #else
@@ -985,7 +985,7 @@
       #else
       <div class="container">
       #end
-        <div class="row span16">Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</div>
+        <div class="row span12">Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</div>
 
         #if ( $decoration.body.footer )
           #foreach( $item in $decoration.body.footer.getChildren() )
