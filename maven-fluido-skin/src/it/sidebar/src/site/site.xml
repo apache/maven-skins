@@ -34,7 +34,7 @@
   <!-- START SNIPPET: skin-custom-config -->
   <custom>
     <fluidoSkin>
-      <searchEnabled>true</searchEnabled>
+      <googleSearch/>
       <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
     </fluidoSkin>
   </custom>
