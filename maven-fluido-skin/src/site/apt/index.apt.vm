@@ -180,7 +180,7 @@ Welcome to ${project.name}!
 
  * <<<custom.fluidoSkin.gitHub.ribbonOrientation>>>: <<optional>>, it is the the ribbon position, <<<left>>>/<<<right>>> only accepted (<<<left>>> by default);
 
- * <<<custom.fluidoSkin.gitHub.ribbonColor>>>: <<optional>>, it is the the ribbon color, <<<red>>>/<<<green>>>/<<<black>>>/<<<orange>>>/<<<gray>>> only accepted only accepted (<<<red>>> by default).
+ * <<<custom.fluidoSkin.gitHub.ribbonColor>>>: <<optional>>, it is the the ribbon color, <<<red>>>/<<<green>>>/<<<black>>>/<<darkblue>>/<<<orange>>>/<<<gray>>> only accepted only accepted (<<<red>>> by default).
 
 +-----+
 <project name="xxx">
