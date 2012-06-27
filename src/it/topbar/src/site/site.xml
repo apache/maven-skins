@@ -42,7 +42,7 @@
         <href>/index.html</href>
       </topBarIcon>
       <sideBarEnabled>false</sideBarEnabled>
-      <searchEnabled>true</searchEnabled>
+      <googleSearch/>
       <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
     </fluidoSkin>
   </custom>
