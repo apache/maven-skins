@@ -3,7 +3,7 @@
  ------
  Hervé Boutemy, Simone "Simo" Tripodi
  ------
- 2011-10-11
+ 2012-06-28
  ------
 
 ~~ Licensed to the Apache Software Foundation (ASF) under one
@@ -140,7 +140,7 @@ Welcome to ${project.name}!
 
  By default, the search form:
 
- * is <not> enabled; adding <<custom.fluidoSkin.googleSearch>>> is enough to enable the searchbox.
+ * is <not> enabled; adding <<<custom.fluidoSkin.googleSearch>>> is enough to enable the searchbox.
 
  * is rendered in the sidebar, if the topbar only is available it will be rendered there.
 
