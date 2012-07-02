@@ -592,7 +592,7 @@
     #if ( $profile.equalsIgnoreCase( "retired" )
           || $profile.equalsIgnoreCase( "pre-release" )
           || $profile.equalsIgnoreCase( "sandbox" ) )
-      <style>body{background-image: url('$relativePath/images/profiles/${profile}.png');}</style>
+      <style type="text/css">body{background-image: url('$relativePath/images/profiles/${profile}.png');}</style>
     #end
 
   #end
