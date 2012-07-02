@@ -26,9 +26,6 @@ under the License.
   <bannerLeft>
     <name>${project.name}</name>
   </bannerLeft>
-  <bannerRight>
-    <src></src>
-  </bannerRight>
 
   <skin>
     <groupId>${project.groupId}</groupId>
