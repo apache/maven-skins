@@ -450,6 +450,21 @@
                 </configuration>
               </execution>
               <execution>
+                <id>copy-mskins-28</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <resources>
+                    <resource>
+                      <directory>${project.build.directory}/it/mskins-28/target/site/</directory>
+                    </resource>
+                  </resources>
+                  <outputDirectory>${project.build.directory}/site/mskins-28/</outputDirectory>
+                </configuration>
+              </execution>
+              <execution>
                 <id>copy-mskins-31</id>
                 <phase>site</phase>
                 <goals>

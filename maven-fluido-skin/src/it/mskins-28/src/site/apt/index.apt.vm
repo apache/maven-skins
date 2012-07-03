@@ -1,0 +1,16 @@
+ ------
+ ${project.name}
+ ------
+ Andreas Sewe
+ ------
+ 2012-12-26
+ ------
+
+${project.name}
+
+ This is a test for ${skinName} with multiple "powered by" logos.
+ ${skinDescription}
+
+* Actual configuration
+
+%{snippet|id=skin-custom-config|file=${project.basedir}/src/site/site.xml}
