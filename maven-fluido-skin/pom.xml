@@ -97,6 +97,14 @@
         </includes>
       </resource>
 
+       <!-- include the responsive bootstrap css -->
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+        <includes>
+          <include>css/bootstrap-responsive.css</include>
+        </includes>
+      </resource>
+
       <!-- include minified only -->
       <resource>
         <directory>${project.build.directory}/${project.build.finalName}</directory>

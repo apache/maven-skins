@@ -5,7 +5,7 @@
 -->
 #macro ( topMenu $menus )
   #foreach( $menu in $menus )
-    #if ( $menu.name )
+  #if ( $menu.name )
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">$menu.name <b class="caret"></b></a>
         <ul class="dropdown-menu">
@@ -114,7 +114,7 @@
       #end
       <a href="$hrf" id="$id"#if( $banner.alt ) title="$banner.alt"#end>
     #else
-        <div id="$id">
+      <div id="$id" style="padding-top:25px;">
     #end
 ##
     #if( $banner.src )
@@ -149,7 +149,9 @@
         #end
         <img src="$src" $alt$imgBorder$imgWidth$imgHeight/>
     #else
-        <h2>$banner.name</h2>
+        #if ( $topBarEnabled )
+          <h2>$banner.name</h2>
+        #end
     #end
 ##
     #if( $banner.href )
@@ -395,17 +397,17 @@
   #set ( $links = $decoration.body.links )
 
   #if ( $datePosition.equalsIgnoreCase( "right" ) && $versionPosition.equalsIgnoreCase( "right" ) )
-    #set ( $prefix = '<li class="divider pull-right">|</li>' )
+    #set ( $prefix = '<li class="divider pull-right hidden-phone">|</li>' )
   #else
     #set ( $prefix = "" )
   #end
 ##
   #if ( $datePosition.equalsIgnoreCase( $position ) )
-    #if ( ( $datePosition.equalsIgnoreCase( "right" ) ) || ( $datePosition.equalsIgnoreCase( "bottom" ) ) )
-        <li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li> $prefix
-      #if ( $versionPosition.equalsIgnoreCase( $position ) )
-        <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
-      #end
+  #if ( ( $datePosition.equalsIgnoreCase( "right" ) ) || ( $datePosition.equalsIgnoreCase( "bottom" ) ) )
+        <li id="publishDate" class="pull-right hidden-phone">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li> $prefix
+        #if ( $versionPosition.equalsIgnoreCase( $position ) )
+          <li id="projectVersion" class="pull-right hidden-phone">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+        #end
     #elseif ( ( $datePosition.equalsIgnoreCase( "navigation-bottom" ) ) || ( $datePosition.equalsIgnoreCase( "navigation-top" ) ) )
       <div id="lastPublished">
         <span id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</span>
@@ -414,7 +416,7 @@
         #end
       </div>
     #elseif ( $datePosition.equalsIgnoreCase("left") )
-        <li id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li>
+        <li id="publishDate">B $i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li>
         #if ( $versionPosition.equalsIgnoreCase( $position ) )
           <li class="divider">|</li> <li id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
         #end
@@ -424,7 +426,7 @@
     #end
   #elseif ( $versionPosition.equalsIgnoreCase( $position ) )
     #if ( $versionPosition.equalsIgnoreCase( "right" ) )
-      $prefix <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+    $prefix <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
     #elseif ( $versionPosition.equalsIgnoreCase( "bottom" ) )
       <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
     #elseif ( ( $versionPosition.equalsIgnoreCase( "navigation-bottom" ) ) || ( $versionPosition.equalsIgnoreCase( "navigation-top" ) ) )
@@ -609,13 +611,17 @@
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 
     #if( !$sideBarEnabled )
-    <ul class="nav pull-right"><li style="margin-top: 10px;">
+    <ul class="nav pull-right" style="width:60px;"><li style="margin-top: 10px;">
+    #else
+    <div class="hidden-tablet">
     #end
 
-    <div class="g-plusone" data-href="$project.url" data-size="$dataSize" #if( !$sideBarEnabled ) width="60px" align="right" #end></div>
+      <div class="g-plusone" data-href="$project.url" data-size="$dataSize" #if( !$sideBarEnabled ) width="64px" align="right" #end></div>
 
     #if( !$sideBarEnabled )
     </li></ul>
+    #else
+  </div>
     #end
   #end
 #end
@@ -636,14 +642,14 @@
       #set( $colorscheme = 'dark' )
     #end
 
-    #set( $frameWidth = 'width:48px; height:63px' )
+    #set( $frameWidth = 'width:64px; height:63px' )
     #if( !$sideBarEnabled )
-      #set( $frameWidth = 'width:80px; height:20px' )
+      #set( $frameWidth = 'width:90px; height:20px' )
     #end
 
     <iframe src="http://www.facebook.com/plugins/like.php?href=$project.url&send=false&layout=$layout&show-faces=false&action=like&colorscheme=$colorscheme"
         scrolling="no" frameborder="0"
-        style="border:none; $frameWidth; margin-top: 10px;" #if( !$sideBarEnabled ) class="pull-right" #end></iframe>
+        style="border:none; $frameWidth; margin-top: 10px;" #if( !$sideBarEnabled ) class="pull-right" #else class="hidden-tablet" #end></iframe>
   #end
 #end
 ##
@@ -669,15 +675,27 @@
     #if ( $sideBarEnabled )
       #set( $dataSize = "medium" )
       #set( $dataAlign = "left" )
-    <div id="twitter">
+    <div id="twitter" class="visible-desktop" style="padding-right:20px;">
     #else
-      #set( $dataSize = "large" )
+      #set( $dataSize = "medium" )
       #set( $dataAlign = "right" )
-    <ul class="nav pull-right"><li>
+    <ul class="nav pull-right" style="width:203px;"><li>
     #end
 
-    <a href="https://twitter.com/${user}" class="twitter-follow-button" data-show-count="${showFollowers}" data-align="${dataAlign}" data-size="${dataSize}" data-show-screen-name="${showUser}" data-lang="${locale}">Follow ${user}</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <div class="visible-tablet">
+      <a href="https://twitter.com/${user}" class="twitter-follow-button" data-show-count="${showfollowers}" data-align="left" data-size="${dataSize}" data-show-screen-name="${showUser}" data-lang="${locale}">Follow ${user}</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>  
+
+    #if ( $topBarEnabled )
+      <div class="hidden-phone hidden-tablet" style="padding-top:10px;">
+    #else
+      <div class="hidden-phone hidden-tablet">
+    #end
+        <a href="https://twitter.com/${user}" class="twitter-follow-button" data-show-count="${showFollowers}" data-align="right" data-size="${dataSize}" data-show-screen-name="${showUser}" data-lang="${locale}">Follow ${user}</a>
+      </div>
+
+     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
     #if ( $sideBarEnabled )
     </div>
@@ -726,7 +744,7 @@
       #end
     #end
 
-    <div id="ohloh" class="pull-right">
+    <div id="ohloh" class="pull-right hidden-phone hidden-tablet">
       <script type="text/javascript" src="http://www.ohloh.net/p/${projectId}/widgets/project_${widget}"></script>
     </div>
   #end
@@ -738,6 +756,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>$title</title>
     <link rel="stylesheet" href="$relativePath/css/apache-maven-fluido.min.css" />
+    <link rel="stylesheet" href="$relativePath/css/bootstrap-responsive.css" />
     <link rel="stylesheet" href="$relativePath/css/site.css" />
     <link rel="stylesheet" href="$relativePath/css/print.css" media="print" />
 
@@ -801,8 +820,8 @@
     #end
 
     #if ( $topBarEnabled )
-    <div id="topbar" class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
+    <div id="topbar" class="navbar navbar-fixed-top hidden-tablet hidden-phone">
+      <div class="navbar-inner" style="height:85px;">
         #if ( $sideBarEnabled )
         <div class="container-fluid">
         #else
@@ -887,24 +906,78 @@
       </div>
     </div>
     #end
+    #if ( !$topBarEnabled )
+    <div id="topbar" class="navbar navbar-fixed-top" style="position:fixed; top:0px; padding-bottom:20px; margin-left:0px; margin-right:0px; margin-bottom:18px; height:85px;">
+      <div class="navbar-inner" style="height:85px;">
+    #else
+    <div id="topbar" class="navbar navbar-fixed-top hidden-desktop" style="position:fixed; top:0px; ">
+      <div class="navbar-inner" style="height:85px; padding-left:20px;">
+    #end  
+        #if ( $sideBarEnabled )
+        <div class="container-fluid">
+        #else
+        <div class="container" style="padding-left:10px;">
+        #end
+          ## MSKINS-31
+          #if( $decoration.body && $decoration.body.menus )
+            ##if ( !$sideBarEnabled )
+            <ul class="nav" style="float:left; margin-bottom:0; padding-right:10px; padding-left:5px;">
+                <h1 style="padding-left:30px; font-size:22px; padding-left:0px;">
+                #if( $project.name && $project.name != '' )
+                  $project.name
+                #else
+                  $project.artifactId
+                #end
+                </h1>
+              <ul class="nav" style="float:left; margin-bottom:0; padding-right:5px; padding-left:0;">
+                #if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'facebookLike' ))
+                  #facebookLike( false )
+                #end
+              </ul>
+              <ul class="nav" style="float:left; margin-bottom:0; padding-right:5px; padding-left:0;">
+                #if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googlePlusOne' ))
+                  #googlePlusOne( false )
+                #end
+              </ul>
+              <ul class="nav" style="float:left; width:203px; margin-bottom:0; padding-right:5px; padding-top:10px; padding-left:20px;">
+                #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ))
+                  #followTwitter( false )
+                #end
+              </ul>
+            </ul>
+            ##end
+          #end
+        </div>
+      </div>
+    </div>
 
     #if ( $sideBarEnabled )
     <div class="container-fluid">
     #else
     <div class="container">
     #end
-      <div id="banner">
+      #if ( $topBarEnabled )
+        <div id="banner" class="hidden-desktop" style="padding-top:45px"></div>
+      #else
+        <div id="banner" class="hidden-desktop" style="padding-top:80px"></div>##65px
+      #end
+    
+      #if ( !$sideBarEnabled && !$topBarEnabled )
+      <div id="banner" class="hidden-phone hidden-tablet" style="padding-top:45px;">
+      #else
+      <div id="banner" class="hidden-phone hidden-tablet">
+      #end
         <div class="pull-left">
         #if( $decoration.bannerLeft )
           #banner( $decoration.bannerLeft "bannerLeft" )
         #else
           ## MSKINS-32
           <h1>
-            #if( $project.name && $project.name != '' )
-              $project.name
-            #else
-              $project.artifactId
-            #end
+              #if( $project.name && $project.name != '' )
+                $project.name
+              #else
+                $project.artifactId
+              #end
           </h1>
         #end
         </div>
@@ -929,7 +1002,7 @@
                     && $decoration.version.position
                     && $decoration.version.position.equalsIgnoreCase( "right" ) ) )
             <li class="divider pull-right">|</li>
-          #end
+            #end
           #links( $decoration.body.links )
           #end
         </ul>
@@ -938,7 +1011,7 @@
       #if ( $sideBarEnabled )
       <div class="row-fluid">
         <div id="leftColumn" class="span2">
-          <div class="well sidebar-nav">
+          <div class="well sidebar-nav hidden-phone">
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
           #mainMenu( $decoration.body.menus )
           #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
