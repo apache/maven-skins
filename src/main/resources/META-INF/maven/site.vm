@@ -805,6 +805,11 @@
       <div class="navbar-inner">
         #if ( $sideBarEnabled )
         <div class="container-fluid">
+        <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
         #else
         <div class="container">
         #end
@@ -855,9 +860,11 @@
 
           ## MSKINS-31
           #if( $decoration.body && $decoration.body.menus )
-          <ul class="nav">
-            #topMenu( $decoration.body.menus )
-          </ul>
+          <div class="nav-collapse">
+            <ul class="nav">
+              #topMenu( $decoration.body.menus )
+            </ul>
+          </div>
           #end
 
           #if ( $searchEnabled && !$sideBarEnabled )
