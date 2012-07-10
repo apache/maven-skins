@@ -47,7 +47,8 @@ under the License.
     <menu name="Overview">
       <item name="Introduction" href="./index.html"/>
       <item name="Sample Page" href="./sample.html"/>
-      <!--item name="FAQ" href="faq.html"/-->
+      <item name="Press" href="./press.html"/>
+      <item name="Powered By" href="./poweredby.html"/>
     </menu>
 
     <menu name="Layouts">
