@@ -34,9 +34,13 @@ Powered By
 *-----*------*------*
  {{{http://incubator.apache.org/amber/}Apache Amber}} | {{{http://incubator.apache.org/any23/}Apache Any23}} | {{{http://incubator.apache.org/directmemory/}Apache Direct Memory}}
 *-----*------*------*
- {{{http://incubator.apache.org/amber/}Apache Syncope}} | {{{http://sonatype.github.com/async-http-client/}Async Http Client}} | {{{http://mojo.codehaus.org/}Codehaus' MOJO}}
+ {{{http://incubator.apache.org/amber/}Apache Syncope}} | {{{http://archiva.apache.org/}Apache Archiva}} | {{{http://sonatype.github.com/async-http-client/}Async Http Client}}
 *-----*------*------*
- {{{https://maven.alfresco.com/nexus/content/repositories/alfresco-docs/maven-alfresco-lifecycle/latest/index.html}Maven Alfresco Lifecycle}} | {{{http://www.mybatis.org/core/}MyBatis SQL Mapper}} | {{{http://redline-rpm.org/}Redline RPM}}
+ {{{http://mojo.codehaus.org/}Codehaus' MOJO}} | {{{https://maven.alfresco.com/nexus/content/repositories/alfresco-docs/maven-alfresco-lifecycle/latest/index.html}Maven Alfresco Lifecycle}} | {{{http://www.mybatis.org/core/}MyBatis SQL Mapper}}
 *-----*------*------*
- {{{http://99soft.github.com/}99 Software Foundation}} | {{{http://code.grobmeier.de/jjson/}JJSON}} | {{{http://sparkle-g.googlecode.com/svn/site/3.3.1/index.html}Sparkle-G}}
+ {{{http://redline-rpm.org/}Redline RPM}} | {{{http://99soft.github.com/}The 99 Software Foundation}} | {{{http://code.grobmeier.de/jjson/}JJSON}}
+*-----*------*------*
+ {{{http://sparkle-g.googlecode.com/svn/site/3.3.1/index.html}Sparkle-G}} | {{{http://maven-android-plugin-m2site.googlecode.com/svn/index.html}Android Maven Plugin}} | {{{http://maven-site.nuiton.org/mavenpom/}nuiton.org Mavenpom}}
+*-----*------*------*
+ {{{http://www.silverpeas.org/}silverpeas.org}} | | 
 *-----*------*------*
