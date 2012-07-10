@@ -36,4 +36,5 @@ Powered By
 *-----*------*------*
  {{{http://incubator.apache.org/amber/}Apache Syncope}} | {{{http://sonatype.github.com/async-http-client/}Async Http Client}} | {{{http://mojo.codehaus.org/}Codehaus' MOJO}}
 *-----*------*------*
-{{{https://maven.alfresco.com/nexus/content/repositories/alfresco-docs/maven-alfresco-lifecycle/latest/index.html}Maven Alfresco Lifecycle}} | {{{http://www.mybatis.org/core/}MyBatis SQL Mapper}} | {{{http://redline-rpm.org/}Redline RPM}}
+ {{{https://maven.alfresco.com/nexus/content/repositories/alfresco-docs/maven-alfresco-lifecycle/latest/index.html}Maven Alfresco Lifecycle}} | {{{http://www.mybatis.org/core/}MyBatis SQL Mapper}} | {{{http://redline-rpm.org/}Redline RPM}}
+*-----*------*------*
