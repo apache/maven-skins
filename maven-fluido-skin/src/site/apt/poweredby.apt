@@ -42,5 +42,7 @@ Powered By
 *-----*------*------*
 {{{http://code.grobmeier.de/jjson/}JJSON}} | {{{http://sparkle-g.googlecode.com/svn/site/3.3.1/index.html}Sparkle-G}} | {{{http://maven-android-plugin-m2site.googlecode.com/svn/index.html}Android Maven Plugin}}
 *-----*------*------*
-{{{http://maven-site.nuiton.org/mavenpom/}nuiton.org' Mavenpom}} | {{{http://www.silverpeas.org/}silverpeas.org}} | 
+{{{http://maven-site.nuiton.org/mavenpom/}nuiton.org' Mavenpom}} | {{{http://www.silverpeas.org/}silverpeas.org}} | {{{http://tap4j.org/}Test Anything Protocol for Java}}
+*-----*------*------*
+{{{http://testlinkjavaapi.sourceforge.net/}TestLink Java API}}
 *-----*------*------*
