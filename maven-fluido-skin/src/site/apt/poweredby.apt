@@ -31,12 +31,22 @@ Powered By
   Here is a non-exhaustive list of known projects which documentation sites have been generated using
   the Maven Fluido Skin (in sparse order):
 
+* Apache Projects
+
 *-----*------*------*
- {{{http://incubator.apache.org/amber/}Apache Amber}} | {{{http://incubator.apache.org/any23/}Apache Any23}} | {{{http://incubator.apache.org/directmemory/}Apache Direct Memory}}
+{{{http://incubator.apache.org/amber/}Apache Amber}} | {{{http://incubator.apache.org/any23/}Apache Any23}} | {{{http://incubator.apache.org/directmemory/}Apache Direct Memory}}
 *-----*------*------*
- {{{http://incubator.apache.org/amber/}Apache Syncope}} | {{{http://archiva.apache.org/}Apache Archiva}} | {{{http://maven.apache.org/plugins/maven-surefire-plugin/}Apache Maven Surefire Plugin}}
+{{{http://incubator.apache.org/amber/}Apache Syncope}} | {{{http://archiva.apache.org/}Apache Archiva}} | {{{http://maven.apache.org/plugins/maven-surefire-plugin/}Apache Maven Surefire Plugin}}
 *-----*------*------*
 {{{http://incubator.apache.org/chukwa/}Apache Chukwa}} | {{{http://incubator.apache.org/kalumet/}Apache Kalumet}} | {{{http://incubator.apache.org/flume/}Apache Flume}}
+*-----*------*------*
+{{{http://tomcat.apache.org/maven-plugin-2/}Apache Tomcat Maven Plugin}} |  | 
+*-----*------*------*
+{{{http://people.apache.org/~olamy/resume/}Olivier Lamy}}'s ASF pages | {{{http://people.apache.org/~tommaso/}Tommaso Teofili}}'s ASF pages | {{{http://people.apache.org/~simonetripodi/}Simone Tripodi}}'s ASF pages
+*-----*------*------*
+
+* Non-ASF projects
+
 *-----*------*------*
 {{{http://mojo.codehaus.org/}Codehaus' MOJO}} | {{{http://sonatype.github.com/async-http-client/}Async Http Client}} | {{{https://maven.alfresco.com/nexus/content/repositories/alfresco-docs/maven-alfresco-lifecycle/latest/index.html}Maven Alfresco Lifecycle}}
 *-----*------*------*
@@ -48,5 +58,5 @@ nuiton.org {{{http://maven-site.nuiton.org/mavenpom/}Mavenpom}} | {{{http://www.
 *-----*------*------*
 {{{http://testlinkjavaapi.sourceforge.net/}TestLink Java API}} | Terradue Spatial OpenSearch {{{http://terradue.github.com/jcatalogue-client/}catalogue client}} | {{{http://gwtbootstrap.github.com/gwt-bootstrap/}GWT Bootstrap}}
 *-----*------*------*
-{{{http://people.apache.org/~olamy/resume/}Olivier Lamy}}'s ASF pages | {{{http://people.apache.org/~tommaso/}Tommaso Teofili}}'s ASF pages | {{{http://people.apache.org/~simonetripodi/}Simone Tripodi}}'s ASF pages
+{{{http://awhitford.github.com/lombok.maven/}Maven Plugin}} for Project Lombok |  | 
 *-----*------*------*
