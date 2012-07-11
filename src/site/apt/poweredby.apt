@@ -36,7 +36,7 @@ Powered By
 *-----*------*------*
 {{{http://incubator.apache.org/amber/}Apache Amber}} | {{{http://incubator.apache.org/any23/}Apache Any23}} | {{{http://incubator.apache.org/directmemory/}Apache Direct Memory}}
 *-----*------*------*
-{{{http://incubator.apache.org/amber/}Apache Syncope}} | {{{http://archiva.apache.org/}Apache Archiva}} | {{{http://maven.apache.org/plugins/maven-surefire-plugin/}Apache Maven Surefire Plugin}}
+{{{http://incubator.apache.org/syncope/}Apache Syncope}} | {{{http://archiva.apache.org/}Apache Archiva}} | {{{http://maven.apache.org/plugins/maven-surefire-plugin/}Apache Maven Surefire Plugin}}
 *-----*------*------*
 {{{http://incubator.apache.org/chukwa/}Apache Chukwa}} | {{{http://incubator.apache.org/kalumet/}Apache Kalumet}} | {{{http://incubator.apache.org/flume/}Apache Flume}}
 *-----*------*------*
