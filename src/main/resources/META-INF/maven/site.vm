@@ -741,13 +741,13 @@
     <meta name="author" content="$author" />
 #end
 #if ( $dateCreation )
-    <!-- <meta name="Date-Creation-yyyymmdd" content="$dateCreation" /> -->
+    <meta name="Date-Creation-yyyymmdd" content="$dateCreation" />
 #end
 #if ( $dateRevision )
-    <!--  <meta name="Date-Revision-yyyymmdd" content="$dateRevision" /> -->
+    <meta name="Date-Revision-yyyymmdd" content="$dateRevision" />
 #end
 #if ( $locale )
-    <!-- <meta http-equiv="Content-Language" content="$locale.language" /> -->
+    <meta http-equiv="Content-Language" content="$locale.language" />
 #end
     <title>$title</title>
     <link rel="stylesheet" href="$relativePath/css/apache-maven-fluido.min.css" />
