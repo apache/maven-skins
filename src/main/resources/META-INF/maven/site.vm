@@ -736,6 +736,19 @@
   <head>
     <meta charset="${outputEncoding}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+## put meta together
+#foreach( $author in $authors )
+    <meta name="author" content="$author" />
+#end
+#if ( $dateCreation )
+    <!-- <meta name="Date-Creation-yyyymmdd" content="$dateCreation" /> -->
+#end
+#if ( $dateRevision )
+    <!--  <meta name="Date-Revision-yyyymmdd" content="$dateRevision" /> -->
+#end
+#if ( $locale )
+    <!-- <meta http-equiv="Content-Language" content="$locale.language" /> -->
+#end
     <title>$title</title>
     <link rel="stylesheet" href="$relativePath/css/apache-maven-fluido.min.css" />
     <link rel="stylesheet" href="$relativePath/css/site.css" />
@@ -748,7 +761,7 @@
     #if ( $decoration.body.head )
       #foreach( $item in $decoration.body.head.getChildren() )
         #set ( $head = $item.toString().trim() )
-
+        #set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
         #if ( $item.name == "script" )
           #set ( $head = $StringUtils.replace( $item.toUnescapedString(), $documentHeader, "" ) )
         #else
@@ -759,18 +772,6 @@
       #end
     #end
 
-#foreach( $author in $authors )
-      <meta name="author" content="$author" />
-#end
-#if ( $dateCreation )
-    <meta name="Date-Creation-yyyymmdd" content="$dateCreation" />
-#end
-#if ( $dateRevision )
-    <meta name="Date-Revision-yyyymmdd" content="$dateRevision" />
-#end
-#if ( $locale )
-    <meta http-equiv="Content-Language" content="$locale.language" />
-#end
     #if( $headContent )$headContent#end
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
   </head>
@@ -986,6 +987,7 @@
       #if ( $sideBarEnabled )
       </div>
       #end
+    </div>
 
     <hr/>
 
