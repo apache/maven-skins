@@ -70,6 +70,9 @@
       <name>Ivan Habunek</name>
       <email>ihabunek AT apache DOT org</email>
     </contributor>
+    <contributor>
+      <name>Eric Barboni</name>
+    </contributor>
   </contributors>
 
   <build>
