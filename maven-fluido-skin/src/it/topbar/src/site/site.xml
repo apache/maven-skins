@@ -35,6 +35,7 @@
   <custom>
     <fluidoSkin>
       <topBarEnabled>true</topBarEnabled>
+      <topBarContainerStyle>width: 90%;</topBarContainerStyle>
       <topBarIcon>
         <name>Maven Fluido Skin</name>
         <alt>Maven Fluido Skin</alt>
@@ -63,6 +64,10 @@
 
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
+      <item name="Foo" href="foo.html">
+        <item name="Bar" href="bar.html"/>
+        <item name="Wine" href="wine.html"/>
+      </item>
     </menu>
 
     <menu ref="reports"/>
