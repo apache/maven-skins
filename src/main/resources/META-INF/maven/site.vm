@@ -812,7 +812,12 @@
           <span class="icon-bar"></span>
         </a>
         #else
-        <div class="container">
+            #if ( $decoration.custom.getChild('fluidoSkin')
+                  && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ) )
+              <div class="container" style="$decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ).getValue()">
+            #else
+              <div class="container">
+            #end
         #end
         #if ( $decoration.custom.getChild('fluidoSkin')
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarIcon' ) )
@@ -861,11 +866,9 @@
 
           ## MSKINS-31
           #if( $decoration.body && $decoration.body.menus )
-          <div class="nav-collapse">
             <ul class="nav">
               #topMenu( $decoration.body.menus )
             </ul>
-          </div>
           #end
 
           #if ( $searchEnabled && !$sideBarEnabled )
