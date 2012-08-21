@@ -946,7 +946,7 @@
       #if ( $sideBarEnabled )
       <div class="row-fluid">
         <div id="leftColumn" class="span2">
-          <div class="well sidebar-nav">
+          <div class="well nav nav-list">
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
           #mainMenu( $decoration.body.menus )
           #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
