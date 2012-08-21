@@ -63,10 +63,13 @@
     </breadcrumbs>
 
     <menu name="Overview">
-      <item name="Introduction" href="index.html"/>
+      <item name="Introduction" href="index.html">
+        <item name="Bar" href="bar.html"/>
+      </item>
       <item name="Foo" href="foo.html">
         <item name="Bar" href="bar.html"/>
         <item name="Wine" href="wine.html"/>
+        <item name="Beer" href="beer.html"/>
       </item>
     </menu>
 
