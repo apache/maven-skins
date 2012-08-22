@@ -106,6 +106,41 @@ Welcome to ${project.name}!
 </project>
 +-----+
 
+** TopBarContainerStyle
+
+  You can configure the style attribute value of the div container for your topbar
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+      <topBarEnabled>true</topBarEnabled>
+      <topBarContainerStyle>width: 90%;</topBarContainerStyle>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
+
+** NavBarStyle
+
+  You can configure style of your top bar nav (since bootstrap 2.1.0 is not anymore black by default).
+  Use navbar-inverse to have the black one.
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+      <topBarEnabled>true</topBarEnabled>
+      <navBarStyle>navbar-inverse</navBarStyle>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
+
 ** GoogleSearch
 
  Users can optionally enable the <<Google Search>> for the generated site, requirements are:
