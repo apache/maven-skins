@@ -818,7 +818,15 @@
     #end
 
     #if ( $topBarEnabled )
-    <div id="topbar" class="navbar navbar-fixed-top">
+      #if ( $decoration.custom.getChild('fluidoSkin')
+           && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'navBarStyle' ) )
+        #set ( $navBarStyle = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'navBarStyle' ).getValue())
+      #else
+        #set ( $navBarStyle = '')
+      #end
+
+
+    <div id="topbar" class="navbar navbar-fixed-top $navBarStyle">
       <div class="navbar-inner">
         #if ( $sideBarEnabled )
         <div class="container-fluid">

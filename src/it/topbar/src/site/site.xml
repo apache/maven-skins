@@ -36,6 +36,7 @@
     <fluidoSkin>
       <topBarEnabled>true</topBarEnabled>
       <topBarContainerStyle>width: 90%;</topBarContainerStyle>
+      <!--navBarStyle>navbar-inverse</navBarStyle-->
       <topBarIcon>
         <name>Maven Fluido Skin</name>
         <alt>Maven Fluido Skin</alt>
