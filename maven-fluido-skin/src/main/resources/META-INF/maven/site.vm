@@ -838,10 +838,11 @@
         #else
             #if ( $decoration.custom.getChild('fluidoSkin')
                   && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ) )
-              <div class="container" style="$decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ).getValue()">
+              <div class="container" style="$decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ).getValue()"><div class="nav-collapse">
             #else
-              <div class="container">
+              <div class="container"><div class="nav-collapse">
             #end
+
         #end
         #if ( $decoration.custom.getChild('fluidoSkin')
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarIcon' ) )
@@ -918,6 +919,11 @@
               </li>
             </ul>
           #end
+
+          #if ($topBarEnabled)
+            </div>
+          #end
+
         </div>
       </div>
     </div>
