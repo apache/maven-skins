@@ -108,8 +108,8 @@
       <resource>
         <directory>${project.build.directory}/${project.build.finalName}</directory>
         <includes>
-          <include>css/apache-maven-fluido.min.css</include>
-          <include>js/apache-maven-fluido.min.js</include>
+          <include>css/apache-maven-fluido-${project.version}.min.css</include>
+          <include>js/apache-maven-fluido-${project.version}.min.js</include>
         </includes>
       </resource>
     </resources>
@@ -142,7 +142,7 @@
                 <cssSourceFile>maven-theme.css</cssSourceFile>
                 <cssSourceFile>prettify.css</cssSourceFile>
               </cssSourceFiles>
-              <cssFinalFile>apache-maven-fluido.css</cssFinalFile>
+              <cssFinalFile>apache-maven-fluido-${project.version}.css</cssFinalFile>
               <jsSourceDir>js</jsSourceDir>
               <jsSourceFiles>
                 <jsSourceFile>jquery-1.7.1.js</jsSourceFile>
@@ -150,7 +150,7 @@
                 <jsSourceFile>prettify.js</jsSourceFile>
                 <jsSourceFile>fluido.js</jsSourceFile>
               </jsSourceFiles>
-              <jsFinalFile>apache-maven-fluido.js</jsFinalFile>
+              <jsFinalFile>apache-maven-fluido-${project.version}.js</jsFinalFile>
             </configuration>
             <goals>
               <goal>minify</goal>
