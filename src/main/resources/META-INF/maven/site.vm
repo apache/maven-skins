@@ -249,31 +249,37 @@
       #set ( $collapse = "expanded" )
     #end
   #end
-  <li class="$collapse">
+  
+  #if ( $alignedFileName == $currentItemHref )
+    <li class="$collapse active">
+  #else
+    <li class="$collapse">
+  #end
+  
   #if ( $item.img )
     #if ( $item.position == "left" )
       #if ( $alignedFileName == $currentItemHref )
-        <strong>#image($item.img $item.alt $item.border $item.width $item.height) $item.name</strong>
+        <a href="#">#image($item.img $item.alt $item.border $item.width $item.height) $item.name</a>
       #else
         #link($currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height)
       #end
     #else
       #if ( $alignedFileName == $currentItemHref )
-        <strong>$item.name #image($item.img $item.alt $item.border $item.width $item.height)</strong>
+        <a href="#">$item.name #image($item.img $item.alt $item.border $item.width $item.height)</a>
       #else
         #link($currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height)
       #end
     #end
   #else
     #if ( $alignedFileName == $currentItemHref )
-      <strong>$item.name</strong>
+      <a href="#">$item.name</a>
     #else
       #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
     #end
   #end
   #if ( $item && $item.items && $item.items.size() > 0 )
     #if ( $collapse == "expanded" )
-      <ul>
+      <ul class="nav nav-list">
         #foreach( $subitem in $item.items )
           #menuItem( $subitem )
         #end
@@ -284,6 +290,7 @@
 #end
 ##
 #macro ( mainMenu $menus )
+<ul class="nav nav-list">
   #foreach( $menu in $menus )
     #if ( $menu.name )
       #if ( $menu.img )
@@ -329,22 +336,21 @@
         #set ( $img = '<img class="imageLink"' + $src + $alt + $border + $width + $height + "/>" )
 ##
         #if ( $position == "left" )
-        <h3>$img $menu.name</h3>
+        <li class="nav-header">$img $menu.name</li>
         #else
-        <h3>$menu.name $img</h3>
+        <li class="nav-header">$menu.name $img</li>
         #end
       #else
-        <h3>$menu.name</h3>
+        <li class="nav-header">$menu.name</li>
       #end
     #end
     #if ( $menu.items && $menu.items.size() > 0 )
-    <ul>
       #foreach( $item in $menu.items )
         #menuItem( $item )
       #end
-    </ul>
     #end
   #end
+</ul>
 #end
 ##
 #macro ( copyright )
@@ -978,8 +984,8 @@
 
       #if ( $sideBarEnabled )
       <div class="row-fluid">
-        <div id="leftColumn" class="span2">
-          <div class="well nav nav-list">
+        <div id="leftColumn" class="span3">
+          <div class="well sidebar-nav">
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
           #mainMenu( $decoration.body.menus )
           #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
@@ -1002,7 +1008,7 @@
         </div>
         #end
 
-        <div id="bodyColumn" #if ( $sideBarEnabled ) class="span10" #end>
+        <div id="bodyColumn" #if ( $sideBarEnabled ) class="span9" #end>
           #if ( $title && $title.endsWith( "Project License" ) )
             $bodyContent
           #else
