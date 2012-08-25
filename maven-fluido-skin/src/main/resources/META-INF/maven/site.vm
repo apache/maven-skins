@@ -190,7 +190,7 @@
     #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
     #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
 
-    <li class="pull-right">#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )</li>
+    <li class="pull-right">#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false)</li>
 
     #if ( $counter > 0 && $counter < $links.size() )
     <li class="divider pull-right">|</li>
@@ -207,7 +207,7 @@
     #end
 ##
       <li class="$cssClass">
-      #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
+      #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false )
       </li>
       <li class="divider $cssClass">/</li>
   #end
