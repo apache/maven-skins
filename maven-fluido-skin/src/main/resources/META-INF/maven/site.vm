@@ -1045,6 +1045,8 @@
         #if ( $decoration.body.footer )
           #foreach( $item in $decoration.body.footer.getChildren() )
             #set ( $foot = $item.toString().trim() )
+            ## Workaround for http://jira.codehaus.org/browse/MSITE-135
+            ## Use StringUtils untill http://jira.codehaus.org/browse/DOXIASITETOOLS-67 is fixed
             ## #eval macro not supported yet, that is a silly turnaround to allow ASF projects adopt fluido
             $StringUtils.replace( $foot, '@project.name@', ${project.name} )
           #end
