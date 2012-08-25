@@ -603,7 +603,7 @@
     #end
 
     <a href="http://github.com/$gitHubProjectId">
-      <img style="position: absolute; top: 0; $ribbonOrientation: 0; border: 0; z-index: 100;"
+      <img style="position: absolute; top: 0; $ribbonOrientation: 0; border: 0; z-index: 10000;"
         src="https://s3.amazonaws.com/github/ribbons/$ribbon.get( $ribbonColor )"
         alt="Fork me on GitHub">
     </a>
