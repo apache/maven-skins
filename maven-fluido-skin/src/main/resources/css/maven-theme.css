@@ -39,8 +39,6 @@ a.externalLink[href^=ftp]{background: url('../images/network-server.png') right 
 a.externalLink[href^=mailto]{background: url('../images/contact-new.png') right center no-repeat;padding-right: 18px;}
 
 li.none{list-style: none;}
-li.expanded{list-style-image: url('../images/expanded.png')}
-li.collapsed{list-style-image: url('../images/collapsed.png');}
 
 .search-query{background-image: url(http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(255, 255, 255); background-position: 0% 50%; background-repeat: no-repeat no-repeat; width:95% }
 
