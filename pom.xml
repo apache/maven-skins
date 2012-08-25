@@ -413,6 +413,21 @@
                 </configuration>
               </execution>
               <execution>
+                <id>copy-mskins-22_topbar</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <resources>
+                    <resource>
+                      <directory>${project.build.directory}/it/mskins-22_topbar/target/site/</directory>
+                    </resource>
+                  </resources>
+                  <outputDirectory>${project.build.directory}/site/mskins-22_topbar/</outputDirectory>
+                </configuration>
+              </execution>
+              <execution>
                 <id>copy-mskins-23</id>
                 <phase>site</phase>
                 <goals>
