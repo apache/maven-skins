@@ -48,6 +48,8 @@ body.topBarDisabled{padding-top: 20px;}
 .builtBy{display: block;}
 img.builtBy{margin: 10px auto;}
 
+#search-form{margin-left: 9px;margin-right:9px;}
+
 /* Tweaks to the bootstrap theme
 --------------------------------- */
 
