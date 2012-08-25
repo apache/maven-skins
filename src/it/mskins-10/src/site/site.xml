@@ -34,6 +34,12 @@
   <body>
     <menu>
       <item name="Suppress line wrapping in navigation caused by spaces or hyphens" href="./"/>
+      <item name="Beer" href="beer.html" collapse="true">
+        <item name="Wine" href="wine.html"/>
+      </item>
+      <item name="Beer1" href="beer1.html" collapse="true">
+        <item name="Wine1" href="wine1.html"/>
+      </item>
     </menu>
     
     <menu ref="reports"/>

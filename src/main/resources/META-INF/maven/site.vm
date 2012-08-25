@@ -56,7 +56,7 @@
   #end
 #end
 ##
-#macro ( link $href $name $target $img $position $alt $border $width $height )
+#macro ( link $href $name $target $img $position $alt $border $width $height $icon)
   #set ( $linkTitle = ' title="' + $name + '"' )
   #if( $target )
     #set ( $linkTarget = ' target="' + $target + '"' )
@@ -77,7 +77,11 @@
       <a href="$href"$linkClass$linkTarget$linkTitle>$name #image($img $alt $border $width $height)</a>
     #end
   #else
-    <a href="$href"$linkClass$linkTarget$linkTitle>$name</a>
+    <a href="$href"$linkClass$linkTarget$linkTitle>
+    #if($icon)
+      <i class="$icon"></i>
+    #end
+    $name</a>
   #end
 #end
 ##
@@ -236,24 +240,24 @@
 ##
   #if ( $item && $item.items && $item.items.size() > 0 )
     #if ( $item.collapse == false )
-      #set ( $collapse = "expanded" )
+      #set ( $collapse = "icon-chevron-down" )
     #else
       ## By default collapsed
-      #set ( $collapse = "collapsed" )
+      #set ( $collapse = "icon-chevron-right" )
     #end
 ##
     #set ( $display = false )
     #displayTree( $display $item )
 ##
     #if ( $alignedFileName == $currentItemHref || $display )
-      #set ( $collapse = "expanded" )
+      #set ( $collapse = "icon-chevron-down" )
     #end
   #end
   
   #if ( $alignedFileName == $currentItemHref )
-    <li class="$collapse active">
+    <li class="active">
   #else
-    <li class="$collapse">
+    <li>
   #end
   
   #if ( $item.img )
@@ -272,13 +276,13 @@
     #end
   #else
     #if ( $alignedFileName == $currentItemHref )
-      <a href="#">$item.name</a>
+      <a href="#"><i class="$collapse"></i>$item.name</a>
     #else
-      #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
+      #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height $collapse)
     #end
   #end
   #if ( $item && $item.items && $item.items.size() > 0 )
-    #if ( $collapse == "expanded" )
+    #if ( $collapse == "icon-chevron-down" )
       <ul class="nav nav-list">
         #foreach( $subitem in $item.items )
           #menuItem( $subitem )
