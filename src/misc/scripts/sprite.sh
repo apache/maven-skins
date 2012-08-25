@@ -29,6 +29,4 @@ montage window-new.png \
         drive-harddisk.png \
         network-server.png \
         contact-new.png \
-        expanded.png \
-        collapsed.png \
         -tile 4x3 -geometry +2+2 -background none external-links.png
