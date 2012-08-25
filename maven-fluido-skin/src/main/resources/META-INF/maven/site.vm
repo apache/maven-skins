@@ -234,23 +234,23 @@
 #end
 ##
 #macro ( menuItem $item )
-  #set ( $collapse = "none" )
+  #set ( $collapseClass = "none" )
   #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
   #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
 ##
   #if ( $item && $item.items && $item.items.size() > 0 )
     #if ( $item.collapse == false )
-      #set ( $collapse = "icon-chevron-down" )
+      #set ( $collapseClass = "icon-chevron-down" )
     #else
       ## By default collapsed
-      #set ( $collapse = "icon-chevron-right" )
+      #set ( $collapseClass = "icon-chevron-right" )
     #end
 ##
     #set ( $display = false )
     #displayTree( $display $item )
 ##
     #if ( $alignedFileName == $currentItemHref || $display )
-      #set ( $collapse = "icon-chevron-down" )
+      #set ( $collapseClass = "icon-chevron-down" )
     #end
   #end
   
@@ -265,24 +265,24 @@
       #if ( $alignedFileName == $currentItemHref )
         <a href="#">#image($item.img $item.alt $item.border $item.width $item.height) $item.name</a>
       #else
-        #link($currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height)
+        #link($currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false)
       #end
     #else
       #if ( $alignedFileName == $currentItemHref )
         <a href="#">$item.name #image($item.img $item.alt $item.border $item.width $item.height)</a>
       #else
-        #link($currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height)
+        #link($currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false)
       #end
     #end
   #else
     #if ( $alignedFileName == $currentItemHref )
-      <a href="#"><i class="$collapse"></i>$item.name</a>
+      <a href="#"><i class="$collapseClass"></i>$item.name</a>
     #else
-      #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height $collapse)
+      #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height $collapseClass)
     #end
   #end
   #if ( $item && $item.items && $item.items.size() > 0 )
-    #if ( $collapse == "icon-chevron-down" )
+    #if ( $collapseClass == "icon-chevron-down" )
       <ul class="nav nav-list">
         #foreach( $subitem in $item.items )
           #menuItem( $subitem )
