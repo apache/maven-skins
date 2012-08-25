@@ -45,8 +45,8 @@ li.none{list-style: none;}
 body.topBarEnabled{padding-top: 60px;}
 body.topBarDisabled{padding-top: 20px;}
 
-.poweredBy{display: block;}
-img.poweredBy{margin: 10px auto;}
+.builtBy{display: block;}
+img.builtBy{margin: 10px auto;}
 
 /* Tweaks to the bootstrap theme
 --------------------------------- */

@@ -470,7 +470,7 @@
   #end
 #end
 ##
-#macro ( poweredByLogo $poweredBy )
+#macro ( builtByLogo $poweredBy )
   #if( $poweredBy )
     #foreach ($item in $poweredBy)
       #if( $item.href )
@@ -523,18 +523,18 @@
         #set ( $height = "" )
       #end
 ##
-      <a href="$href" title="$name" class="poweredBy">
-        <img class="poweredBy" $alt src="$img" $border $width $height />
+      <a href="$href" title="$name" class="builtBy">
+        <img class="builtBy" $alt src="$img" $border $width $height />
       </a>
     #end
     #if( $poweredBy.isEmpty() )
       <a href="http://maven.apache.org/" title="$i18n.getString( "site-renderer", $locale, "template.builtby" ) Maven" class="poweredBy">
-        <img class="poweredBy" alt="$i18n.getString( "site-renderer", $locale, "template.builtby" ) Maven" src="$relativePath/images/logos/maven-feather.png" />
+        <img class="builtBy" alt="$i18n.getString( "site-renderer", $locale, "template.builtby" ) Maven" src="$relativePath/images/logos/maven-feather.png" />
       </a>
     #end
   #else
     <a href="http://maven.apache.org/" title="$i18n.getString( "site-renderer", $locale, "template.builtby" ) Maven" class="poweredBy">
-      <img class="poweredBy" alt="$i18n.getString( "site-renderer", $locale, "template.builtby" ) Maven" src="$relativePath/images/logos/maven-feather.png" />
+      <img class="builtBy" alt="$i18n.getString( "site-renderer", $locale, "template.builtby" ) Maven" src="$relativePath/images/logos/maven-feather.png" />
     </a>
   #end
 #end
@@ -1006,7 +1006,7 @@
              <div class="clear"></div>
              #followTwitter( $sideBarEnabled )
              <div class="clear"></div>
-             #poweredByLogo( $decoration.poweredBy )
+             #builtByLogo( $decoration.poweredBy )
             </div>
           </div>
         </div>
@@ -1052,7 +1052,7 @@
 
         #if ( !$sideBarEnabled )
         <p id="poweredBy" class="pull-right">
-          #poweredByLogo( $decoration.poweredBy )
+          #builtByLogo( $decoration.poweredBy )
         </p>
         #end
 
