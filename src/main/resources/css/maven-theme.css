@@ -66,6 +66,16 @@ table.zebra-striped{background-color:#FFF}
 /* avoid transparent footer */
 .footer{background-color:#EEE}
 
+/* align with adjustments of http://twitter.github.com/bootstrap/examples/fluid.html */
 .sidebar-nav {
-    padding-left: 12px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.sidebar-nav .icon-chevron-right, .sidebar-nav .icon-chevron-down
+{
+  margin-top: 2px;
+  margin-right: -6px;
+  float: right;
+  opacity: 0.25;
 }
