@@ -1018,7 +1018,7 @@
         </div>
         #end
 
-        #set ($bodyColumnClass="span3")
+        #set ($bodyColumnClass="span9")
         #if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
           && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ) )
           #set ( $bodyColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ).getValue() )
