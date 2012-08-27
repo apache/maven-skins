@@ -987,8 +987,14 @@
       </div>
 
       #if ( $sideBarEnabled )
+      #set ($leftColumnClass="span3")
+      #if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
+        && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'leftColumnClass' ) )
+        #set ( $leftColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'leftColumnClass' ).getValue() )
+      #end
+
       <div class="row-fluid">
-        <div id="leftColumn" class="span3">
+        <div id="leftColumn" class="$leftColumnClass">
           <div class="well sidebar-nav">
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
           #mainMenu( $decoration.body.menus )
@@ -1012,7 +1018,13 @@
         </div>
         #end
 
-        <div id="bodyColumn" #if ( $sideBarEnabled ) class="span9" #end>
+        #set ($bodyColumnClass="span3")
+        #if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
+          && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ) )
+          #set ( $bodyColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ).getValue() )
+        #end
+
+        <div id="bodyColumn" #if ( $sideBarEnabled ) class="$bodyColumnClass" #end>
           #if ( $title && $title.endsWith( "Project License" ) )
             $bodyContent
           #else
