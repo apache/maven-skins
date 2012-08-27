@@ -141,6 +141,25 @@ Welcome to ${project.name}!
 </project>
 +-----+
 
+** Configuring column class
+
+  When using sidebar, the left column used by default span3 class and body column use span9.
+  To prevent weird/ugly result, the sum must be 12.
+  You can change that using:
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+      <leftColumnClass>span2</leftColumnClass>
+      <bodyColumnClass>span10</bodyColumnClass>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
+
 ** GoogleSearch
 
  Users can optionally enable the <<Google Search>> for the generated site, requirements are:
