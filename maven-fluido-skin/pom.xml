@@ -21,7 +21,7 @@
   <parent>
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-skins</artifactId>
-    <version>7-SNAPSHOT</version>
+    <version>7</version>
     <relativePath>../maven-skins/pom.xml</relativePath>
   </parent>
 
