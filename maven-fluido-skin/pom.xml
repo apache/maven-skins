@@ -137,7 +137,7 @@
               <webappSourceDir>${basedir}/src/main/resources</webappSourceDir>
               <cssSourceDir>css</cssSourceDir>
               <cssSourceFiles>
-                <cssSourceFile>bootstrap-2.1.0.css</cssSourceFile>
+                <cssSourceFile>bootstrap-2.1.1.css</cssSourceFile>
                 <cssSourceFile>maven-base.css</cssSourceFile>
                 <cssSourceFile>maven-theme.css</cssSourceFile>
                 <cssSourceFile>prettify.css</cssSourceFile>
@@ -146,7 +146,7 @@
               <jsSourceDir>js</jsSourceDir>
               <jsSourceFiles>
                 <jsSourceFile>jquery-1.8.0.js</jsSourceFile>
-                <jsSourceFile>bootstrap-2.1.0.js</jsSourceFile>
+                <jsSourceFile>bootstrap-2.1.1.js</jsSourceFile>
                 <jsSourceFile>prettify.js</jsSourceFile>
                 <jsSourceFile>fluido.js</jsSourceFile>
               </jsSourceFiles>
