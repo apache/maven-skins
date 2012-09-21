@@ -20,7 +20,7 @@
 /* $Id$ */
 
 /*IE6/7 don't support selectors*/
-a.externalLink{background: url('../images/external.png') right center no-repeat;padding-right: 18px;}
+a.externalLink{padding-right: 18px;}
 a.newWindow{background: url('../images/window-new.png') right center no-repeat;padding-right: 18px;}
 
 a.externalLink[href^=http]{background: url('../images/internet-web-browser.png') right center no-repeat;padding-right: 18px;}
