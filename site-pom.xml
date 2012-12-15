@@ -52,19 +52,32 @@ under the License.
   <distributionManagement>
     <site>
       <id>apache.website</id>
-      <url>scp://people.apache.org/www/maven.apache.org/pom/skins/</url>
+      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/maven/content/${maven.site.path}</url>
     </site>
   </distributionManagement>
+
+  <properties>
+    <maven.site.path>pom-archives/skins-${project.version}</maven.site.path>
+  </properties>
 
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
           <siteDirectory>${basedir}/src/site-docs</siteDirectory>
-          <stagingSiteURL>scp://people.apache.org/www/maven.apache.org/pom/skins-${project.version}/</stagingSiteURL>
         </configuration>
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>site-release</id>
+      <properties>
+        <maven.site.path>pom/skins</maven.site.path>
+      </properties>
+    </profile>
+  </profiles>
 </project>
