@@ -220,6 +220,22 @@ Welcome to ${project.name}!
 </project>
 +-----+
 
+** Copyright Style
+
+  Since 1.3.1, you can configure Copyright class. (default is span-12)
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+      <copyrightStyle>pull-right</copyrightStyle>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
+
 ** Footers placeholders
 
  Since <<<#eval>>> Velocity macro is not supported yet, the only placeholder
