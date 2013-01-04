@@ -1052,7 +1052,14 @@
       #else
       <div class="container">
       #end
-        <div class="row span12">Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</div>
+        <div class="row">
+          #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightStyle') )
+            <p class="$decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightStyle').getValue()">Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
+          #else
+            <p class="span12">Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
+          #end
+
+        </div>
 
         #if ( $decoration.body.footer )
           #foreach( $item in $decoration.body.footer.getChildren() )
