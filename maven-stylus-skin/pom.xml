@@ -34,7 +34,7 @@ under the License.
 
   <name>Maven Stylus Skin</name>
   <description>Maven Stylus Skin</description>
-  <url>http://maven.apache.org/skins/${site.destination}</url>
+  <url>http://maven.apache.org/${maven.site.path}</url>
 
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/maven-stylus-skin/</connection>
@@ -81,16 +81,6 @@ under the License.
   </build>
 
   <profiles>
-    <profile>
-      <id>rc</id>
-      <distributionManagement>
-        <!-- Cannot define in parent -->
-        <site>
-          <id>apache.website</id>
-          <url>scp://people.apache.org/www/maven.apache.org/skins/${site.destination}</url>
-        </site>
-      </distributionManagement>
-    </profile>
     <profile>
       <id>run-its</id>
       <build>
@@ -159,7 +149,7 @@ under the License.
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-invoker-plugin</artifactId>
-            <version>1.5</version>
+            <version>1.6</version>
           </plugin>
         </plugins>
       </reporting>
