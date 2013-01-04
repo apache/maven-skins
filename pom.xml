@@ -31,7 +31,7 @@
   <name>Apache Maven Fluido Skin</name>
   <description>The Apache Maven Fluido Skin is an Apache Maven site skin
     built on top of Twitter's bootstrap.</description>
-  <url>http://maven.apache.org/skins/${site.destination}</url>
+  <url>http://maven.apache.org/${maven.site.path}</url>
   <inceptionYear>2011</inceptionYear>
 
   <scm>
@@ -162,16 +162,6 @@
   </build>
 
   <profiles>
-    <profile>
-      <id>rc</id>
-      <distributionManagement>
-        <!-- Cannot define in parent -->
-        <site>
-          <id>apache.website</id>
-          <url>scp://people.apache.org/www/maven.apache.org/skins/${site.destination}</url>
-        </site>
-      </distributionManagement>
-    </profile>
     <profile>
       <id>run-its</id>
       <build>
