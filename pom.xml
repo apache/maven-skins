@@ -34,7 +34,7 @@ under the License.
 
   <name>Maven Default Skin</name>
   <description>Maven Default Skin</description>
-  <url>http://maven.apache.org/skins/${site.destination}</url>
+  <url>http://maven.apache.org/${maven.site.path}</url>
 
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/maven-default-skin/</connection>
@@ -47,16 +47,6 @@ under the License.
   </issueManagement>
 
   <profiles>
-    <profile>
-      <id>rc</id>
-      <distributionManagement>
-        <!-- Cannot define in parent -->
-        <site>
-          <id>apache.website</id>
-          <url>scp://people.apache.org/www/maven.apache.org/skins/${site.destination}</url>
-        </site>
-      </distributionManagement>
-    </profile>
     <profile>
       <id>run-its</id>
       <build>
