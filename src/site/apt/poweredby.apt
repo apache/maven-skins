@@ -42,6 +42,8 @@ Powered By
 *-----*------*------*
 {{{http://tomcat.apache.org/maven-plugin-2/}Apache Tomcat Maven Plugin}} | {{{http://hama.apache.org/}Apache Hama}} | {{{http://logging.apache.org/log4j/2.x/}Apache Log4j 2}}
 *-----*------*------*
+{{{http://onami.incubator.apache.org/}Apache Onami}} | {{{http://struts.apache.org/}Apache Struts}} |
+*-----*------*------*
 {{{http://people.apache.org/~olamy/resume/}Olivier Lamy}}'s ASF pages | {{{http://people.apache.org/~tommaso/}Tommaso Teofili}}'s ASF pages | {{{http://people.apache.org/~simonetripodi/}Simone Tripodi}}'s ASF pages
 *-----*------*------*
 
@@ -58,5 +60,5 @@ nuiton.org {{{http://maven-site.nuiton.org/mavenpom/}Mavenpom}} | {{{http://www.
 *-----*------*------*
 {{{http://testlinkjavaapi.sourceforge.net/}TestLink Java API}} | Terradue Spatial OpenSearch {{{http://terradue.github.com/jcatalogue-client/}catalogue client}} | {{{http://gwtbootstrap.github.com/gwt-bootstrap/}GWT Bootstrap}}
 *-----*------*------*
-{{{http://awhitford.github.com/lombok.maven/}Maven Plugin}} for Project Lombok | {{{http://www.alia4j.org/alia4j/}Advanced-dispatch Language Implementation Architecture for Java}} | 
+{{{http://awhitford.github.com/lombok.maven/}Maven Plugin}} for Project Lombok | {{{http://www.alia4j.org/alia4j/}Advanced-dispatch Language Implementation Architecture for Java}} | {{{http://dozer.sourceforge.net/}Dozer}}
 *-----*------*------*
