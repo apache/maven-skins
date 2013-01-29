@@ -42,7 +42,7 @@ Powered By
 *-----*------*------*
 {{{http://tomcat.apache.org/maven-plugin-2/}Apache Tomcat Maven Plugin}} | {{{http://hama.apache.org/}Apache Hama}} | {{{http://logging.apache.org/log4j/2.x/}Apache Log4j 2}}
 *-----*------*------*
-{{{http://onami.incubator.apache.org/}Apache Onami}} | {{{http://struts.apache.org/}Apache Struts}} |
+{{{http://onami.incubator.apache.org/}Apache Onami}} | {{{http://struts.apache.org/}Apache Struts}} | {{{http://incubator.apache.org/ambari/}Apache Ambari}}
 *-----*------*------*
 {{{http://people.apache.org/~olamy/resume/}Olivier Lamy}}'s ASF pages | {{{http://people.apache.org/~tommaso/}Tommaso Teofili}}'s ASF pages | {{{http://people.apache.org/~simonetripodi/}Simone Tripodi}}'s ASF pages
 *-----*------*------*
