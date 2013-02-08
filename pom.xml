@@ -76,7 +76,7 @@
   </contributors>
 
   <properties>
-    <bootstap.version>2.3.0</bootstap.version>
+    <bootstrap.version>2.3.0</bootstrap.version>
   </properties>
 
   <build>
@@ -141,7 +141,7 @@
               <webappSourceDir>${basedir}/src/main/resources</webappSourceDir>
               <cssSourceDir>css</cssSourceDir>
               <cssSourceFiles>
-                <cssSourceFile>bootstrap-${bootstap.version}.css</cssSourceFile>
+                <cssSourceFile>bootstrap-${bootstrap.version}.css</cssSourceFile>
                 <cssSourceFile>maven-base.css</cssSourceFile>
                 <cssSourceFile>maven-theme.css</cssSourceFile>
                 <cssSourceFile>prettify.css</cssSourceFile>
@@ -150,7 +150,7 @@
               <jsSourceDir>js</jsSourceDir>
               <jsSourceFiles>
                 <jsSourceFile>jquery-1.8.1.js</jsSourceFile>
-                <jsSourceFile>bootstrap-${bootstap.version}.js</jsSourceFile>
+                <jsSourceFile>bootstrap-${bootstrap.version}.js</jsSourceFile>
                 <jsSourceFile>prettify.js</jsSourceFile>
                 <jsSourceFile>fluido.js</jsSourceFile>
               </jsSourceFiles>
