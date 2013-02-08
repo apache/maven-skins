@@ -149,7 +149,7 @@
               <cssFinalFile>apache-maven-fluido-${project.version}.css</cssFinalFile>
               <jsSourceDir>js</jsSourceDir>
               <jsSourceFiles>
-                <jsSourceFile>jquery-1.8.1.js</jsSourceFile>
+                <jsSourceFile>jquery-1.9.1.js</jsSourceFile>
                 <jsSourceFile>bootstrap-${bootstrap.version}.js</jsSourceFile>
                 <jsSourceFile>prettify.js</jsSourceFile>
                 <jsSourceFile>fluido.js</jsSourceFile>
