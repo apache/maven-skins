@@ -1,0 +1,18 @@
+ ------
+ ${project.name}
+ ------
+ Michael Koch
+ ------
+ 2013-02-17
+ ------
+
+${project.name}
+
+ This is a test for ${skinName} with Piwik web analytics tracking code.
+ ${skinDescription}
+ 
+ The Piwik tracking code is not visible on the page, look at the end of the page source to see it.
+
+* Actual configuration
+
+%{snippet|id=skin-custom-config|file=${project.basedir}/src/site/site.xml}
