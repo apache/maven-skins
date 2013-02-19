@@ -422,7 +422,7 @@ Welcome to ${project.name}!
 
 ** Piwik web analytics
 
- Since version <<1.4>>, fluido-skin supports inserting {{{http://piwik.org/}Piwik web analytics}}
+ Since version <<1.3.1>>, fluido-skin supports inserting {{{http://piwik.org/}Piwik web analytics}}
  {{{http://piwik.org/docs/javascript-tracking/#toc-where-can-i-find-the-piwik-tracking-code}tracking code}} into the generated pages.
  Users have to declare: 
 
