@@ -420,6 +420,31 @@ Welcome to ${project.name}!
 
  <<Note>> in order the Google plusone button appears, <<<$\{project.url\}>>> property <<must>> be set in the <<<pom.xml>>>!
 
+** Piwik web analytics
+
+ Since version <<1.4>>, fluido-skin supports inserting {{{http://piwik.org/}Piwik web analytics}}
+ {{{http://piwik.org/docs/javascript-tracking/#toc-where-can-i-find-the-piwik-tracking-code}tracking code}} into the generated pages.
+ Users have to declare: 
+
+ * <<<custom.fluidoSkin.piwik.piwikUrl>>>: URL of the Piwik installation without protocol, leading and trailing slashes (i. e. without <<http://>>).
+ 
+ * <<<custom.fluidoSkin.piwik.idsite>>>: ID in the Piwik installation of the site which is tracked.
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+        <piwik>
+            <piwikUrl>example.org/piwik</piwikUrl>
+            <idsite>1</idsite>
+        </piwik>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
+
 Acknowledgment
 
   ${project.name} contains/redistributes {{{http://glyphicons.com}Glyphicons Halflings}} as part of Bootstrap by Twitter,
