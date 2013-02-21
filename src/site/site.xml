@@ -37,6 +37,11 @@ under the License.
     <fluidoSkin>
       <googlePlusOne />
       <facebookLike />
+      <gitHub>
+        <projectId>apache/maven-skins</projectId>
+        <ribbonOrientation>right</ribbonOrientation>
+        <ribbonColor>red</ribbonColor>
+      </gitHub>
     </fluidoSkin>
   </custom>
 

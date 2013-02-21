@@ -258,7 +258,7 @@ Welcome to ${project.name}!
   <custom>
     <fluidoSkin>
       <gitHub>
-        <projectId>99soft/backport-spi</projectId>
+        <projectId>apache/maven-skins</projectId>
         <ribbonOrientation>right</ribbonOrientation>
         <ribbonColor>black</ribbonColor>
       </gitHub>

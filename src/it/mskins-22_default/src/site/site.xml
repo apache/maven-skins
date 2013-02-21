@@ -35,7 +35,7 @@
   <custom>
     <fluidoSkin>
       <gitHub>
-        <projectId>99soft/backport-spi</projectId>
+        <projectId>apache/maven-skins</projectId>
       </gitHub>
     </fluidoSkin>
   </custom>
