@@ -64,6 +64,7 @@
     </contributor>
     <contributor>
       <name>Michael Koch</name>
+      <email>tensberg AT gmx DOT net</email>
     </contributor>
     <contributor>
       <name>Emmanuel Hugonnet</name>
@@ -603,6 +604,36 @@
                     </resource>
                   </resources>
                   <outputDirectory>${project.build.directory}/site/mskins-75/</outputDirectory>
+                </configuration>
+              </execution>
+              <execution>
+                <id>copy-mskins-76</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <resources>
+                    <resource>
+                      <directory>${project.build.directory}/it/mskins-76/target/site/</directory>
+                    </resource>
+                  </resources>
+                  <outputDirectory>${project.build.directory}/site/mskins-76/</outputDirectory>
+                </configuration>
+              </execution>
+              <execution>
+                <id>copy-mskins-76_topbar</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <resources>
+                    <resource>
+                      <directory>${project.build.directory}/it/mskins-76_topbar/target/site/</directory>
+                    </resource>
+                  </resources>
+                  <outputDirectory>${project.build.directory}/site/mskins-76_topbar/</outputDirectory>
                 </configuration>
               </execution>
             </executions>
