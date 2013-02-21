@@ -779,6 +779,62 @@
   #end
 #end
 ##
+#macro ( flattrHead )
+  #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' )
+    && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'thing' )
+    && ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'url' ) 
+          || $project.url ) )
+    <script type="text/javascript">
+    /* <![CDATA[ */
+        (function() {
+            var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+            t.parentNode.insertBefore(s, t);
+        })();
+    /* ]]> */</script>
+  #end
+#end
+##
+#macro ( flattrBody $sideBarEnabled )
+  #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' )
+    && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'thing' )
+    && ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'url' ) 
+          || $project.url ) )
+    #set ( $flattrThing = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'thing' ).getValue() )
+    #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'url' ) )
+      #set ( $flattrUrl = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'url' ).getValue() )
+    #else
+      #set ( $flattrUrl = $project.url )
+    #end
+
+    #set ( $styleModifier = '' )
+    #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'style' ) )
+      #set ( $style = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'style' ).getValue() )
+      #if ( $style.equalsIgnoreCase( 'compact' ) )
+        #set ( $styleModifier = 'rev="flattr;button:compact;"' )
+      #end
+    #end
+
+    #if ( $sideBarEnabled )
+    <div id="flattr">
+    #else
+    <ul class="nav pull-right"><li>
+    #end
+
+    <a class="FlattrButton" style="display:none;" $styleModifier href="$flattrUrl"></a>
+    <noscript><a href="http://flattr.com/thing/$flattrThing" target="_blank">
+    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
+
+    #if ( $sideBarEnabled )
+    </div>
+    #else
+    </li></ul>
+    #end
+  #end
+#end
+##
 <html xmlns="http://www.w3.org/1999/xhtml"#if ( $locale ) xml:lang="$locale.language" lang="$locale.language"#end>
   <head>
     <meta charset="${outputEncoding}" />
@@ -821,6 +877,7 @@
 
     #if( $headContent )$headContent#end
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
+    #flattrHead()
   </head>
     #if ( $decoration.custom.getChild( 'fluidoSkin' )
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' )
@@ -935,6 +992,7 @@
             #facebookLike( $sideBarEnabled )
             #googlePlusOne( $sideBarEnabled )
             #followTwitter( $sideBarEnabled )
+            #flattrBody( $sideBarEnabled )
           #end
 
          ## MSKINS-31
@@ -1032,6 +1090,8 @@
              #facebookLike( $sideBarEnabled )
              <div class="clear"></div>
              #followTwitter( $sideBarEnabled )
+             <div class="clear"></div>
+             #flattrBody( $sideBarEnabled )
              <div class="clear"></div>
              #builtByLogo( $decoration.poweredBy )
             </div>

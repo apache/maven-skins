@@ -1,0 +1,16 @@
+ ------
+ ${project.name}
+ ------
+ Michael Koch
+ ------
+ 2013-02-19
+ ------
+
+${project.name}
+
+ This is a test for ${skinName} with a large Flattr button.
+ ${skinDescription}
+
+* Actual configuration
+
+%{snippet|id=skin-custom-config|file=${project.basedir}/src/site/site.xml}
