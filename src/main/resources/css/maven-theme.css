@@ -81,3 +81,10 @@ table.zebra-striped{background-color:#FFF}
   float: right;
   opacity: 0.25;
 }
+
+/* MSKINS-79: pull-right compresses list items */
+li.pull-right 
+{
+  margin-left: 3px;
+  margin-right: 3px;
+}
