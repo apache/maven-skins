@@ -34,7 +34,7 @@
   <!-- START SNIPPET: skin-custom-config -->
   <custom>
     <publishDate>1970-01-01</publishDate>
-    <doxiaTimeStamp>true</doxiaTimeStamp>
+    <skipGenerationDate>true</skipGenerationDate>
   </custom>
   <!-- END SNIPPET: skin-custom-config -->
 
