@@ -31,12 +31,6 @@
     <version>${skinVersion}</version>
   </skin>
 
-  <custom>
-    <fluidoSkin>
-      <doxiaTimeStamp>true</doxiaTimeStamp>
-    </fluidoSkin>
-  </custom>
-
   <body>
     <menu>
       <item name="Suppress line wrapping in navigation caused by spaces or hyphens" href="./"/>

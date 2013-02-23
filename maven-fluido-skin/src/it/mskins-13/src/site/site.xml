@@ -36,6 +36,7 @@
       <topBarEnabled>true</topBarEnabled>
       <sideBarEnabled>false</sideBarEnabled>
       <googleSearch/>
+      <skipGenerationDate>true</skipGenerationDate>
     </fluidoSkin>
   </custom>
 
