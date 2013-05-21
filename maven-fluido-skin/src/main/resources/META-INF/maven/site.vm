@@ -260,13 +260,13 @@
       #set ( $collapseClass = "icon-chevron-down" )
     #end
   #end
-  
+
   #if ( $alignedFileName == $currentItemHref )
     <li class="active">
   #else
     <li>
   #end
-  
+
   #if ( $item.img )
     #if ( $item.position == "left" )
       #if ( $alignedFileName == $currentItemHref )
@@ -551,7 +551,7 @@
         && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'piwik' ).getChild( 'idsite' ) )
     #set ( $piwikUrl =  $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'piwik' ).getChild( 'piwikUrl' ).getValue() )
     #set ( $idsite =  $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'piwik' ).getChild( 'idsite' ).getValue() )
-    
+
     <!-- Piwik -->
     <script type="text/javascript">
     var pkBaseURL = (("https:" == document.location.protocol) ? "https://$piwikUrl/" : "http://$piwikUrl/");
@@ -789,7 +789,7 @@
 #macro ( flattrHead )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' )
     && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'thing' )
-    && ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'url' ) 
+    && ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'url' )
           || $project.url ) )
     <script type="text/javascript">
     /* <![CDATA[ */
@@ -807,7 +807,7 @@
 #macro ( flattrBody $sideBarEnabled )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' )
     && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'thing' )
-    && ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'url' ) 
+    && ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'url' )
           || $project.url ) )
     #set ( $flattrThing = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'thing' ).getValue() )
     #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'url' ) )
@@ -1141,8 +1141,8 @@
       <div class="container">
       #end
         <div class="row">
-          #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightStyle') )
-            <p class="$decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightStyle').getValue()">Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
+          #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('footerStyle') )
+            <p class="$decoration.custom.getChild( 'fluidoSkin' ).getChild('footerStyle').getValue()">Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
           #else
             <p class="span12">Copyright &copy;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
           #end
