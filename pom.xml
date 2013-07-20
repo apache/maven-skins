@@ -80,7 +80,7 @@
   </contributors>
 
   <properties>
-    <bootstrap.version>2.3.0</bootstrap.version>
+    <bootstrap.version>2.2.2</bootstrap.version>
     <jquery.version>1.9.1</jquery.version>
   </properties>
 
