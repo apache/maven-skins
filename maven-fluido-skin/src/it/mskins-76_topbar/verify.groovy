@@ -10,9 +10,9 @@ assert 1 == index.getText().count( '''\
             s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
             t.parentNode.insertBefore(s, t);
         })();
-    /* ]]> */</script>''' )
+    /* ]]> */</script>'''.replace( "\n", System.getProperty( "line.separator" ) ) )
 
 assert 1 == index.getText().count( '''\
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://opensource.org/"></a>
     <noscript><a href="http://flattr.com/thing/448050/Open-Source-Initiative-OSI" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>''' )
+    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>'''.replace( "\n", System.getProperty( "line.separator" ) ) )
