@@ -29,9 +29,9 @@
 Welcome to ${project.name}!
 
  The Apache Maven Fluido Skin is an Apache Maven site skin built on top of
- {{{http://twitter.github.com/bootstrap/}Twitter's bootstrap}}.
+ {{{http://bootstrapdocs.com/v${project.properties.get('bootstrap.version')}/docs/}Twitter's Bootstrap ${project.properties.get('bootstrap.version')}}}.
 
- A {{{./sample.html}sample page}} is provided to see the skin in action, and 2 complete sites to show skin
+ A {{{./sample.html}sample page}} is provided to see the skin in action, and two complete sites to show skin
  configurations: one for {{{./sidebar/}sidebar layout (default)}} and the other for {{{./topbar/}topbar layout}}.
 
 * Usage
