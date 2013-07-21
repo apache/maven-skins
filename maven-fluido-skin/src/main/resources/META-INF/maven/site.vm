@@ -1089,7 +1089,7 @@
             #googleSearch( false )
           #end
 
-          <hr class="divider" />
+          <hr />
 
            <div id="poweredBy">
              #googlePlusOne( $sideBarEnabled )
