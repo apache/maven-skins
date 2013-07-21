@@ -197,11 +197,13 @@
     #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
     #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
 
-    <li class="pull-right">#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false)</li>
-
+    <li class="pull-right">
     #if ( $counter > 0 && $counter < $links.size() )
-    <li class="divider pull-right">|</li>
+    <span class="divider">|</span>
     #end
+    #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false)
+    </li>
+    
   #end
 #end
 ##
@@ -215,13 +217,13 @@
 ##
       <li class="$cssClass">
       #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false )
+      <span class="divider">/</span>
       </li>
-      <li class="divider $cssClass">/</li>
   #end
   #if ( $shortTitle )
-    <li class="$cssClass">$shortTitle</li>
+    <li class="active $cssClass">$shortTitle</li>
   #else
-    <li class="$cssClass">$title</li>
+    <li class="active $cssClass">$title</li>
   #end
 #end
 ##
@@ -427,17 +429,26 @@
   #set ( $breadcrumbs = $decoration.body.breadcrumbs )
   #set ( $links = $decoration.body.links )
 
-  #if ( $datePosition.equalsIgnoreCase( "right" ) && $versionPosition.equalsIgnoreCase( "right" ) )
-    #set ( $prefix = '<li class="divider pull-right">|</li>' )
+  #if ( $datePosition.equalsIgnoreCase( "right" ) && ( $versionPosition.equalsIgnoreCase( "right" ) || !$topBarEnabled
+                                                                                                         && $decoration.body.links
+                                                                                                         && $decoration.body.links.size() > 0) )
+    #set ( $prefix = '<span class="divider">|</span> ' )
   #else
     #set ( $prefix = "" )
   #end
 ##
   #if ( $datePosition.equalsIgnoreCase( $position ) )
     #if ( ( $datePosition.equalsIgnoreCase( "right" ) ) || ( $datePosition.equalsIgnoreCase( "bottom" ) ) )
-        <li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li> $prefix
+        <li id="publishDate" class="pull-right">$prefix$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li>
       #if ( $versionPosition.equalsIgnoreCase( $position ) )
-        <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+        <li id="projectVersion" class="pull-right">
+          #if ( !$topBarEnabled
+              && $decoration.body.links
+              && $decoration.body.links.size() > 0 )
+            <span class="divider">|</span>
+          #end
+          $i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}
+        </li>
       #end
     #elseif ( ( $datePosition.equalsIgnoreCase( "navigation-bottom" ) ) || ( $datePosition.equalsIgnoreCase( "navigation-top" ) ) )
       <div id="lastPublished">
@@ -447,17 +458,25 @@
         #end
       </div>
     #elseif ( $datePosition.equalsIgnoreCase("left") )
-        <li id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li>
+        <li id="publishDate">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue
+          #if ( $versionPosition.equalsIgnoreCase( $position ) || $breadcrumbs && $breadcrumbs.size() > 0)
+            <span class="divider">|</span>
+          #end
+         </li>
         #if ( $versionPosition.equalsIgnoreCase( $position ) )
-          <li class="divider">|</li> <li id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+          <li id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}
+            #if ( $breadcrumbs && $breadcrumbs.size() > 0 )
+              <span class="divider">|</span>
+            #end
+          </li>
         #end
         #if ( $breadcrumbs && $breadcrumbs.size() > 0 )
-          <li class="divider">|</li> #breadcrumbs( $breadcrumbs "" )
+          #breadcrumbs( $breadcrumbs "" )
         #end
     #end
   #elseif ( $versionPosition.equalsIgnoreCase( $position ) )
     #if ( $versionPosition.equalsIgnoreCase( "right" ) )
-      $prefix <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+      <li id="projectVersion" class="pull-right">$prefix$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
     #elseif ( $versionPosition.equalsIgnoreCase( "bottom" ) )
       <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
     #elseif ( ( $versionPosition.equalsIgnoreCase( "navigation-bottom" ) ) || ( $versionPosition.equalsIgnoreCase( "navigation-top" ) ) )
@@ -465,9 +484,13 @@
         <span id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</span>
       </div>
     #elseif ( $versionPosition.equalsIgnoreCase("left") )
-        <li id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}</li>
+        <li id="projectVersion">$i18n.getString( "site-renderer", $locale, "template.version" ): ${project.version}
+            #if ( $breadcrumbs && $breadcrumbs.size() > 0 )
+              <span class="divider">|</span>
+            #end
+        </li>
         #if ( $breadcrumbs && $breadcrumbs.size() > 0 )
-          | #breadcrumbs( $breadcrumbs "")
+          #breadcrumbs( $breadcrumbs "")
         #end
     #end
   #elseif ( $position.equalsIgnoreCase( "left" ) )
@@ -1059,15 +1082,7 @@
           #if ( !$topBarEnabled
               && $decoration.body.links
               && $decoration.body.links.size() > 0 )
-            #if ( ( $decoration.publishDate
-                    && $decoration.publishDate.position
-                    && $decoration.publishDate.position.equalsIgnoreCase( "right" ) )
-                || ( $decoration.version
-                    && $decoration.version.position
-                    && $decoration.version.position.equalsIgnoreCase( "right" ) ) )
-            <li class="divider pull-right">|</li>
-          #end
-          #links( $decoration.body.links )
+            #links( $decoration.body.links )
           #end
         </ul>
       </div>
