@@ -59,6 +59,7 @@ under the License.
     <menu name="Layouts">
       <item name="Sidebar" href="./sidebar/index.html"/>
       <item name="Topbar" href="./topbar/index.html"/>
+      <item name="Topbar (inverse)" href="./topbar-inverse/index.html"/>
     </menu>
 
     <menu name="Issues ITs">
@@ -91,7 +92,7 @@ under the License.
     <menu ref="reports"/>
 
     <footer>
-      <div class="row">Apache Maven, ${project.name}, Apache, the Apache feather logo, and the Apache Maven project logos are trademarks of The Apache Software Foundation.
+      <div class="row-fluid">Apache Maven, ${project.name}, Apache, the Apache feather logo, and the Apache Maven project logos are trademarks of The Apache Software Foundation.
       All other marks mentioned may be trademarks or registered trademarks of their respective owners.</div>
     </footer>
   </body>
