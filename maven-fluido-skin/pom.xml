@@ -592,6 +592,21 @@
                 </configuration>
               </execution>
               <execution>
+                <id>copy-mskins-72</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <resources>
+                    <resource>
+                      <directory>${project.build.directory}/it/mskins-72/target/site/</directory>
+                    </resource>
+                  </resources>
+                  <outputDirectory>${project.build.directory}/site/mskins-72/</outputDirectory>
+                </configuration>
+              </execution>
+              <execution>
                 <id>copy-mskins-75</id>
                 <phase>site</phase>
                 <goals>

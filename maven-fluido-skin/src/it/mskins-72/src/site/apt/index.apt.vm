@@ -1,0 +1,17 @@
+ ------
+ ${project.name}
+ ------
+ Michael Osipov
+ ------
+ 2013-07-30
+ ------
+
+${project.name}
+
+ This is a test for ${skinName} with copyright pulled to the right-hand side by
+ the css class <<<pull-right>>>.
+ ${skinDescription}
+
+* Actual configuration
+
+%{snippet|id=skin-custom-config|file=${project.basedir}/src/site/site.xml}
