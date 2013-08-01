@@ -202,7 +202,7 @@
     #end
     #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false)
     </li>
-    
+
   #end
 #end
 ##
@@ -1159,10 +1159,10 @@
         #else
         <div class="row">
         #end
-          #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('footerStyle') )
-            #set ( $footerStyle = 'class="' + $decoration.custom.getChild( 'fluidoSkin' ).getChild('footerStyle').getValue() + '"' )
+          #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass') )
+            #set ( $copyrightClass = 'class="' + $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass').getValue() + '"' )
           #end
-            <p $!footerStyle>Copyright &copy;#copyright()All rights reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
+            <p $!copyrightClass>Copyright &copy;#copyright()All rights reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
         </div>
 
         #if ( $decoration.body.footer )
