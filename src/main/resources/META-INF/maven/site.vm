@@ -216,7 +216,7 @@
 ##
       <li class="$cssClass">
       #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false )
-      <span class="divider">/</span>
+      <span class="divider">&gt;</span>
       </li>
   #end
   #if ( $shortTitle )
