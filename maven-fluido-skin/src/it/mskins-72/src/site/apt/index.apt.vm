@@ -12,6 +12,6 @@ ${project.name}
  the css class <<<pull-right>>>.
  ${skinDescription}
 
-* Actual configuration
+* Actual Configuration
 
 %{snippet|id=skin-custom-config|file=${project.basedir}/src/site/site.xml}
