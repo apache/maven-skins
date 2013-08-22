@@ -222,7 +222,7 @@ Welcome to ${project.name}!
 
 ** Copyright class
 
-  Since version <<1.3.1>>, you can configure a copyright class.
+  Since version <<1.3.1>>, you can configure a copyright class:
 
 +-----+
 <project name="xxx">
@@ -447,7 +447,7 @@ Welcome to ${project.name}!
 
 ** Flattr button
 
- Since version <<1.3.1>>,fluido-skin supports {{{http://flattr.com}Flattr}} {{{http://flattr.com/support/button}button}} integration.
+ Since version <<1.3.1>>, fluido-skin supports {{{http://flattr.com}Flattr}} {{{http://flattr.com/support/button}button}} integration.
  Users have to declare:
 
  * <<<custom.fluidoSkin.flattr.thing>>>: <<required>>, ID of the Flattr thing. This is the part after the <<<flattr.com/thing/>>> part of the URL of the Flattr button.
@@ -491,6 +491,21 @@ Welcome to ${project.name}!
 </project>
 +-----+
 
+** Breadcrumb Divider
+
+   Since version <<1.3.1>>, you can configure the breadcrumb divider (default is a slash):
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+      <breadcrumbDivider>»</breadcrumbDivider>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
 
 Acknowledgment
 

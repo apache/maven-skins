@@ -651,6 +651,21 @@
                   <outputDirectory>${project.build.directory}/site/mskins-76_topbar/</outputDirectory>
                 </configuration>
               </execution>
+              <execution>
+                <id>copy-mskins-85</id>
+                <phase>site</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <resources>
+                    <resource>
+                      <directory>${project.build.directory}/it/mskins-85/target/site/</directory>
+                    </resource>
+                  </resources>
+                  <outputDirectory>${project.build.directory}/site/mskins-85/</outputDirectory>
+                </configuration>
+              </execution>
             </executions>
           </plugin>
         </plugins>
