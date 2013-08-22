@@ -1,0 +1,16 @@
+ ------
+ ${project.name}
+ ------
+ Michael Osipov
+ ------
+ 2013-08-18
+ ------
+
+${project.name}
+
+ This is a test for ${skinName} with a custom breadcrumb divider <<<»>>> (guillemet).
+ ${skinDescription}
+
+* Actual Configuration
+
+%{snippet|id=skin-custom-config|file=${project.basedir}/src/site/site.xml}
