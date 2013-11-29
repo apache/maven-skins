@@ -253,17 +253,17 @@
 ##
   #if ( $item && $item.items && $item.items.size() > 0 )
     #if ( $item.collapse == false )
-      #set ( $collapseClass = "icon-chevron-down" )
+      #set ( $collapseClass = "glyphicon glyphicon-chevron-down" )
     #else
       ## By default collapsed
-      #set ( $collapseClass = "icon-chevron-right" )
+      #set ( $collapseClass = "glyphicon glyphicon-chevron-right" )
     #end
 ##
     #set ( $display = false )
     #displayTree( $display $item )
 ##
     #if ( $alignedFileName == $currentItemHref || $display )
-      #set ( $collapseClass = "icon-chevron-down" )
+      #set ( $collapseClass = "glyphicon glyphicon-chevron-down" )
     #end
   #end
 
@@ -295,7 +295,7 @@
     #end
   #end
   #if ( $item && $item.items && $item.items.size() > 0 )
-    #if ( $collapseClass == "icon-chevron-down" )
+    #if ( $collapseClass == "glyphicon glyphicon-chevron-down" )
       <ul class="nav nav-list">
         #foreach( $subitem in $item.items )
           #menuItem( $subitem )
@@ -948,21 +948,21 @@
       #end
 
 
-    <div id="topbar" class="navbar navbar-fixed-top $navBarStyle">
+    <div id="topbar" class="navbar navbar-default $navBarStyle" role="navigation">
       <div class="navbar-inner">
         #if ( $sideBarEnabled )
-        <div class="container-fluid">
-        <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
+          <div class="container">
+            <a data-target=".navbar-collapse" data-toggle="collapse" class="btn navbar-btn">
+              <span class="glyphicon glyphicon-bar"></span>
+              <span class="glyphicon glyphicon-bar"></span>
+              <span class="glyphicon glyphicon-bar"></span>
+            </a>
         #else
             #if ( $decoration.custom.getChild('fluidoSkin')
                   && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ) )
-              <div class="container" style="$decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ).getValue()"><div class="nav-collapse">
+              <div class="container" style="$decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ).getValue()"><div class="navbar-collapse">
             #else
-              <div class="container"><div class="nav-collapse">
+              <div class="container"><div class="navbar-collapse">
             #end
 
         #end
@@ -981,7 +981,7 @@
                         #set ( $hrf = './' )
                     #end
                 #end
-                <a class="brand" href="$hrf" #if( $topBarIcon.getChild( 'alt' ) ) title="$topBarIcon.getChild( 'alt' ).getValue()"#end>
+                <a class="navbar-brand" href="$hrf" #if( $topBarIcon.getChild( 'alt' ) ) title="$topBarIcon.getChild( 'alt' ).getValue()"#end>
 
                 #if( $topBarIcon.getChild( 'name' ) )
                     #set ( $topBarIconName = $topBarIcon.getChild( 'name' ).getValue() )
@@ -1013,7 +1013,7 @@
 
           ## MSKINS-31
           #if( $decoration.body && $decoration.body.menus )
-            <ul class="nav">
+            <ul class="nav navbar-nav">
               #topMenu( $decoration.body.menus )
             </ul>
           #end
@@ -1033,7 +1033,7 @@
           #if( $decoration.body
               && $decoration.body.links
               && $decoration.body.links.size() > 0 )
-            <ul class="nav pull-right">
+            <ul class="nav navbar-nav">
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">External Links <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -1052,11 +1052,8 @@
     </div>
     #end
 
-    #if ( $sideBarEnabled )
-    <div class="container-fluid">
-    #else
     <div class="container">
-    #end
+
       <div id="banner">
         <div class="pull-left">
         #if( $decoration.bannerLeft )
@@ -1092,13 +1089,13 @@
       </div>
 
       #if ( $sideBarEnabled )
-      #set ($leftColumnClass="span3")
+      #set ($leftColumnClass="col-md-3")
       #if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
         && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'leftColumnClass' ) )
         #set ( $leftColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'leftColumnClass' ).getValue() )
       #end
 
-      <div class="row-fluid">
+      <div class="row">
         <div id="leftColumn" class="$leftColumnClass">
           <div class="well sidebar-nav">
           #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
@@ -1125,7 +1122,7 @@
         </div>
         #end
 
-        #set ($bodyColumnClass="span9")
+        #set ($bodyColumnClass="col-md-9")
         #if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
           && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ) )
           #set ( $bodyColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ).getValue() )
@@ -1154,16 +1151,9 @@
     <hr/>
 
     <footer>
-      #if ( $sideBarEnabled )
-      <div class="container-fluid">
-      #else
+
       <div class="container">
-      #end
-        #if ( $sideBarEnabled )
-        <div class="row-fluid">
-        #else
         <div class="row">
-        #end
           #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass') )
             #set ( $copyrightClass = 'class="' + $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass').getValue() + '"' )
           #end
