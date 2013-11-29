@@ -85,7 +85,7 @@
   #else
     <a href="$href"$linkClass$linkTarget$linkTitle>
     #if($icon)
-      <i class="$icon"></i>
+      <span class="$icon"></span>
     #end
     $name</a>
   #end
@@ -289,7 +289,7 @@
     #end
   #else
     #if ( $alignedFileName == $currentItemHref )
-      <a href="#"><i class="$collapseClass"></i>$item.name</a>
+      <a href="#"><span class="$collapseClass"></span>$item.name</a>
     #else
       #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height $collapseClass)
     #end
