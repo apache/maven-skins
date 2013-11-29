@@ -80,6 +80,7 @@
   </contributors>
 
   <properties>
+    <sitePluginVersion>3.3</sitePluginVersion>
     <bootstrap.version>2.2.2</bootstrap.version>
     <jquery.version>1.10.2</jquery.version>
   </properties>
