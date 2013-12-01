@@ -78,7 +78,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.2</version><!-- TODO remove when upgrading parent to 23 -->
+          <version>3.3</version><!-- TODO remove when upgrading parent to 23 -->
           <configuration>
             <skipDeploy>true</skipDeploy><!-- don't deploy site with maven-site-plugin -->
           </configuration>
