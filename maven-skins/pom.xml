@@ -60,7 +60,7 @@ under the License.
   </distributionManagement>
 
   <properties>
-    <maven.site.path>skins-archives/${project.artifactId}-${project.version}</maven.site.path>
+    <maven.site.path>skins-archives/${project.artifactId}-LATEST</maven.site.path>
     <sitePluginVersion>3.3</sitePluginVersion>
   </properties>
 
@@ -112,14 +112,4 @@ under the License.
       </plugin>
     </plugins>
   </build>
-
-  <profiles>
-    <profile>
-      <id>site-release</id>
-      <properties>
-        <maven.site.path>skins/${project.artifactId}</maven.site.path>
-      </properties>
-    </profile>
-  </profiles>
-
 </project>
