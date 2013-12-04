@@ -22,7 +22,7 @@
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-skins</artifactId>
     <version>8-SNAPSHOT</version>
-    <relativePath>../maven-skins/pom.xml</relativePath>
+    <!--relativePath>../maven-skins/pom.xml</relativePath-->
   </parent>
 
   <artifactId>maven-fluido-skin</artifactId>
