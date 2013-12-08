@@ -72,7 +72,6 @@ under the License.
           <configuration>
             <tagBase>https://svn.apache.org/repos/asf/maven/skins/tags</tagBase>
             <arguments>-Papache-release,rat,run-its</arguments>
-            <goals>deploy site-deploy</goals>
           </configuration>
         </plugin>
         <plugin>
