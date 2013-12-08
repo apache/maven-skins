@@ -71,7 +71,7 @@ under the License.
           <artifactId>maven-release-plugin</artifactId>
           <configuration>
             <tagBase>https://svn.apache.org/repos/asf/maven/skins/tags</tagBase>
-            <arguments>-Prc,apache-release,run-its,reporting</arguments>
+            <arguments>-Papache-release,rat,run-its</arguments>
             <goals>deploy site-deploy</goals>
           </configuration>
         </plugin>
