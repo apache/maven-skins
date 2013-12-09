@@ -20,53 +20,104 @@
 /* $Id$ */
 
 /*IE6/7 don't support selectors*/
-a.externalLink{padding-right: 18px;}
-a.newWindow{background: url('../images/window-new.png') right center no-repeat;padding-right: 18px;}
+a.externalLink {
+  padding-right: 18px;
+}
+a.newWindow {
+  background: url('../images/window-new.png') right center no-repeat;padding-right: 18px;
+}
 
-a.externalLink[href^=http]{background: url('../images/internet-web-browser.png') right center no-repeat;padding-right: 18px;}
-a.externalLink[href$=".asc"]{background: url('../images/accessories-text-editor.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href^=http] {
+  background: url('../images/internet-web-browser.png') right center no-repeat;padding-right: 18px;
+}
+a.externalLink[href$=".asc"] {
+  background: url('../images/accessories-text-editor.png') right center no-repeat;padding-right: 18px;
+}
 a.externalLink[href$=".jpg"],
 a.externalLink[href$=".jpeg"],
 a.externalLink[href$=".gif"],
-a.externalLink[href$=".png"]{background: url('../images/image-x-generic.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href$=".png"] {
+  background: url('../images/image-x-generic.png') right center no-repeat;padding-right: 18px;
+}
 a.externalLink[href$=".tar.gz"],
-a.externalLink[href$=".zip"]{background: url('../images/package-x-generic.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href$=".zip"] {
+  background: url('../images/package-x-generic.png') right center no-repeat;padding-right: 18px;
+}
 a.externalLink[href$=".md5"],
-a.externalLink[href$=".sha1"]{background: url('../images/document-properties.png') right center no-repeat;padding-right: 18px;}
-a.externalLink[href^=https]{background: url('../images/application-certificate.png') right center no-repeat;padding-right: 18px;}
-a.externalLink[href^=file]{background: url('../images/drive-harddisk.png') right center no-repeat;padding-right: 18px;}
-a.externalLink[href^=ftp]{background: url('../images/network-server.png') right center no-repeat;padding-right: 18px;}
-a.externalLink[href^=mailto]{background: url('../images/contact-new.png') right center no-repeat;padding-right: 18px;}
+a.externalLink[href$=".sha1"] {
+  background: url('../images/document-properties.png') right center no-repeat;padding-right: 18px;
+}
+a.externalLink[href^=https] {
+  background: url('../images/application-certificate.png') right center no-repeat;padding-right: 18px;
+}
+a.externalLink[href^=file] {
+  background: url('../images/drive-harddisk.png') right center no-repeat;padding-right: 18px;
+}
+a.externalLink[href^=ftp] {
+  background: url('../images/network-server.png') right center no-repeat;padding-right: 18px;
+}
+a.externalLink[href^=mailto] {
+  background: url('../images/contact-new.png') right center no-repeat;padding-right: 18px;
+}
 
-li.none{list-style: none;}
+li.none {
+  list-style: none;
+}
 
-.search-query{background-image: url(http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(255, 255, 255); background-position: 0% 50%; background-repeat: no-repeat no-repeat; width:95% }
+.search-query {
+  background-image: url(http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif);
+  background-attachment: initial; background-origin: initial; background-clip: initial; 
+  background-color: rgb(255, 255, 255); background-position: 0% 50%; background-repeat: no-repeat no-repeat;
+  width:95%
+}
 
-body.topBarEnabled{padding-top: 60px;}
-body.topBarDisabled{padding-top: 20px;}
+body.topBarEnabled {
+  padding-top: 60px;
+}
+body.topBarDisabled {
+  padding-top: 20px;
+}
 
-.builtBy{display: block;}
-img.builtBy{margin: 10px auto;}
+.builtBy {
+  display: block;
+}
+img.builtBy {
+  margin: 10px auto;
+}
 
-#search-form{margin-left: 9px;margin-right:9px;}
+#search-form {
+  margin-left: 9px;margin-right:9px;
+}
 
 /* Tweaks to the bootstrap theme
 --------------------------------- */
 
 /* sections title are rendered using h2 instead of h1 */
-.hero-unit h2{font-size: 60px;}
+.hero-unit h2 {
+  font-size: 60px;
+}
 
 /* Copied from bootstrap <code> tag style. Maven translates <code> to <tt>. */
-tt{padding:0 3px 2px;font-family:Monaco, Andale Mono, Courier New, monospace;font-size:12px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-color:#fee9cc;color:rgba(0, 0, 0, 0.75);padding:1px 3px;}
+tt {
+  padding:0 3px 2px;font-family:Monaco, Andale Mono, Courier New, monospace;
+  font-size:0.8em;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+  background-color:#fee9cc;color:rgba(0, 0, 0, 0.75);padding:1px 3px;
+}
 
 /* avoid greyed list items */
-li{color:#404040;}
+li {
+  color:#404040;
+}
 
 /* avoid transparent background of table */
-table.zebra-striped{background-color:#FFF}
+table.zebra-striped {
+  background-color:#FFF
+}
 
 /* avoid transparent footer */
-.footer{background-color:#EEE}
+.footer {
+  background-color:#EEE
+}
 
 /* align with adjustments of http://twitter.github.com/bootstrap/examples/fluid.html */
 .sidebar-nav {
@@ -74,8 +125,7 @@ table.zebra-striped{background-color:#FFF}
     padding-right: 0px;
 }
 
-.sidebar-nav .icon-chevron-right, .sidebar-nav .icon-chevron-down
-{
+.sidebar-nav .icon-chevron-right, .sidebar-nav .icon-chevron-down {
   margin-top: 2px;
   margin-right: -6px;
   float: right;
@@ -83,8 +133,7 @@ table.zebra-striped{background-color:#FFF}
 }
 
 /* MSKINS-79: pull-right compresses list items */
-li.pull-right 
-{
+li.pull-right {
   margin-left: 3px;
   margin-right: 3px;
 }
