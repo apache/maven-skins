@@ -57,7 +57,7 @@ under the License.
   </distributionManagement>
 
   <properties>
-    <maven.site.path>pom-archives/skins-${project.version}</maven.site.path>
+    <maven.site.path>pom-archives/skins-LATEST</maven.site.path>
   </properties>
 
   <build>
@@ -71,13 +71,4 @@ under the License.
       </plugin>
     </plugins>
   </build>
-
-  <profiles>
-    <profile>
-      <id>site-release</id>
-      <properties>
-        <maven.site.path>pom/skins</maven.site.path>
-      </properties>
-    </profile>
-  </profiles>
 </project>

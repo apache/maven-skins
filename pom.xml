@@ -55,12 +55,12 @@ under the License.
   <distributionManagement>
     <site>
       <id>apache.website</id>
-      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/maven/content/skins</url>
+      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/maven/content/${maven.site.path}</url>
     </site>
   </distributionManagement>
 
   <properties>
-    <maven.site.path>skins-archives/${project.artifactId}-LATEST</maven.site.path>
+    <maven.site.path>skins-archives/maven-skins-LATEST</maven.site.path>
     <sitePluginVersion>3.3</sitePluginVersion>
   </properties>
 
@@ -71,17 +71,13 @@ under the License.
           <artifactId>maven-release-plugin</artifactId>
           <configuration>
             <tagBase>https://svn.apache.org/repos/asf/maven/skins/tags</tagBase>
-            <arguments>-Prc,apache-release,run-its,reporting</arguments>
-            <goals>deploy site-deploy</goals>
+            <arguments>-Papache-release,rat,run-its</arguments>
           </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>3.3</version>
-          <configuration>
-            <skipDeploy>true</skipDeploy><!-- don't deploy site with maven-site-plugin -->
-          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -95,20 +91,11 @@ under the License.
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-scm-publish-plugin</artifactId>
         <configuration>
-          <content>${project.reporting.outputDirectory}</content>
+          <content>${project.build.directory}/staging/${maven.site.path}</content>
           <pubScmUrl>scm:svn:https://svn.apache.org/repos/infra/websites/production/maven/content/${maven.site.path}</pubScmUrl>
           <checkoutDirectory>${maven.site.cache}/${maven.site.path}</checkoutDirectory>
           <tryUpdate>true</tryUpdate>
         </configuration>
-        <executions>
-          <execution>
-            <id>scm-publish</id>
-            <phase>site-deploy</phase><!-- deploy site with maven-scm-publish-plugin -->
-            <goals>
-              <goal>publish-scm</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
