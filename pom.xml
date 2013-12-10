@@ -44,6 +44,13 @@
     <url>http://jira.codehaus.org/browse/MSKINS/component/15253</url>
   </issueManagement>
 
+  <distributionManagement>
+    <site>
+      <id>apache.website</id>
+      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/maven/content/${maven.site.path}</url>
+    </site>
+  </distributionManagement>
+
   <contributors>
     <!-- in alphabetical order -->
     <contributor>
@@ -82,6 +89,7 @@
   <properties>
     <bootstrap.version>2.2.2</bootstrap.version>
     <jquery.version>1.9.1</jquery.version>
+    <maven.site.path>skins-archives/maven-fluido-skin-LATEST</maven.site.path>
   </properties>
 
   <build>
