@@ -57,11 +57,6 @@
       <item name="Just Test" href="http://nowhere.com/"/>
     </links>
 
-    <breadcrumbs>
-      <item name="skins" href="/skins/"/>
-      <item name="${skinArtifactId}" href="/skins/${skinArtifactId}/"/>
-    </breadcrumbs>
-
     <menu name="Overview">
       <item name="Introduction" href="index.html">
         <item name="Bar" href="bar.html"/>
