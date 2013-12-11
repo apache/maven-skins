@@ -84,6 +84,10 @@
     <contributor>
       <name>Eric Barboni</name>
     </contributor>
+    <contributor>
+      <name>Michael Osipov</name>
+      <email>michaelo AT apache DOT org</email>
+    </contributor>
   </contributors>
 
   <properties>
