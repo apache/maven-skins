@@ -100,7 +100,7 @@ img.builtBy {
 /* Copied from bootstrap <code> tag style. Maven translates <code> to <tt>. */
 tt {
   padding:0 3px 2px;font-family:Monaco, Andale Mono, Courier New, monospace;
-  font-size:0.8em;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+  font-size:0.9em;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
   background-color:#fee9cc;color:rgba(0, 0, 0, 0.75);padding:1px 3px;
 }
 
