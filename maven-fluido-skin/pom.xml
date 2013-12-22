@@ -82,12 +82,16 @@
     <contributor>
       <name>Eric Barboni</name>
     </contributor>
+    <contributor>
+      <name>Michael Osipov</name>
+      <email>michaelo AT apache DOT org</email>
+    </contributor>
   </contributors>
 
   <properties>
     <bootstrap.version>3.0.2</bootstrap.version>
     <jquery.version>1.10.2</jquery.version>
-    <maven.site.path>skins-archives/${project.artifactId}-LATEST</maven.site.path>
+    <maven.site.path>skins-archives/maven-fluido-skin-LATEST</maven.site.path>
   </properties>
 
   <build>
