@@ -43,10 +43,6 @@
   <version position="right" />
 
   <body>
-    <breadcrumbs>
-      <item name="skins" href="/skins/"/>
-      <item name="${skinArtifactId}" href="/skins/${skinArtifactId}/"/>
-    </breadcrumbs>
 
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
