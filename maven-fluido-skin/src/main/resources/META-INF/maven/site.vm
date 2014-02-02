@@ -614,7 +614,7 @@
 #end
 ##
 #macro ( googleSearch $top )
-<form id="search-form" action="http://www.google.com/search" method="get" #if ( $top ) class="navbar-search pull-right" #end>
+<form id="search-form" action="https://www.google.com/search" method="get" #if ( $top ) class="navbar-search pull-right" #end>
   #if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ) )
     #set( $sitesearchValue = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ).getValue() )
   #else
@@ -625,7 +625,7 @@
   <input value="$sitesearchValue" name="sitesearch" type="hidden"/>
   <input class="search-query" name="q" id="query" type="text" />
 </form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
+<script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=search-form"></script>
 #end
 ##
 #macro ( forkMeOnGitHub )
@@ -657,7 +657,7 @@
       #set ( $ribbonColor = $definedRibbonColor.getValue().toLowerCase() )
     #end
 
-    <a href="http://github.com/$gitHubProjectId">
+    <a href="https://github.com/$gitHubProjectId">
       <img style="position: absolute; top: 0; $ribbonOrientation: 0; border: 0; z-index: 10000;"
         src="https://s3.amazonaws.com/github/ribbons/$ribbon.get( $ribbonColor )"
         alt="Fork me on GitHub">
@@ -722,7 +722,7 @@
       #set( $frameWidth = 'width:80px; height:20px' )
     #end
 
-    <iframe src="http://www.facebook.com/plugins/like.php?href=$project.url&send=false&layout=$layout&show-faces=false&action=like&colorscheme=$colorscheme"
+    <iframe src="https://www.facebook.com/plugins/like.php?href=$project.url&send=false&layout=$layout&show-faces=false&action=like&colorscheme=$colorscheme"
         scrolling="no" frameborder="0"
         style="border:none; $frameWidth; margin-top: 10px;" #if( !$sideBarEnabled ) class="pull-right" #end></iframe>
   #end
@@ -808,7 +808,7 @@
     #end
 
     <div id="ohloh" class="pull-right">
-      <script type="text/javascript" src="http://www.ohloh.net/p/${projectId}/widgets/project_${widget}"></script>
+      <script type="text/javascript" src="https://www.ohloh.net/p/${projectId}/widgets/project_${widget}"></script>
     </div>
   #end
 #end
@@ -824,7 +824,7 @@
             var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
             s.type = 'text/javascript';
             s.async = true;
-            s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+            s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto';
             t.parentNode.insertBefore(s, t);
         })();
     /* ]]> */</script>
@@ -858,8 +858,8 @@
     #end
 
     <a class="FlattrButton" style="display:none;" $styleModifier href="$flattrUrl"></a>
-    <noscript><a href="http://flattr.com/thing/$flattrThing" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
+    <noscript><a href="https://flattr.com/thing/$flattrThing" target="_blank">
+    <img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
 
     #if ( $sideBarEnabled )
     </div>
