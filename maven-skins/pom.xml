@@ -25,7 +25,7 @@ under the License.
   <parent>
     <groupId>org.apache.maven</groupId>
     <artifactId>maven-parent</artifactId>
-    <version>23</version>
+    <version>24</version>
     <relativePath>../../pom/maven/pom.xml</relativePath>
   </parent>
 
@@ -60,7 +60,7 @@ under the License.
   </distributionManagement>
 
   <properties>
-    <maven.site.path>skins-archives/maven-skins-LATEST</maven.site.path>
+    <maven.site.path>skins-archives/${project.artifactId}-LATEST</maven.site.path>
     <sitePluginVersion>3.3</sitePluginVersion>
   </properties>
 
@@ -74,16 +74,6 @@ under the License.
             <arguments>-Papache-release,rat,run-its</arguments>
           </configuration>
         </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.3</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-invoker-plugin</artifactId>
-          <version>1.8</version>
-        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -91,22 +81,9 @@ under the License.
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-scm-publish-plugin</artifactId>
         <configuration>
-          <content>${project.build.directory}/staging/${maven.site.path}</content>
-          <pubScmUrl>scm:svn:https://svn.apache.org/repos/infra/websites/production/maven/content/${maven.site.path}</pubScmUrl>
-          <checkoutDirectory>${maven.site.cache}/${maven.site.path}</checkoutDirectory>
-          <tryUpdate>true</tryUpdate>
+          <content>${project.reporting.outputDirectory}</content><!-- skins are mono-module, no real need for site:stage -->
         </configuration>
       </plugin>
     </plugins>
   </build>
-
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>2.7</version><!-- TODO remove when upgrading parent to 24 -->
-      </plugin>
-    </plugins>
-  </reporting>
 </project>
