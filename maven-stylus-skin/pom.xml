@@ -51,10 +51,6 @@ under the License.
     </site>
   </distributionManagement>
 
-  <properties>
-    <maven.site.path>skins-archives/${project.artifactId}-LATEST</maven.site.path>
-  </properties>
-
   <build>
     <resources>
     
@@ -72,9 +68,8 @@ under the License.
           <exclude>META-INF/maven/site.vm</exclude>
         </excludes>
       </resource>
-      
     </resources>
-    
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

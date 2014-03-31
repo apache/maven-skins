@@ -51,10 +51,6 @@ under the License.
     </site>
   </distributionManagement>
 
-  <properties>
-    <maven.site.path>skins-archives/${project.artifactId}-LATEST</maven.site.path>
-  </properties>
-
   <profiles>
     <profile>
       <id>run-its</id>
