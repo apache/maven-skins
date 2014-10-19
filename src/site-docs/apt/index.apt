@@ -36,6 +36,8 @@ History
 *--------------+------------+
 || <<Version>> || <<Release Date>> ||
 *--------------+------------+
+| {{{http://svn.apache.org/viewvc/maven/skins/tags/maven-skins-10/pom.xml?view=markup}10}} ({{{http://svn.apache.org/viewvc/maven/skins/tags/maven-skins-10/pom.xml?r1=HEAD&r2=1582517&diff_format=h}diff}}) | 2014-10-22 |
+*--------------+------------+
 | {{{http://svn.apache.org/viewvc/maven/skins/tags/maven-skins-9/pom.xml?view=markup}9}} ({{{http://svn.apache.org/viewvc/maven/skins/tags/maven-skins-9/pom.xml?r1=HEAD&r2=1549585&diff_format=h}diff}}) | 2014-03-27 |
 *--------------+------------+
 | {{{http://svn.apache.org/viewvc/maven/skins/tags/maven-skins-8/pom.xml?view=markup}8}} ({{{http://svn.apache.org/viewvc/maven/skins/tags/maven-skins-8/pom.xml?r1=HEAD&r2=1377628&diff_format=h}diff}}) | 2013-12-09 |
