@@ -94,7 +94,7 @@ under the License.
 
   <properties>
     <bootstrap.version>2.3.2</bootstrap.version>
-    <jquery.version>1.10.2</jquery.version>
+    <jquery.version>1.11.2</jquery.version>
   </properties>
 
   <build>
