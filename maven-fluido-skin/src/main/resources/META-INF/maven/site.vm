@@ -233,9 +233,9 @@
       <li class="$cssClass">
       #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false )
       #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'breadcrumbDivider' ) )
-      	#set ( $breadcrumbDivider = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'breadcrumbDivider' ).getValue() )
+        #set ( $breadcrumbDivider = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'breadcrumbDivider' ).getValue() )
       #else
-      	#set ( $breadcrumbDivider = '/' )
+        #set ( $breadcrumbDivider = '/' )
       #end
       <span class="divider">$breadcrumbDivider</span>
       </li>
@@ -1180,12 +1180,6 @@
         #else
         <div class="row">
         #end
-          #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass') )
-            #set ( $copyrightClass = 'class="' + $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass').getValue() + '"' )
-          #end
-            <p $!copyrightClass>Copyright &copy;#copyright()All rights reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
-        </div>
-
         #if ( $decoration.body.footer )
           #foreach( $item in $decoration.body.footer.getChildren() )
             #set ( $foot = $item.toString().trim() )
@@ -1196,7 +1190,13 @@
             ## #eval macro not supported yet, that is a silly turnaround to allow ASF projects adopt fluido
             $StringUtils.replace( $foot, '@project.name@', ${project.name} )
           #end
+        #else
+          #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass') )
+            #set ( $copyrightClass = 'class="' + $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass').getValue() + '"' )
+          #end
+            <p $!copyrightClass>Copyright &copy;#copyright()All rights reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
         #end
+        </div>
 
         #if ( !$sideBarEnabled )
         <p id="poweredBy" class="pull-right">
