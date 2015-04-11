@@ -142,7 +142,7 @@ under the License.
           <groupId>org.apache.rat</groupId>
           <artifactId>apache-rat-plugin</artifactId>
           <configuration>
-            <excludes>
+            <excludes combine.children="append">
               <exclude>src/main/resources/fonts/glyphicons-halflings-regular.svg</exclude>
               <exclude>src/main/resources/js/prettify.js</exclude>
               <exclude>src/main/resources/js/jquery-*.js</exclude>
