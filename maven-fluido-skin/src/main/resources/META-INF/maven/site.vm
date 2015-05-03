@@ -735,7 +735,7 @@
 
     #set( $frameWidth = 'width:48px; height:63px' )
     #if( !$sideBarEnabled )
-      #set( $frameWidth = 'width:80px; height:20px' )
+      #set( $frameWidth = 'width:100px; height:20px' )
     #end
 
     <iframe src="https://www.facebook.com/plugins/like.php?href=$project.url&send=false&layout=$layout&show-faces=false&action=like&colorscheme=$colorscheme"
