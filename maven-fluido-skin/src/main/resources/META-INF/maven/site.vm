@@ -1108,7 +1108,7 @@
       </div>
 
       #if ( $sideBarEnabled )
-      #set ($leftColumnClass="span3")
+      #set ($leftColumnClass="span2")
       #if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
         && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'leftColumnClass' ) )
         #set ( $leftColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'leftColumnClass' ).getValue() )
@@ -1141,7 +1141,7 @@
         </div>
         #end
 
-        #set ($bodyColumnClass="span9")
+        #set ($bodyColumnClass="span10")
         #if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
           && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ) )
           #set ( $bodyColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ).getValue() )
