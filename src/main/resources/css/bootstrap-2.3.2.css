@@ -329,7 +329,7 @@ a:focus {
 }
 
 .span3 {
-  width: 180px;
+  width: 220px;
 }
 
 .span2 {
@@ -440,8 +440,8 @@ a:focus {
 }
 
 .row-fluid .span9 {
-  width: 82.46808510638297%;
-  *width: 82.41489361702126%;
+  width: 74.46808510638297%;
+  *width: 74.41489361702126%;
 }
 
 .row-fluid .span8 {
@@ -470,8 +470,8 @@ a:focus {
 }
 
 .row-fluid .span3 {
-  width: 15.404255319148934%;
-  *width: 15.351063829787233%;
+  width: 23.404255319148934%;
+  *width: 23.351063829787233%;
 }
 
 .row-fluid .span2 {
@@ -633,7 +633,7 @@ a:focus {
 
 .container-fluid {
   padding-right: 20px;
-  padding-left: 8px;
+  padding-left: 20px;
   *zoom: 1;
 }
 
