@@ -143,8 +143,8 @@ Welcome to ${project.name}!
 
 ** Configuring column class
 
-  When using sidebar, the left column used by default span3 class and body column use span9.
-  To prevent weird/ugly result, the sum must be 12.
+  When using sidebar, the navigation column uses by default <<<span2>>> class and body column uses
+  <<<span10>>>. To prevent weird/ugly result, the sum must be 12.
   You can change that using:
 
 +-----+
@@ -152,8 +152,8 @@ Welcome to ${project.name}!
   [...]
   <custom>
     <fluidoSkin>
-      <leftColumnClass>span2</leftColumnClass>
-      <bodyColumnClass>span10</bodyColumnClass>
+      <leftColumnClass>span3</leftColumnClass>
+      <bodyColumnClass>span9</bodyColumnClass>
     </fluidoSkin>
   </custom>
   [...]
