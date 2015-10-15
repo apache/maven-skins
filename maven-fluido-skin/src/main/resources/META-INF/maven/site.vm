@@ -673,7 +673,13 @@
       #set ( $ribbonColor = $definedRibbonColor.getValue().toLowerCase() )
     #end
 
-    <a href="https://github.com/$gitHubProjectId">
+    #set ( $ribbonLinkTarget = '_self' )
+    #set ( $definedOpenInNewWindow = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' ).getChild( 'openInNewWindow' ) )
+    #if ( $definedOpenInNewWindow && $definedOpenInNewWindow.getValue().equalsIgnoreCase( "true" ) )
+      #set ( $ribbonLinkTarget = '_blank' )
+    #end
+
+    <a href="https://github.com/$gitHubProjectId" target="$ribbonLinkTarget">
       <img style="position: absolute; top: 0; $ribbonOrientation: 0; border: 0; z-index: 10000;"
         src="https://s3.amazonaws.com/github/ribbons/$ribbon.get( $ribbonColor )"
         alt="Fork me on GitHub">
