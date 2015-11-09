@@ -976,11 +976,22 @@
         #else
             #if ( $decoration.custom.getChild('fluidoSkin')
                   && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ) )
-              <div class="container" style="$decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ).getValue()"><div class="nav-collapse">
+              <div class="container" style="$decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ).getValue()">
+                <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse">
             #else
-              <div class="container"><div class="nav-collapse">
+              <div class="container">
+                <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse">
             #end
-
         #end
         #if ( $decoration.custom.getChild('fluidoSkin')
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarIcon' ) )
