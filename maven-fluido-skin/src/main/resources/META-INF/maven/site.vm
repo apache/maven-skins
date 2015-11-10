@@ -630,18 +630,34 @@
 #end
 ##
 #macro ( googleSearch $top )
-<form id="search-form" action="https://www.google.com/search" method="get" #if ( $top ) class="navbar-search pull-right" #end>
-  #if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ) )
-    #set( $sitesearchValue = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ).getValue() )
-  #else
-    #set( $startIndex = $project.url.indexOf("://") + 3 )
-    #set( $sitesearchValue = $project.url.substring( $startIndex, $project.url.length() ) )
-  #end
+#if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'customSearch' ) )
+  #set( $searchId = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'customSearch' ).getValue() )
+    <div id="search-form" class="navbar-search pull-right">
+      <script type="text/javascript">
+      var cx = '$searchId';
 
+      (function() {
+        var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+      })();
+
+    </script>
+    <gcse:search></gcse:search>
+  </div>
+#else
+<form id="search-form" action="https://www.google.com/search" method="get" #if ( $top ) class="navbar-search pull-right" #end>
+    #if( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ) )
+      #set( $sitesearchValue = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' ).getValue() )
+    #else
+      #set( $startIndex = $project.url.indexOf("://") + 3 )
+      #set( $sitesearchValue = $project.url.substring( $startIndex, $project.url.length() ) )
+    #end
   <input value="$sitesearchValue" name="sitesearch" type="hidden"/>
   <input class="search-query" name="q" id="query" type="text" />
 </form>
 <script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=search-form"></script>
+#end
 #end
 ##
 #macro ( forkMeOnGitHub )
