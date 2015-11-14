@@ -26,7 +26,7 @@ under the License.
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-skins</artifactId>
     <version>10</version>
-    <relativePath>../maven-skins/pom.xml</relativePath>
+    <relativePath>../../pom/maven/maven-skins/pom.xml</relativePath>
   </parent>
 
   <artifactId>maven-default-skin</artifactId>
