@@ -38,7 +38,6 @@ under the License.
   <description>Maven Skins Aggregator</description>
 
   <modules>
-    <module>maven-skins</module>
     <module>maven-application-skin</module>
     <module>maven-default-skin</module>
     <module>maven-classic-skin</module>
