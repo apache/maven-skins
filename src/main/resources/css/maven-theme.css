@@ -65,7 +65,7 @@ li.none {
 }
 
 .search-query {
-  background-image: url(http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif);
+  background-image: url(https://cse.google.com/cse/images/google_custom_search_watermark.gif);
   background-attachment: initial; background-origin: initial; background-clip: initial; 
   background-color: rgb(255, 255, 255); background-position: 0% 50%; background-repeat: no-repeat no-repeat;
   width:95%
