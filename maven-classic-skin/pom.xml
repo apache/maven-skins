@@ -32,7 +32,7 @@ under the License.
   <artifactId>maven-classic-skin</artifactId>
   <version>1.2-SNAPSHOT</version>
 
-  <name>Maven Classic Skin</name>
+  <name>Maven Classic Skin (RETIRED)</name>
   <description>Maven Classic Skin</description>
 
   <scm>

@@ -32,7 +32,7 @@ under the License.
   <artifactId>maven-stylus-skin</artifactId>
   <version>1.6-SNAPSHOT</version>
 
-  <name>Maven Stylus Skin</name>
+  <name>Maven Stylus Skin (RETIRED)</name>
   <description>Maven Stylus Skin</description>
 
   <scm>

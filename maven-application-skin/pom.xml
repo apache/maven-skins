@@ -32,7 +32,7 @@ under the License.
   <artifactId>maven-application-skin</artifactId>
   <version>1.1-SNAPSHOT</version>
 
-  <name>Maven Application Skin</name>
+  <name>Maven Application Skin (RETIRED)</name>
   <description>Maven Application Skin</description>
 
   <scm>
