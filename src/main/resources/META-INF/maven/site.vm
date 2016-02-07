@@ -1159,7 +1159,7 @@
               #set ( $sourceStyle = "prettyprint" )
             #end
 
-            $bodyContent.replaceAll( "<div class=\"source\">(\r?\n)?<pre>", "<div class=\"source\"><pre class=\"$sourceStyle\">" ).replaceAll( "class=\"bodyTable\"", "class=\"table table-striped\"" )
+            $bodyContent.replaceAll( "<div class=""source"">(\r?\n)?<pre>", "<div class=""source""><pre class=""$sourceStyle"">" ).replaceAll( "class=""bodyTable""", "class=""table table-striped""" )
           #end
         </div>
       #if ( $sideBarEnabled )
