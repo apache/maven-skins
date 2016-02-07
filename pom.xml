@@ -95,6 +95,7 @@ under the License.
   <properties>
     <bootstrap.version>2.3.2</bootstrap.version>
     <jquery.version>1.11.2</jquery.version>
+    <sitePluginVersion>3.5-SNAPSHOT</sitePluginVersion>
   </properties>
 
   <build>
