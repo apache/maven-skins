@@ -53,7 +53,8 @@
     <menu ref="reports"/>
 
     <footer>
-      <div class="row-fluid">Apache Maven, Apache @project.name@, Apache, the Apache feather logo, and the Apache Maven project logos are trademarks of The Apache Software Foundation.
+      <![CDATA[
+      <div class="row-fluid">Apache Maven, Apache $project.name, Apache, the Apache feather logo, and the Apache Maven project logos are trademarks of The Apache Software Foundation.
       All other marks mentioned may be trademarks or registered trademarks of their respective owners.</div>
       <div class="row-fluid">
         <div class="span4">
@@ -75,6 +76,7 @@
           </address>
         </div>
       </div>
+      ]]>
     </footer>
   </body>
 

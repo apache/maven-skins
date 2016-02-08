@@ -1181,15 +1181,7 @@
         <div class="row">
         #end
         #if ( $decoration.body.footer )
-          #foreach( $item in $decoration.body.footer.getChildren() )
-            #set ( $foot = $item.toString().trim() )
-            #set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
-            #set ( $foot = $StringUtils.replace( $foot.toString(), $documentHeader, "" ) )
-            ## Workaround for https://issues.apache.org/jira/browse/MSITE-135
-            ## Use StringUtils until https://issues.apache.org/jira/browse/DOXIASITETOOLS-67 is fixed
-            ## #eval macro not supported yet, that is a silly turnaround to allow ASF projects adopt fluido
-            $StringUtils.replace( $foot, '@project.name@', ${project.name} )
-          #end
+          $render.eval( $decoration.body.footer )
         #else
           #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass') )
             #set ( $copyrightClass = 'class="' + $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass').getValue() + '"' )
