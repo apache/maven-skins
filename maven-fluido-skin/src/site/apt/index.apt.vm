@@ -236,10 +236,10 @@ Welcome to ${project.name}!
 </project>
 +-----+
 
-** Footers placeholders
+** Footer placeholders
 
- Since <<<#eval>>> Velocity macro is not supported yet, the only placeholder
- available in additional footers is <<<@project.name@>>>.
+ This skin will pass your custom footer to <<<${esc.d}render.eval()>>> and replace all variables
+ known to the Velocity context.
 
 ** GitHub ribbons
 
