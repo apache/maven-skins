@@ -85,9 +85,7 @@
   #else
     #set ( $linkTarget = "" )
   #end
-  #if ( $href.toLowerCase().startsWith("http:/") || $href.toLowerCase().startsWith("https:/") ||
-    $href.toLowerCase().startsWith("ftp:/") || $href.toLowerCase().startsWith("mailto:") ||
-    $href.toLowerCase().startsWith("file:/") || ($href.toLowerCase().indexOf("://") != -1) )
+  #if ( $decoration.isLink( $href ) )
     #set ( $linkClass = ' class="externalLink"' )
   #else
     #set ( $linkClass = "" )
@@ -109,9 +107,7 @@
 ##
 #macro ( image $img $alt $border $width $height )
   #if( $img )
-    #if ( ! ( $img.toLowerCase().startsWith("http:/") || $img.toLowerCase().startsWith("https:/") ||
-            $img.toLowerCase().startsWith("ftp:/") || $img.toLowerCase().startsWith("mailto:") ||
-            $img.toLowerCase().startsWith("file:/") || ($img.toLowerCase().indexOf("://") != -1) ) )
+    #if ( !$decoration.isLink( $img ) )
       #set ( $imgSrc = $PathTool.calculateLink( $img, $relativePath ) )
       #set ( $imgSrc = $imgSrc.replaceAll( '\\', '/' ) )
       #set ( $imgSrc = ' src="' + $imgSrc + '"' )
@@ -145,9 +141,7 @@
   #if ( $banner )
     #if( $banner.href )
       #set ( $hrf = $banner.href )
-      #if ( ! ( $hrf.toLowerCase().startsWith("http:/") || $hrf.toLowerCase().startsWith("https:/") ||
-        $hrf.toLowerCase().startsWith("ftp:/") || $hrf.toLowerCase().startsWith("mailto:") ||
-        $hrf.toLowerCase().startsWith("file:/") || ($hrf.toLowerCase().indexOf("://") != -1) ) )
+      #if ( !$decoration.isLink( $hrf ) )
         #set ( $hrf = $PathTool.calculateLink( $hrf, $relativePath ) )
         #set ( $hrf = $hrf.replaceAll( '\\', '/' ) )
         #if ( ( $hrf == '' ) )
@@ -161,9 +155,7 @@
 ##
     #if( $banner.src )
         #set ( $src = $banner.src )
-        #if ( ! ( $src.toLowerCase().startsWith("http:/") || $src.toLowerCase().startsWith("https:/") ||
-                $src.toLowerCase().startsWith("ftp:/") || $src.toLowerCase().startsWith("mailto:") ||
-                $src.toLowerCase().startsWith("file:/") || ($src.toLowerCase().indexOf("://") != -1) ) )
+        #if ( !$decoration.isLink( $src ) )
             #set ( $src = $PathTool.calculateLink( $src, $relativePath ) )
             #set ( $src = $src.replaceAll( '\\', '/' ) )
         #end
@@ -333,9 +325,7 @@
           #set ( $position = "left" )
         #end
 ##
-        #if ( ! ( $menu.img.toLowerCase().startsWith("http:/") || $menu.img.toLowerCase().startsWith("https:/") ||
-                $menu.img.toLowerCase().startsWith("ftp:/") || $menu.img.toLowerCase().startsWith("mailto:") ||
-                $menu.img.toLowerCase().startsWith("file:/") || ($menu.img.toLowerCase().indexOf("://") != -1) ) )
+        #if ( !$decoration.isLink( $menu.img ) )
           #set ( $src = $PathTool.calculateLink( $menu.img, $relativePath ) )
           #set ( $src = $src.replaceAll( '\\', '/' ) )
           #set ( $src = ' src="' + $src + '"' )
@@ -543,9 +533,7 @@
         #set ( $img = "images/logos/maven-feather.png" )
       #end
 ##
-      #if ( ! ( $img.toLowerCase().startsWith("http:/") || $img.toLowerCase().startsWith("https:/") ||
-            $img.toLowerCase().startsWith("ftp:/") || $img.toLowerCase().startsWith("mailto:") ||
-            $img.toLowerCase().startsWith("file:/") || ($img.toLowerCase().indexOf("://") != -1) ) )
+      #if ( !$decoration.isLink( $img ) )
         #set ( $img = $PathTool.calculateLink( $img, $relativePath ) )
         #set ( $img = $img.replaceAll( '\\', '/' ) )
       #end
@@ -988,9 +976,7 @@
 
             #if ( $topBarIcon.getChild( 'href' ) )
                 #set ( $hrf = $topBarIcon.getChild( 'href' ).getValue() )
-                #if ( ! ( $hrf.toLowerCase().startsWith("http:/") || $hrf.toLowerCase().startsWith("https:/") ||
-                    $hrf.toLowerCase().startsWith("ftp:/") || $hrf.toLowerCase().startsWith("mailto:") ||
-                    $hrf.toLowerCase().startsWith("file:/") || ($hrf.toLowerCase().indexOf("://") != -1) ) )
+                #if ( !$decoration.isLink( $hrf ) )
                     #set ( $hrf = $PathTool.calculateLink( $hrf, $relativePath ) )
                     #set ( $hrf = $hrf.replaceAll( '\\', '/' ) )
                     #if ( ( $hrf == '' ) )
@@ -1007,9 +993,7 @@
 
                 #if( $topBarIcon.getChild( 'src' ) )
                     #set ( $src = $topBarIcon.getChild( 'src' ).getValue() )
-                    #if ( ! ( $src.toLowerCase().startsWith("http:/") || $src.toLowerCase().startsWith("https:/") ||
-                          $src.toLowerCase().startsWith("ftp:/") || $src.toLowerCase().startsWith("mailto:") ||
-                          $src.toLowerCase().startsWith("file:/") || ($src.toLowerCase().indexOf("://") != -1) ) )
+                    #if ( !$decoration.isLink( $src ) )
                         #set ( $src = $PathTool.calculateLink( $src, $relativePath ) )
                         #set ( $src = $src.replaceAll( '\\', '/' ) )
                     #end
