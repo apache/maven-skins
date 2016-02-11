@@ -236,9 +236,9 @@ Welcome to ${project.name}!
 </project>
 +-----+
 
-** Footer placeholders
+** head/footer placeholders
 
- This skin will pass your custom footer to <<<${esc.d}render.eval()>>> and replace all variables
+ This skin will pass your custom head/footer to <<<${esc.d}render.eval()>>> and replace all variables
  known to the Velocity context.
 
 ** GitHub ribbons
