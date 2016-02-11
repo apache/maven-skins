@@ -877,20 +877,9 @@
 
     <script type="text/javascript" src="$relativePath/js/apache-maven-fluido-@project.version@.min.js"></script>
 
-    #if ( $decoration.body.head )
-      #foreach( $item in $decoration.body.head.getChildren() )
-        #set ( $head = $item.toString().trim() )
-        #set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
-        #if ( $item.name == "script" )
-          #set ( $head = $StringUtils.replace( $item.toUnescapedString(), $documentHeader, "" ) )
-        #else
-          #set ( $head = $StringUtils.replace( $item.toString(), $documentHeader, "" ) )
-        #end
-
-        $StringUtils.replace( $head, '@relativePath@', ${relativePath} )
-      #end
+    #if( $decoration.body.head )
+      $render.eval( $decoration.body.head )
     #end
-
     #if( $headContent )$headContent#end
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
     #flattrHead()
