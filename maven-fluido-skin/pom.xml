@@ -95,7 +95,6 @@ under the License.
   <properties>
     <bootstrap.version>2.3.2</bootstrap.version>
     <jquery.version>1.11.2</jquery.version>
-    <sitePluginVersion>3.5-SNAPSHOT</sitePluginVersion>
   </properties>
 
   <build>
@@ -154,11 +153,6 @@ under the License.
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-invoker-plugin</artifactId>
           <version>1.10</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>${sitePluginVersion}</version>
         </plugin>
       </plugins>
     </pluginManagement>

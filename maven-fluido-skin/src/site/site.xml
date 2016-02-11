@@ -29,7 +29,7 @@ under the License.
   <skin>
     <groupId>${project.groupId}</groupId>
     <artifactId>${project.artifactId}</artifactId>
-    <version>${project.version}</version>
+    <version>1.4</version>
   </skin>
 
   <custom>
