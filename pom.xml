@@ -51,10 +51,6 @@ under the License.
     </site>
   </distributionManagement>
 
-  <properties>
-    <sitePluginVersion>3.5-SNAPSHOT</sitePluginVersion>
-  </properties>
-
   <build>
     <pluginManagement>
       <plugins>
@@ -62,11 +58,6 @@ under the License.
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-invoker-plugin</artifactId>
           <version>1.10</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>${sitePluginVersion}</version>
         </plugin>
       </plugins>
     </pluginManagement>
