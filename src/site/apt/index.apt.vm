@@ -1,7 +1,8 @@
  ------
  Introduction
  ------
- Hervé Boutemy, Simone "Simo" Tripodi
+ Hervé Boutemy
+ Simone "Simo" Tripodi
  ------
  2012-06-28
  ------
@@ -33,6 +34,11 @@ Welcome to ${project.name}!
 
  A {{{./sample.html}sample page}} is provided to see the skin in action, and two complete sites to show skin
  configurations: one for {{{./sidebar/}sidebar layout (default)}} and the other for {{{./topbar/}topbar layout}}.
+
+ Notice: since version 1.5 of this skin, Velocity 1.7 (used by Maven Site Plugin version 3.5) is required.
+ But in previous versions of the skin, it was Velocity 1.5, which has some incompatibilities.
+ If you need to mix versions, please see {{{/plugins/maven-site-plugin/migrate.html}the migration guide}} to override
+ Velocity version used by Maven Site Plugin as per your specific skin and site plugin requirements. 
 
 * Usage
 
