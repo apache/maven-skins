@@ -30,15 +30,15 @@ under the License.
   </parent>
 
   <artifactId>maven-default-skin</artifactId>
-  <version>1.2</version>
+  <version>1.3-SNAPSHOT</version>
 
   <name>Maven Default Skin</name>
   <description>Maven Default Skin</description>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/tags/maven-default-skin-1.2</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/tags/maven-default-skin-1.2</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/skins/tags/maven-default-skin-1.2</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/trunk/maven-default-skin/</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/trunk/maven-default-skin/</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/skins/trunk/maven-default-skin/</url>
   </scm>
   <issueManagement>
     <system>jira</system>
