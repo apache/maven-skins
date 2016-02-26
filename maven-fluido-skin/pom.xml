@@ -97,6 +97,17 @@ under the License.
     <jquery.version>1.11.2</jquery.version>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>apache.snapshots</id>
+      <name>Apache Snapshot Repository</name>
+      <url>http://repository.apache.org/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </repository>
+  </repositories>
+
   <build>
     <resources>
       <resource>
