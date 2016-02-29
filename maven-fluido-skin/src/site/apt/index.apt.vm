@@ -170,7 +170,7 @@ Welcome to ${project.name}!
 
  Users can optionally enable the <<Google Search>> for the generated site, requirements are:
 
- * the <<<project.url>>> property in <<<pom.xml>>>, unless the <<<custom.fluidoSkin.googleSearch.sitesearch>>> property is set in the <<<site.xml>>>:
+ * the <<<project.url>>> property in <<<pom.xml>>>, unless the <<<custom.fluidoSkin.googleSearch.sitesearch>>> or <<<custom.fluidoSkin.googleSearch.customSearch>>> property is set in the <<<site.xml>>>:
 
 +-----+
 <project name="xxx">
@@ -196,6 +196,21 @@ Welcome to ${project.name}!
 </project>
 +-----+
 
+ * the <<<custom.fluidoSkin.customSearch>>> element in <<<site.xml>>>:
+
++-----+
+<project name="xxx">
+  [...]
+  <custom>
+    <fluidoSkin>
+      <googleSearch>
+        <customSearch>ID_from_Google</customSearch>
+      </googleSearch>
+    </fluidoSkin>
+  </custom>
+  [...]
+</project>
++-----+
  []
 
  By default, the search form:
