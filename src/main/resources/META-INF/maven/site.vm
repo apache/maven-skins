@@ -48,11 +48,8 @@
     <link rel="stylesheet" href="$relativePath/css/apache-maven-fluido-@project.version@.min.css" />
     <link rel="stylesheet" href="$relativePath/css/site.css" />
     <link rel="stylesheet" href="$relativePath/css/print.css" media="print" />
-
     #prjProfile()
-
     <script type="text/javascript" src="$relativePath/js/apache-maven-fluido-@project.version@.min.js"></script>
-
     #if( $decoration.body.head )
       $render.eval( $decoration.body.head )
     #end
@@ -63,20 +60,20 @@
     #if ( $decoration.custom.getChild( 'fluidoSkin' )
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' )
               && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' ).getValue() )
-        #set( $topBarEnabled = true )
+#**##set( $topBarEnabled = true )
     <body class="topBarEnabled">
     #else
     <body class="topBarDisabled">
     #end
     #forkMeOnGitHub()
-
+##
     #set ( $sideBarEnabled = true )
     #if ( $decoration.custom.getChild('fluidoSkin') )
         #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' )
               && 'false' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' ).getValue() )
             #set ( $sideBarEnabled = false )
         #end
-
+##
         #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' )
               && ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' )
                     || $project.url ) )
@@ -85,7 +82,7 @@
           #set ( $searchEnabled = false )
         #end
     #end
-
+##
     #if ( $topBarEnabled )
       #if ( $decoration.custom.getChild('fluidoSkin')
            && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'navBarStyle' ) )
@@ -93,8 +90,6 @@
       #else
         #set ( $navBarStyle = '')
       #end
-
-
     <div id="topbar" class="navbar navbar-fixed-top $navBarStyle">
       <div class="navbar-inner">
         #if ( $sideBarEnabled )
@@ -111,12 +106,11 @@
             #else
               <div class="container"><div class="nav-collapse">
             #end
-
         #end
         #if ( $decoration.custom.getChild('fluidoSkin')
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarIcon' ) )
             #set ( $topBarIcon = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarIcon' ) )
-
+##
             #if ( $topBarIcon.getChild( 'href' ) )
                 #set ( $hrf = $topBarIcon.getChild( 'href' ).getValue() )
                 #if ( !$decoration.isLink( $hrf ) )
@@ -127,13 +121,13 @@
                     #end
                 #end
                 <a class="brand" href="$hrf" #if( $topBarIcon.getChild( 'alt' ) ) title="$topBarIcon.getChild( 'alt' ).getValue()"#end>
-
+##
                 #if( $topBarIcon.getChild( 'name' ) )
                     #set ( $topBarIconName = $topBarIcon.getChild( 'name' ).getValue() )
                 #else
                     #set ( $topBarIconName = $project.name )
                 #end
-
+##
                 #if( $topBarIcon.getChild( 'src' ) )
                     #set ( $src = $topBarIcon.getChild( 'src' ).getValue() )
                     #if ( !$decoration.isLink( $src ) )
@@ -149,30 +143,30 @@
                 #else
                     $topBarIconName
                 #end
-
+##
                 </a>
             #end
         #end
-
-          ## MSKINS-31
+##
+##        ## MSKINS-31
           #if( $decoration.body && $decoration.body.menus )
             <ul class="nav">
               #topMenu( $decoration.body.menus )
             </ul>
           #end
-
+##
           #if ( $searchEnabled && !$sideBarEnabled )
             #googleSearch(true)
           #end
-
+##
           #if ( !$sideBarEnabled )
             #facebookLike( $sideBarEnabled )
             #googlePlusOne( $sideBarEnabled )
             #followTwitter( $sideBarEnabled )
             #flattrBody( $sideBarEnabled )
           #end
-
-         ## MSKINS-31
+##
+##        ## MSKINS-31
           #if( $decoration.body
               && $decoration.body.links
               && $decoration.body.links.size() > 0 )
@@ -185,16 +179,16 @@
               </li>
             </ul>
           #end
-
+##
           #if ($topBarEnabled)
             </div>
           #end
-
+##
         </div>
       </div>
     </div>
     #end
-
+##
     #if ( $sideBarEnabled )
     <div class="container-fluid">
     #else
@@ -222,9 +216,7 @@
       <div id="breadcrumbs">
         <ul class="breadcrumb">
           #publishDate( "left" $decoration.publishDate $decoration.version )
-
           #publishDate( "right" $decoration.publishDate $decoration.version )
-
           ## MSITE-44
           #if ( !$topBarEnabled
               && $decoration.body.links
@@ -233,14 +225,14 @@
           #end
         </ul>
       </div>
-
+##
       #if ( $sideBarEnabled )
       #set ($leftColumnClass="span2")
       #if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
         && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'leftColumnClass' ) )
         #set ( $leftColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'leftColumnClass' ).getValue() )
       #end
-
+##
       <div class="row-fluid">
         <div id="leftColumn" class="$leftColumnClass">
           <div class="well sidebar-nav">
@@ -250,30 +242,28 @@
           #if ( $searchEnabled )
             #googleSearch( false )
           #end
-
           <hr />
-
-           <div id="poweredBy">
-             #googlePlusOne( $sideBarEnabled )
-             <div class="clear"></div>
-             #facebookLike( $sideBarEnabled )
-             <div class="clear"></div>
-             #followTwitter( $sideBarEnabled )
-             <div class="clear"></div>
-             #flattrBody( $sideBarEnabled )
-             <div class="clear"></div>
-             #builtByLogo( $decoration.poweredBy )
+          <div id="poweredBy">
+            #googlePlusOne( $sideBarEnabled )
+            <div class="clear"></div>
+            #facebookLike( $sideBarEnabled )
+            <div class="clear"></div>
+            #followTwitter( $sideBarEnabled )
+            <div class="clear"></div>
+            #flattrBody( $sideBarEnabled )
+            <div class="clear"></div>
+            #builtByLogo( $decoration.poweredBy )
             </div>
           </div>
         </div>
         #end
-
+##
         #set ($bodyColumnClass="span10")
         #if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
           && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ) )
           #set ( $bodyColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ).getValue() )
         #end
-
+##
         <div id="bodyColumn" #if ( $sideBarEnabled ) class="$bodyColumnClass" #end>
           #if ( $title && $title.endsWith( "Project License" ) )
             $bodyContent
@@ -285,7 +275,7 @@
             #else
               #set ( $sourceStyle = "prettyprint" )
             #end
-
+##
             $bodyContent.replaceAll( "<div class=${esc.q}source${esc.q}>(\r?\n)?<pre>", "<div class=${esc.q}source${esc.q}><pre class=${esc.q}$sourceStyle${esc.q}>" ).replaceAll( "class=${esc.q}bodyTable${esc.q}", "class=${esc.q}table table-striped${esc.q}" )
           #end
         </div>
@@ -293,9 +283,7 @@
       </div>
       #end
     </div>
-
     <hr/>
-
     <footer>
       #if ( $sideBarEnabled )
       <div class="container-fluid">
@@ -316,13 +304,13 @@
             <p $!copyrightClass>Copyright &copy;#copyright()All rights reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
         #end
         </div>
-
+##
         #if ( !$sideBarEnabled )
         <p id="poweredBy" class="pull-right">
           #builtByLogo( $decoration.poweredBy )
         </p>
         #end
-
+##
         #ohloh()
       </div>
     </footer>
