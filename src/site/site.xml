@@ -22,23 +22,6 @@ under the License.
 <project xmlns="http://maven.apache.org/DECORATION/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/DECORATION/1.1.0 http://maven.apache.org/xsd/decoration-1.1.0.xsd">
 
-  <!-- TODO remove when upgrading parent pom to version 30 -->
-  <bannerLeft>
-    <name>${project.name}</name>
-    <src>http://maven.apache.org/images/apache-maven-project.png</src>
-    <href>http://www.apache.org/</href>
-  </bannerLeft>
-  <bannerRight>
-    <src>http://maven.apache.org/images/maven-logo-black-on-white.png</src>
-    <href>http://maven.apache.org/</href>
-  </bannerRight>
-
-  <skin>
-    <groupId>${project.groupId}</groupId>
-    <artifactId>${project.artifactId}</artifactId>
-    <version>1.4</version>
-  </skin>
-
   <custom>
     <fluidoSkin>
       <googlePlusOne />
@@ -73,24 +56,24 @@ under the License.
     <menu name="Issues ITs">
       <item name="MSKINS-10" href="./mskins-10/index.html"/>
       <item name="MSKINS-13" href="./mskins-13/index.html"/>
-      <item name="MSKINS-14" href="./mskins-14/index.html"/>
-      <item name="MSKINS-14 (sitesearch)" href="./mskins-14_sitesearch/index.html"/>
+      <item name="Search" href="./mskins-14/index.html"/>
+      <item name="Search (sitesearch)" href="./mskins-14_sitesearch/index.html"/>
       <item name="MSKINS-15" href="./mskins-15/index.html"/>
       <item name="MSKINS-16" href="./mskins-16/index.html"/>
       <item name="MSKINS-17" href="./mskins-17/index.html"/>
       <item name="MSKINS-21" href="./mskins-21/index.html"/>
-      <item name="MSKINS-22" href="./mskins-22/index.html"/>
-      <item name="MSKINS-22 (default)" href="./mskins-22_default/index.html"/>
-      <item name="MSKINS-22 (topbar)" href="./mskins-22_topbar/index.html"/>
+      <item name="GitHub" href="./mskins-22/index.html"/>
+      <item name="GitHub (default)" href="./mskins-22_default/index.html"/>
+      <item name="GitHub (topbar)" href="./mskins-22_topbar/index.html"/>
       <item name="MSKINS-23" href="./mskins-23/index.html"/>
-      <item name="MSKINS-24" href="./mskins-24/index.html"/>
-      <item name="MSKINS-24 (topbar)" href="./mskins-24_topbar/index.html"/>
-      <item name="MSKINS-25" href="./mskins-25/index.html"/>
+      <item name="Twitter" href="./mskins-24/index.html"/>
+      <item name="Twitter (topbar)" href="./mskins-24_topbar/index.html"/>
+      <item name="Ohloh" href="./mskins-25/index.html"/>
       <item name="MSKINS-31" href="./mskins-31/index.html"/>
-      <item name="MSKINS-33" href="./mskins-33/index.html"/>
-      <item name="MSKINS-33 (topbar)" href="./mskins-33_topbar/index.html"/>
-      <item name="MSKINS-34" href="./mskins-34/index.html"/>
-      <item name="MSKINS-34 (topbar)" href="./mskins-34_topbar/index.html"/>
+      <item name="Like" href="./mskins-33/index.html"/>
+      <item name="Like (topbar)" href="./mskins-33_topbar/index.html"/>
+      <item name="Google +1" href="./mskins-34/index.html"/>
+      <item name="Google +1 (topbar)" href="./mskins-34_topbar/index.html"/>
       <item name="MSKINS-41" href="./mskins-41/index.html"/>
       <item name="MSKINS-72" href="./mskins-72/index.html"/>
       <item name="MSKINS-75" href="./mskins-75/index.html"/>
