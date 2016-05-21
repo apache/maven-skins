@@ -25,3 +25,13 @@ jQuery( document ).ready( function()
     prettyPrint();
 
 } );
+
+function asyncJs( url ) {
+    ( function() {
+            var s = document.createElement( 'script' ), t = document.getElementsByTagName( 'script' )[0];
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url;
+            t.parentNode.insertBefore( s, t );
+        } )();
+}
