@@ -17,46 +17,47 @@
 ##
 #macro ( topMenu $menus )
   #foreach( $menu in $menus )
-    #if ( $menu.name )
+#**##if ( $menu.name )
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">$menu.name <b class="caret"></b></a>
         <ul class="dropdown-menu">
-        #foreach( $item in $menu.items )
-          #if ($item.items.size() > 0)
+#*    *##foreach( $item in $menu.items )
+#*      *##if ($item.items.size() > 0)
             <li class="dropdown-submenu">
-                #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
-                #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
-                #topLink( $currentItemHref $item.name $item.target )
+#*            *##set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
+#*            *##set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+#*            *##topLink( $currentItemHref $item.name $item.target )
+
               <ul class="dropdown-menu">
-                #foreach($subitem in $item.items)
-                  #set ( $currentItemHref = $PathTool.calculateLink( $subitem.href, $relativePath ) )
-                  #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+#*            *##foreach($subitem in $item.items)
+#*              *##set ( $currentItemHref = $PathTool.calculateLink( $subitem.href, $relativePath ) )
+#*              *##set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
                   <li>#topLink( $currentItemHref $subitem.name $subitem.target )</li>
-                #end
+#*            *##end
               </ul>
             </li>
-          #else
-            #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
-            #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+#*      *##else
+#*        *##set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
+#*        *##set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
             <li>#topLink( $currentItemHref $item.name $item.target )</li>
-          #end
-        #end
+#*      *##end
+#*    *##end
         </ul>
       </li>
-    #end
+#**##end
   #end
 #end
 ##
 ##
 ##
 #macro ( topLink $href $name $target )
-  #set ( $linkTitle = ' title="' + $name + '"' )
-  #if( $target )
-    #set ( $linkTarget = ' target="' + $target + '"' )
-  #else
-    #set ( $linkTarget = "" )
-  #end
-  <a href="$href" $linkTarget title="$name">$name</a>
+#**##set ( $linkTitle = ' title="' + $name + '"' )
+#**##if( $target )
+#*  *##set ( $linkTarget = ' target="' + $target + '"' )
+#**##else
+#*  *##set ( $linkTarget = "" )
+#**##end
+#**#<a href="$href"$linkTarget title="$name">$name</a>##
 #end
 ##
 #macro ( topLinks $links )
@@ -72,30 +73,30 @@
 ##
 ##
 #macro ( link $href $name $target $img $position $alt $border $width $height $icon)
-  #set ( $linkTitle = ' title="' + $name + '"' )
-  #if( $target )
-    #set ( $linkTarget = ' target="' + $target + '"' )
-  #else
-    #set ( $linkTarget = "" )
-  #end
-  #if ( $decoration.isLink( $href ) )
-    #set ( $linkClass = ' class="externalLink"' )
-  #else
-    #set ( $linkClass = "" )
-  #end
-  #if ( $img )
-    #if ( $position == "left" )
-      <a href="$href"$linkClass$linkTarget$linkTitle>#image($img $alt $border $width $height)$name</a>
-    #else
-      <a href="$href"$linkClass$linkTarget$linkTitle>$name #image($img $alt $border $width $height)</a>
-    #end
-  #else
-    <a href="$href"$linkClass$linkTarget$linkTitle>
-    #if($icon)
-      <span class="$icon"></span>
-    #end
-    $name</a>
-  #end
+#**##set ( $linkTitle = ' title="' + $name + '"' )
+#**##if( $target )
+#*  *##set ( $linkTarget = ' target="' + $target + '"' )
+#**##else
+#*  *##set ( $linkTarget = "" )
+#**##end
+#**##if ( $decoration.isLink( $href ) )
+#*  *##set ( $linkClass = ' class="externalLink"' )
+#**##else
+#*  *##set ( $linkClass = "" )
+#**##end
+#**##if ( $img )
+#*  *##if ( $position == "left" )
+#*    *#<a href="$href"$linkClass$linkTarget$linkTitle>#image($img $alt $border $width $height)$name</a>##
+#*  *##else
+#*    *#<a href="$href"$linkClass$linkTarget$linkTitle>$name #image($img $alt $border $width $height)</a>
+#*  *##end
+#**##else
+#*  *#<a href="$href"$linkClass$linkTarget$linkTitle>##
+#*  *##if($icon)
+#*  *#<span class="$icon"></span>##
+#*  *##end
+#*  *#$name</a>##
+#**##end
 #end
 ##
 ##
@@ -218,27 +219,27 @@
 ##
 #macro ( breadcrumbs $breadcrumbs $cssClass )
   #foreach( $item in $breadcrumbs )
-    #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
-    #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
-    #if ( ( $currentItemHref == '' ) )
-      #set ( $currentItemHref = './' )
-    #end
+#**##set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
+#**##set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+#**##if ( ( $currentItemHref == '' ) )
+#*  *##set ( $currentItemHref = './' )
+#**##end
 ##
-      <li class="$cssClass">
-      #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false )
-      #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'breadcrumbDivider' ) )
-        #set ( $breadcrumbDivider = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'breadcrumbDivider' ).getValue() )
-      #else
-        #set ( $breadcrumbDivider = '/' )
-      #end
-      <span class="divider">$breadcrumbDivider</span>
-      </li>
+      <li class="$cssClass">##
+#*  *##link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height false )
+#*  *##if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'breadcrumbDivider' ) )
+#*    *##set ( $breadcrumbDivider = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'breadcrumbDivider' ).getValue() )
+#*  *##else
+#*    *##set ( $breadcrumbDivider = '/' )
+#*  *##end
+#*  *#<span class="divider">$breadcrumbDivider</span>##
+#*  *#</li>
   #end
-  #if ( $shortTitle )
+#**##if ( $shortTitle )
     <li class="active $cssClass">$shortTitle</li>
-  #else
+#**##else
     <li class="active $cssClass">$title</li>
-  #end
+#**##end
 #end
 ##
 ##
