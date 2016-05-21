@@ -22,7 +22,6 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">$menu.name <b class="caret"></b></a>
         <ul class="dropdown-menu">
         #foreach( $item in $menu.items )
-
           #if ($item.items.size() > 0)
             <li class="dropdown-submenu">
                 #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
@@ -48,6 +47,8 @@
   #end
 #end
 ##
+##
+##
 #macro ( topLink $href $name $target )
   #set ( $linkTitle = ' title="' + $name + '"' )
   #if( $target )
@@ -67,6 +68,8 @@
     <li>#topLink( $currentItemHref $item.name $item.target )</li>
   #end
 #end
+##
+##
 ##
 #macro ( link $href $name $target $img $position $alt $border $width $height $icon)
   #set ( $linkTitle = ' title="' + $name + '"' )
@@ -94,6 +97,8 @@
     $name</a>
   #end
 #end
+##
+##
 ##
 #macro ( image $img $alt $border $width $height )
   #if( $img )
@@ -127,6 +132,9 @@
     <img class="imageLink"$imgSrc$imgAlt$imgBorder$imgWidth$imgHeight/>
   #end
 #end
+##
+##
+##
 #macro ( banner $banner $id )
   #if ( $banner )
     #if( $banner.href )
@@ -184,6 +192,8 @@
   #end
 #end
 ##
+##
+##
 #macro ( links $links )
   #set ( $counter = 0 )
   ## MSKINS-41
@@ -203,6 +213,8 @@
 
   #end
 #end
+##
+##
 ##
 #macro ( breadcrumbs $breadcrumbs $cssClass )
   #foreach( $item in $breadcrumbs )
@@ -229,6 +241,8 @@
   #end
 #end
 ##
+##
+##
 #macro ( displayTree $display $item )
   #if ( $item && $item.items && $item.items.size() > 0 )
     #foreach( $subitem in $item.items )
@@ -243,6 +257,8 @@
     #end
   #end
 #end
+##
+##
 ##
 #macro ( menuItem $item )
   #set ( $collapseClass = "none" )
@@ -264,13 +280,13 @@
       #set ( $collapseClass = "icon-chevron-down" )
     #end
   #end
-
+##
   #if ( $alignedFileName == $currentItemHref )
     <li class="active">
   #else
     <li>
   #end
-
+##
   #if ( $item.img )
     #if ( $item.position == "left" )
       #if ( $alignedFileName == $currentItemHref )
@@ -303,6 +319,8 @@
   #end
   </li>
 #end
+##
+##
 ##
 #macro ( mainMenu $menus )
 <ul class="nav nav-list">
@@ -366,6 +384,8 @@
 </ul>
 #end
 ##
+##
+##
 #macro ( copyright )
   #if ( $project )
     #if ( ${project.organization} && ${project.organization.name} )
@@ -391,6 +411,8 @@
     #end
   #end
 #end
+##
+##
 ##
 #macro ( publishDate $position $decorationPublishDate $version )
   #if ( $publishDate )
@@ -478,6 +500,8 @@
   #end
 #end
 ##
+##
+##
 #macro ( builtByLogo $poweredBy )
   #if( $poweredBy )
     #foreach ($item in $poweredBy)
@@ -545,12 +569,14 @@
   #end
 #end
 ##
+##
+##
 #macro ( piwik )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'piwik' ).getChild( 'piwikUrl' )
         && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'piwik' ).getChild( 'idsite' ) )
     #set ( $piwikUrl =  $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'piwik' ).getChild( 'piwikUrl' ).getValue() )
     #set ( $idsite =  $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'piwik' ).getChild( 'idsite' ).getValue() )
-
+##
     <!-- Piwik -->
     <script type="text/javascript">
     var pkBaseURL = (("https:" == document.location.protocol) ? "https://$piwikUrl/" : "http://$piwikUrl/");
@@ -566,24 +592,25 @@
   #end
 #end
 ##
+##
+##
 #macro ( googleAnalytics $accountId )
   #if( $accountId && $accountId != "" )
     <!-- Google Analytics -->
     <script type="text/javascript">
-
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', '$accountId']);
       _gaq.push(['_trackPageview']);
-
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
     </script>
   #end
 #end
+##
+##
 ##
 #macro ( googleSearch $top )
 <form id="search-form" action="https://www.google.com/search" method="get" #if ( $top ) class="navbar-search pull-right" #end>
@@ -600,15 +627,17 @@
 <script type="text/javascript" src="https://cse.google.com/brand?form=search-form"></script>
 #end
 ##
+##
+##
 #macro ( forkMeOnGitHub )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' )
             && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' ).getChild( 'projectId' ) )
-
+##
     #set ( $gitHubProjectId = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' ).getChild( 'projectId' ).getValue() )
-
+##
     #set ( $leftRibbon = { "red" : "forkme_left_red_aa0000.png", "green" : "forkme_left_green_007200.png", "black" : "forkme_left_darkblue_121621.png", "darkblue" : "forkme_left_darkblue_121621.png", "orange" : "forkme_left_orange_ff7600.png", "gray" : "forkme_left_gray_6d6d6d.png" } )
     #set ( $rightRibbon = { "red" : "forkme_right_red_aa0000.png", "green" : "forkme_right_green_007200.png", "black" : "forkme_right_darkblue_121621.png", "darkblue" : "forkme_right_darkblue_121621.png", "orange" : "forkme_right_orange_ff7600.png", "gray" : "forkme_right_gray_6d6d6d.png" } )
-
+##
     #set ( $ribbon = $leftRibbon )
     #set ( $ribbonOrientation = 'left' )
     #set ( $definedRibbonOrientation = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' ).getChild( 'ribbonOrientation' ) )
@@ -616,10 +645,10 @@
       #set ( $ribbonOrientation = 'right' )
       #set ( $ribbon = $rightRibbon )
     #end
-
+##
     #set ( $ribbonColor = 'red' )
     #set ( $definedRibbonColor = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'gitHub' ).getChild( 'ribbonColor' ) )
-
+##
     #if ( $definedRibbonColor
             && ( $definedRibbonColor.getValue().equalsIgnoreCase( "red" )
             || $definedRibbonColor.getValue().equalsIgnoreCase( "green" )
@@ -628,7 +657,7 @@
             || $definedRibbonColor.getValue().equalsIgnoreCase( "gray" ) ) )
       #set ( $ribbonColor = $definedRibbonColor.getValue().toLowerCase() )
     #end
-
+##
     <a href="https://github.com/$gitHubProjectId">
       <img style="position: absolute; top: 0; $ribbonOrientation: 0; border: 0; z-index: 10000;"
         src="https://s3.amazonaws.com/github/ribbons/$ribbon.get( $ribbonColor )"
@@ -637,19 +666,20 @@
   #end
 #end
 ##
+##
+## activate profile background image if custom.fluidoSkin.profile value set to "retired", "pre-release" or "sandbox"
 #macro ( prjProfile )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'profile' ) )
-
     #set ( $profile = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'profile' ).getValue() )
-
     #if ( $profile.equalsIgnoreCase( "retired" )
           || $profile.equalsIgnoreCase( "pre-release" )
           || $profile.equalsIgnoreCase( "sandbox" ) )
       <style type="text/css">body{background-image: url('$relativePath/images/profiles/${profile}.png');}</style>
     #end
-
   #end
 #end
+##
+##
 ##
 #macro ( googlePlusOne $sideBarEnabled )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googlePlusOne' )
@@ -673,52 +703,56 @@
   #end
 #end
 ##
+##
+##
 #macro ( facebookLike $sideBarEnabled )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'facebookLike' )
           && $project.url )
     #set( $facebookLike = $decoration.custom.getChild( 'facebookLike' ) )
-    ## kindly hardcoded
-
+##  ## kindly hardcoded
+##
     #set( $layout = 'box_count' )
     #if( !$sideBarEnabled )
       #set( $layout = 'button_count' )
     #end
-
+##
     #set( $colorscheme = 'light' )
     #if( !$sideBarEnabled )
       #set( $colorscheme = 'dark' )
     #end
-
+##
     #set( $frameWidth = 'width:48px; height:63px' )
     #if( !$sideBarEnabled )
       #set( $frameWidth = 'width:100px; height:20px' )
     #end
-
+##
     <iframe src="https://www.facebook.com/plugins/like.php?href=$project.url&send=false&layout=$layout&show-faces=false&action=like&colorscheme=$colorscheme"
         scrolling="no" frameborder="0"
         style="border:none; $frameWidth; margin-top: 10px;" #if( !$sideBarEnabled ) class="pull-right" #end></iframe>
   #end
 #end
 ##
+##
+##
 #macro ( followTwitter $sideBarEnabled )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' )
         && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'user' ) )
     #set ( $user = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'user' ).getValue() )
-
+##
     #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'showUser' )
             && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'showUser' ).getValue().equalsIgnoreCase( "true" ) )
       #set( $showUser = true )
     #else
       #set( $showUser = false )
     #end
-
+##
     #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'showFollowers' )
             && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'twitter' ).getChild( 'showFollowers' ).getValue().equalsIgnoreCase( "true" ) )
       #set( $showFollowers = true )
     #else
       #set( $showFollowers = false )
     #end
-
+##
     #if ( $sideBarEnabled )
       #set( $dataSize = "medium" )
       #set( $dataAlign = "left" )
@@ -728,10 +762,10 @@
       #set( $dataAlign = "right" )
     <ul class="nav pull-right"><li>
     #end
-
+##
     <a href="https://twitter.com/${user}" class="twitter-follow-button" data-show-count="${showFollowers}" data-align="${dataAlign}" data-size="${dataSize}" data-show-screen-name="${showUser}" data-lang="${locale}">Follow ${user}</a>
     <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
+##
     #if ( $sideBarEnabled )
     </div>
     #else
@@ -740,16 +774,18 @@
   #end
 #end
 ##
+##
+##
 #macro ( ohloh )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'ohloh' )
         && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'ohloh' ).getChild( 'projectId' ) )
     #set ( $projectId = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'ohloh' ).getChild( 'projectId' ).getValue() )
-
+##
     #set( $widget = "users_logo.js" )
-
+##
     #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'ohloh' ).getChild( 'widget' ) )
       #set( $definedWidget = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'ohloh' ).getChild( 'widget' ).getValue() )
-
+##
       #if ( $definedWidget.equalsIgnoreCase( "users-logo" ) )
         #set( $widget = "users_logo.js" )
       #elseif ( $definedWidget.equalsIgnoreCase( "users-green" ) )
@@ -778,12 +814,14 @@
         #set( $widget = "basic_stats.js" )
       #end
     #end
-
+##
     <div id="ohloh" class="pull-right">
       <script type="text/javascript" src="https://www.ohloh.net/p/${projectId}/widgets/project_${widget}"></script>
     </div>
   #end
 #end
+##
+##
 ##
 #macro ( flattrHead )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' )
@@ -803,6 +841,8 @@
   #end
 #end
 ##
+##
+##
 #macro ( flattrBody $sideBarEnabled )
   #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' )
     && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'thing' )
@@ -814,7 +854,7 @@
     #else
       #set ( $flattrUrl = $project.url )
     #end
-
+##
     #set ( $styleModifier = '' )
     #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'style' ) )
       #set ( $style = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'flattr' ).getChild( 'style' ).getValue() )
@@ -822,17 +862,17 @@
         #set ( $styleModifier = 'rev="flattr;button:compact;"' )
       #end
     #end
-
+##
     #if ( $sideBarEnabled )
     <div id="flattr">
     #else
     <ul class="nav pull-right"><li>
     #end
-
+##
     <a class="FlattrButton" style="display:none;" $styleModifier href="$flattrUrl"></a>
     <noscript><a href="https://flattr.com/thing/$flattrThing" target="_blank">
     <img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
-
+##
     #if ( $sideBarEnabled )
     </div>
     #else
