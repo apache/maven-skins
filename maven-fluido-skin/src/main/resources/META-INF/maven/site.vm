@@ -48,272 +48,272 @@
     <link rel="stylesheet" href="$relativePath/css/apache-maven-fluido-@project.version@.min.css" />
     <link rel="stylesheet" href="$relativePath/css/site.css" />
     <link rel="stylesheet" href="$relativePath/css/print.css" media="print" />
-    #prjProfile()
+#**##prjProfile()
     <script type="text/javascript" src="$relativePath/js/apache-maven-fluido-@project.version@.min.js"></script>
-    #if( $decoration.body.head )
-      $render.eval( $decoration.body.head )
-    #end
-    #if( $headContent )$headContent#end
-    #googleAnalytics( $decoration.googleAnalyticsAccountId )
-    #flattrHead()
+#**##if( $decoration.body.head )
+#*  *#$render.eval( $decoration.body.head )
+#**##end
+#**##if( $headContent )$headContent#end
+#**##googleAnalytics( $decoration.googleAnalyticsAccountId )
+#**##flattrHead()
   </head>
-    #if ( $decoration.custom.getChild( 'fluidoSkin' )
+#**##if ( $decoration.custom.getChild( 'fluidoSkin' )
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' )
               && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarEnabled' ).getValue() )
 #**##set( $topBarEnabled = true )
     <body class="topBarEnabled">
-    #else
+#**##else
     <body class="topBarDisabled">
-    #end
-    #forkMeOnGitHub()
+#**##end
+#**##forkMeOnGitHub()
 ##
-    #set ( $sideBarEnabled = true )
-    #if ( $decoration.custom.getChild('fluidoSkin') )
-        #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' )
-              && 'false' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' ).getValue() )
-            #set ( $sideBarEnabled = false )
-        #end
+#**##set ( $sideBarEnabled = true )
+#**##if ( $decoration.custom.getChild('fluidoSkin') )
+#*  *##if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' )
+            && 'false' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sideBarEnabled' ).getValue() )
+#*    *##set ( $sideBarEnabled = false )
+#*  *##end
 ##
-        #if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' )
-              && ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' )
+#*  *##if ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' )
+            && ( $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'googleSearch' ).getChild( 'sitesearch' )
                     || $project.url ) )
-          #set ( $searchEnabled = true )
-        #else
-          #set ( $searchEnabled = false )
-        #end
-    #end
+#*    *##set ( $searchEnabled = true )
+#*  *##else
+#*    *##set ( $searchEnabled = false )
+#*  *##end
+#**##end
 ##
-    #if ( $topBarEnabled )
-      #if ( $decoration.custom.getChild('fluidoSkin')
+#**##if ( $topBarEnabled )
+#*  *##if ( $decoration.custom.getChild('fluidoSkin')
            && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'navBarStyle' ) )
-        #set ( $navBarStyle = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'navBarStyle' ).getValue())
-      #else
-        #set ( $navBarStyle = '')
-      #end
+#*    *##set ( $navBarStyle = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'navBarStyle' ).getValue())
+#*  *##else
+#*    *##set ( $navBarStyle = '')
+#*  *##end
     <div id="topbar" class="navbar navbar-fixed-top $navBarStyle">
       <div class="navbar-inner">
-        #if ( $sideBarEnabled )
+#*    *##if ( $sideBarEnabled )
         <div class="container-fluid">
         <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        #else
-            #if ( $decoration.custom.getChild('fluidoSkin')
-                  && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ) )
-              <div class="container" style="$decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ).getValue()"><div class="nav-collapse">
-            #else
-              <div class="container"><div class="nav-collapse">
-            #end
-        #end
-        #if ( $decoration.custom.getChild('fluidoSkin')
+#*    *##else
+#*      *##if ( $decoration.custom.getChild('fluidoSkin')
+                && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ) )
+            <div class="container" style="$decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarContainerStyle' ).getValue()"><div class="nav-collapse">
+#*      *##else
+            <div class="container"><div class="nav-collapse">
+#*      *##end
+#*    *##end
+#*    *##if ( $decoration.custom.getChild('fluidoSkin')
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarIcon' ) )
-            #set ( $topBarIcon = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarIcon' ) )
+#*      *##set ( $topBarIcon = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'topBarIcon' ) )
 ##
-            #if ( $topBarIcon.getChild( 'href' ) )
-                #set ( $hrf = $topBarIcon.getChild( 'href' ).getValue() )
-                #if ( !$decoration.isLink( $hrf ) )
-                    #set ( $hrf = $PathTool.calculateLink( $hrf, $relativePath ) )
-                    #set ( $hrf = $hrf.replaceAll( '\\', '/' ) )
-                    #if ( ( $hrf == '' ) )
-                        #set ( $hrf = './' )
-                    #end
-                #end
-                <a class="brand" href="$hrf" #if( $topBarIcon.getChild( 'alt' ) ) title="$topBarIcon.getChild( 'alt' ).getValue()"#end>
+#*      *##if ( $topBarIcon.getChild( 'href' ) )
+#*        *##set ( $hrf = $topBarIcon.getChild( 'href' ).getValue() )
+#*        *##if ( !$decoration.isLink( $hrf ) )
+#*          *##set ( $hrf = $PathTool.calculateLink( $hrf, $relativePath ) )
+#*          *##set ( $hrf = $hrf.replaceAll( '\\', '/' ) )
+#*          *##if ( ( $hrf == '' ) )
+#*            *##set ( $hrf = './' )
+#*          *##end
+#*        *##end
+#*        *#<a class="brand" href="$hrf" #if( $topBarIcon.getChild( 'alt' ) ) title="$topBarIcon.getChild( 'alt' ).getValue()"#end>##
 ##
-                #if( $topBarIcon.getChild( 'name' ) )
-                    #set ( $topBarIconName = $topBarIcon.getChild( 'name' ).getValue() )
-                #else
-                    #set ( $topBarIconName = $project.name )
-                #end
+#*        *##if( $topBarIcon.getChild( 'name' ) )
+#*          *##set ( $topBarIconName = $topBarIcon.getChild( 'name' ).getValue() )
+#*        *##else
+#*          *##set ( $topBarIconName = $project.name )
+#*        *##end
 ##
-                #if( $topBarIcon.getChild( 'src' ) )
-                    #set ( $src = $topBarIcon.getChild( 'src' ).getValue() )
-                    #if ( !$decoration.isLink( $src ) )
-                        #set ( $src = $PathTool.calculateLink( $src, $relativePath ) )
-                        #set ( $src = $src.replaceAll( '\\', '/' ) )
-                    #end
-                    #if ( $topBarIcon.getChild( 'alt' ) )
-                          #set ( $alt = $topBarIcon.getChild( 'alt' ).getValue() )
-                    #else
-                          #set ( $alt = $topBarIconName )
-                    #end
-                    <img src="$src" alt="$alt" />
-                #else
-                    $topBarIconName
-                #end
+#*        *##if( $topBarIcon.getChild( 'src' ) )
+#*          *##set ( $src = $topBarIcon.getChild( 'src' ).getValue() )
+#*          *##if ( !$decoration.isLink( $src ) )
+#*            *##set ( $src = $PathTool.calculateLink( $src, $relativePath ) )
+#*            *##set ( $src = $src.replaceAll( '\\', '/' ) )
+#*          *##end
+#*          *##if ( $topBarIcon.getChild( 'alt' ) )
+#*            *##set ( $alt = $topBarIcon.getChild( 'alt' ).getValue() )
+#*          *##else
+#*            *##set ( $alt = $topBarIconName )
+#*          *##end
+#*          *#<img src="$src" alt="$alt" />
+#*        *##else
+#*          *#$topBarIconName
+#*        *##end
 ##
-                </a>
-            #end
-        #end
+#*        *#</a>
+#*      *##end
+#*    *##end
 ##
-##        ## MSKINS-31
-          #if( $decoration.body && $decoration.body.menus )
+##      ## MSKINS-31
+#*      *##if( $decoration.body && $decoration.body.menus )
             <ul class="nav">
-              #topMenu( $decoration.body.menus )
+#*          *##topMenu( $decoration.body.menus )
             </ul>
-          #end
+#*      *##end
 ##
-          #if ( $searchEnabled && !$sideBarEnabled )
-            #googleSearch(true)
-          #end
+#*      *##if ( $searchEnabled && !$sideBarEnabled )
+#*        *##googleSearch(true)
+#*      *##end
 ##
-          #if ( !$sideBarEnabled )
-            #facebookLike( $sideBarEnabled )
-            #googlePlusOne( $sideBarEnabled )
-            #followTwitter( $sideBarEnabled )
-            #flattrBody( $sideBarEnabled )
-          #end
+#*      *##if ( !$sideBarEnabled )
+#*        *##facebookLike( $sideBarEnabled )
+#*        *##googlePlusOne( $sideBarEnabled )
+#*        *##followTwitter( $sideBarEnabled )
+#*        *##flattrBody( $sideBarEnabled )
+#*      *##end
 ##
 ##        ## MSKINS-31
-          #if( $decoration.body
+#*      *##if( $decoration.body
               && $decoration.body.links
               && $decoration.body.links.size() > 0 )
             <ul class="nav pull-right">
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">External Links <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                #topLinks( $decoration.body.links )
+#*            *##topLinks( $decoration.body.links )
                 </ul>
               </li>
             </ul>
-          #end
+#*      *##end
 ##
-          #if ($topBarEnabled)
+#*      *##if ($topBarEnabled)
             </div>
-          #end
+#*      *##end
 ##
         </div>
       </div>
     </div>
-    #end
+#**##end
 ##
-    #if ( $sideBarEnabled )
+#**##if ( $sideBarEnabled )
     <div class="container-fluid">
-    #else
+#**##else
     <div class="container">
-    #end
+#**##end
       <div id="banner">
-        <div class="pull-left">
-        #if( $decoration.bannerLeft )
-          #banner( $decoration.bannerLeft "bannerLeft" )
-        #else
-          ## MSKINS-32
-          <h1>
-            #if( $project.name && $project.name != '' )
-              $project.name
-            #else
-              $project.artifactId
-            #end
-          </h1>
-        #end
-        </div>
+        <div class="pull-left">##
+#*      *##if( $decoration.bannerLeft )
+#*        *##banner( $decoration.bannerLeft "bannerLeft" )
+#*      *##else
+#*      *### MSKINS-32
+          <h1>##
+#*        *##if( $project.name && $project.name != '' )
+#*          *#$project.name
+#*        *##else
+#*          *#$project.artifactId
+#*        *##end
+#*      *#</h1>##
+#*      *##end
+#*    *#</div>
         <div class="pull-right">#banner( $decoration.bannerRight "bannerRight" )</div>
         <div class="clear"><hr/></div>
       </div>
 
       <div id="breadcrumbs">
         <ul class="breadcrumb">
-          #publishDate( "left" $decoration.publishDate $decoration.version )
-          #publishDate( "right" $decoration.publishDate $decoration.version )
-          ## MSITE-44
-          #if ( !$topBarEnabled
+#*      *##publishDate( "left" $decoration.publishDate $decoration.version )
+#*      *##publishDate( "right" $decoration.publishDate $decoration.version )
+#*      *### MSITE-44
+#*      *##if ( !$topBarEnabled
               && $decoration.body.links
               && $decoration.body.links.size() > 0 )
-            #links( $decoration.body.links )
-          #end
+#*        *##links( $decoration.body.links )
+#*      *##end
         </ul>
       </div>
 ##
-      #if ( $sideBarEnabled )
-      #set ($leftColumnClass="span2")
-      #if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
+#*  *##if ( $sideBarEnabled )
+#*  *##set ($leftColumnClass="span2")
+#*  *##if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
         && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'leftColumnClass' ) )
-        #set ( $leftColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'leftColumnClass' ).getValue() )
-      #end
+#*    *##set ( $leftColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'leftColumnClass' ).getValue() )
+#*  *##end
 ##
       <div class="row-fluid">
         <div id="leftColumn" class="$leftColumnClass">
           <div class="well sidebar-nav">
-          #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
-          #mainMenu( $decoration.body.menus )
-          #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
-          #if ( $searchEnabled )
-            #googleSearch( false )
-          #end
+#*      *##publishDate( "navigation-top" $decoration.publishDate $decoration.version )
+#*      *##mainMenu( $decoration.body.menus )
+#*      *##publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
+#*      *##if ( $searchEnabled )
+#*        *##googleSearch( false )
+#*      *##end
           <hr />
           <div id="poweredBy">
-            #googlePlusOne( $sideBarEnabled )
+#*        *##googlePlusOne( $sideBarEnabled )
             <div class="clear"></div>
-            #facebookLike( $sideBarEnabled )
+#*        *##facebookLike( $sideBarEnabled )
             <div class="clear"></div>
-            #followTwitter( $sideBarEnabled )
+#*        *##followTwitter( $sideBarEnabled )
             <div class="clear"></div>
-            #flattrBody( $sideBarEnabled )
+#*        *##flattrBody( $sideBarEnabled )
             <div class="clear"></div>
-            #builtByLogo( $decoration.poweredBy )
+#*        *##builtByLogo( $decoration.poweredBy )
             </div>
           </div>
         </div>
-        #end
+#*    *##end
 ##
-        #set ($bodyColumnClass="span10")
-        #if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
+#*    *##set ($bodyColumnClass="span10")
+#*    *##if ( $decoration.custom && $decoration.custom.getChild('fluidoSkin')
           && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ) )
-          #set ( $bodyColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ).getValue() )
-        #end
+#*      *##set ( $bodyColumnClass = $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'bodyColumnClass' ).getValue() )
+#*    *##end
 ##
         <div id="bodyColumn" #if ( $sideBarEnabled ) class="$bodyColumnClass" #end>
-          #if ( $title && $title.endsWith( "Project License" ) )
-            $bodyContent
-          #else
-            #if ( $decoration.custom.getChild('fluidoSkin')
+#*      *##if ( $title && $title.endsWith( "Project License" ) )
+#*        *#$bodyContent
+#*      *##else
+#*        *##if ( $decoration.custom.getChild('fluidoSkin')
               && $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sourceLineNumbersEnabled' )
               && 'true' == $decoration.custom.getChild( 'fluidoSkin' ).getChild( 'sourceLineNumbersEnabled' ).getValue() )
-              #set ( $sourceStyle = "prettyprint linenums" )
-            #else
-              #set ( $sourceStyle = "prettyprint" )
-            #end
+#*          *##set ( $sourceStyle = "prettyprint linenums" )
+#*        *##else
+#*          *##set ( $sourceStyle = "prettyprint" )
+#*        *##end
 ##
-            $bodyContent.replaceAll( "<div class=${esc.q}source${esc.q}>(\r?\n)?<pre>", "<div class=${esc.q}source${esc.q}><pre class=${esc.q}$sourceStyle${esc.q}>" ).replaceAll( "class=${esc.q}bodyTable${esc.q}", "class=${esc.q}table table-striped${esc.q}" )
-          #end
+#*        *#$bodyContent.replaceAll( "<div class=${esc.q}source${esc.q}>(\r?\n)?<pre>", "<div class=${esc.q}source${esc.q}><pre class=${esc.q}$sourceStyle${esc.q}>" ).replaceAll( "class=${esc.q}bodyTable${esc.q}", "class=${esc.q}table table-striped${esc.q}" )
+#*      *##end
         </div>
-      #if ( $sideBarEnabled )
+#*    *##if ( $sideBarEnabled )
       </div>
-      #end
+#*    *##end
     </div>
     <hr/>
     <footer>
-      #if ( $sideBarEnabled )
+#*  *##if ( $sideBarEnabled )
       <div class="container-fluid">
-      #else
+#*  *##else
       <div class="container">
-      #end
-        #if ( $sideBarEnabled )
+#*  *##end
+#*    *##if ( $sideBarEnabled )
         <div class="row-fluid">
-        #else
+#*    *##else
         <div class="row">
-        #end
-        #if ( $decoration.body.footer )
-          $render.eval( $decoration.body.footer )
-        #else
-          #if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass') )
-            #set ( $copyrightClass = 'class="' + $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass').getValue() + '"' )
-          #end
-            <p $!copyrightClass>Copyright &copy;#copyright()All rights reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
-        #end
+#*    *##end
+#*    *##if ( $decoration.body.footer )
+#*      *#$render.eval( $decoration.body.footer )
+#*    *##else
+#*      *##if ( $decoration.custom.getChild( 'fluidoSkin' ) && $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass') )
+#*        *##set ( $copyrightClass = ' class="' + $decoration.custom.getChild( 'fluidoSkin' ).getChild('copyrightClass').getValue() + '"' )
+#*      *##end
+            <p$!copyrightClass>Copyright &copy;#copyright()All rights reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )</p>
+#*    *##end
         </div>
 ##
-        #if ( !$sideBarEnabled )
-        <p id="poweredBy" class="pull-right">
-          #builtByLogo( $decoration.poweredBy )
-        </p>
-        #end
+#*    *##if ( !$sideBarEnabled )
+        <p id="poweredBy" class="pull-right">##
+#*      *##builtByLogo( $decoration.poweredBy )
+#*    *#</p>
+#*    *##end
 ##
-        #ohloh()
+#*    *##ohloh()
       </div>
     </footer>
-    #piwik()
+#**##piwik()
   </body>
 </html>
