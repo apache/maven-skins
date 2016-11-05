@@ -198,6 +198,7 @@ under the License.
               <cssSourceDir>css</cssSourceDir>
               <cssSourceFiles>
                 <cssSourceFile>bootstrap-${bootstrap.version}.css</cssSourceFile>
+                <cssSourceFile>bootstrap-${bootstrap.version}-responsive.css</cssSourceFile>
                 <cssSourceFile>maven-base.css</cssSourceFile>
                 <cssSourceFile>maven-theme.css</cssSourceFile>
                 <cssSourceFile>prettify.css</cssSourceFile>
