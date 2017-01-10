@@ -182,7 +182,12 @@
 #*    *##else
 #*      *##set ( $imgHeight = "" )
 #*    *##end
-#*    *#<img src="$src" $alt$imgBorder$imgWidth$imgHeight/>##
+#*    *##if( $banner.title )
+#*      *##set ( $bannerTitle=' title="' + $banner.title + '"' )
+#*    *##else
+#*      *##set ( $bannerTitle="" )
+#*    *##end
+#*    *#<img src="$src" $alt$bannerTitle$imgBorder$imgWidth$imgHeight/>##
 #*  *##else
 #*    *#<h2>$banner.name</h2>
 #*  *##end
