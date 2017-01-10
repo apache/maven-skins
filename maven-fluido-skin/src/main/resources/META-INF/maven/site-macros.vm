@@ -165,7 +165,7 @@
 #*    *##elseif ( $banner.name )
 #*      *##set ( $alt = ' alt="' + $banner.name + '"' )
 #*    *##else
-#*      *##set ( $alt = "" )
+#*      *##set ( $alt = ' alt=""' )
 #*    *##end
 #*    *##if( $banner.border )
 #*      *##set ( $imgBorder = ' border="' + $banner.border + '"' )
